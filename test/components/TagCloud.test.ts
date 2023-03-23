@@ -1,6 +1,6 @@
 import type { MarkdownInstance } from 'astro';
 import { assert, expect, test, vi } from 'vitest';
-import { getTopThreeTags } from './TagCloud.astro';
+import { getTopThreeTags } from '../../src/components/TagCloud.astro';
 
 test('Only the top three tags with most posts are displayed', () => {
     function createPostWithTags(tags: string[]): MarkdownInstance<Record<string, any>> {
