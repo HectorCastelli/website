@@ -1,0 +1,10 @@
+---
+interface Props {
+    text: string;
+}
+
+const { text } = Astro.props;
+---
+<section class="mb-2 lg:absolute w-screen p-2 flex justify-center items-center gap-x-6 overflow-hidden bg-stone-500 text-stone-100 border-b-stone-600 border-b-2">
+   <p>{text}</p>
+</section>

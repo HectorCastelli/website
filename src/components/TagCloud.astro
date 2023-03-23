@@ -20,13 +20,13 @@ export function getTopThreeTags(
 const tags = getTopThreeTags(allPosts);
 ---
 
-<ul class="flex align-middle justify-between text-2xl">
+<ul class="flex flex-wrap align-middle justify-between text-2xl px-8">
     {
         tags.map((tag, index) => (
             <li>
                 <a
                     href={`/tags/${tag}`}
-                    class="text-cyan-900 hover:text-cyan-700"
+                    class="text-cyan-900 hover:text-cyan-700 dark:text-cyan-200 dark:hover:text-cyan-400"
                 >
                     {tag}
                 </a>
@@ -34,6 +34,6 @@ const tags = getTopThreeTags(allPosts);
         ))
     }
     <li>
-        and <a href="/tags" class="text-cyan-900 hover:text-cyan-700">more</a>!
+        and <a href="/tags" class="text-cyan-900 hover:text-cyan-700 dark:text-cyan-200 dark:hover:text-cyan-400">more</a>!
     </li>
 </ul>
