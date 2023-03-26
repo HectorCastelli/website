@@ -1,10 +1,10 @@
 # website
 
-My personal website, as well as the articles and posts that power it.
+My [personal website](https://gohector.com), as well as the articles and posts that power it.
 
 Built with [Astro](https://astro.build/).
 
-## 🧞 Commands
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
