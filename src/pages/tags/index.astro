@@ -1,13 +1,39 @@
 ---
-import type { MarkdownInstance } from 'astro';
-import CommonLayout from '../../layouts/CommonLayout.astro';
+import CommonLayout from "../../layouts/CommonLayout.astro";
+import { getTagsOrderedByPostCount, getTopAndRemainder } from "../../lib/tags";
 
 const allPosts = await Astro.glob("../../posts/*.md");
-const tags = [...new Set(allPosts.flatMap((post) => post.frontmatter.tags))]
+const allTags = getTagsOrderedByPostCount(allPosts);
+const [topSixTags, remainingTags] = getTopAndRemainder(allTags, 2);
 ---
+
 <CommonLayout>
-    <h1>Here are all the tags:</h1>
-    <ol>
-        {tags.map(tag=><li><a href={`tags/${tag}`}>{tag}</a></li>)}
+    <h1 class="text-xl mb-3">
+        I post about all sorts of things, but here are the more popular topics:
+    </h1>
+    <ol class="grid grid-cols-3">
+        {
+            topSixTags.map((tag) => (
+                <li>
+                    <a href={`tags/${tag}`}>{tag}</a>
+                </li>
+            ))
+        }
     </ol>
+    {
+        remainingTags.length > 0 ? (
+            <>
+                <h2 class="text-lg mb-3 mt-6">And these are the less popular, alphabetically:</h2>
+                <ol class="grid grid-cols-5">
+                    {remainingTags.sort().map((tag) => (
+                        <li>
+                            <a href={`tags/${tag}`}>{tag}</a>
+                        </li>
+                    ))}
+                </ol>
+            </>
+        ) : (
+            ""
+        )
+    }
 </CommonLayout>
