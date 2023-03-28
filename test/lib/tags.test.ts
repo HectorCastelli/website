@@ -1,10 +1,8 @@
-import type { MarkdownInstance } from 'astro';
-import { assert, expect, test, vi } from 'vitest';
-import { getTopThreeTags } from '../../src/components/TagCloud.astro';
+import { expect, test } from 'vitest';
+import { getTagsOrderedByPostCount } from '../../src/lib/tags';
 import { createPostWithTags } from '../fixtures.test';
 
-test('Only the top three tags with most posts are displayed', () => {
-
+test('Tags are returned with their post counts', () => {
     const posts = [
         ...[...Array(3)].map(_=>createPostWithTags(['a'])),
         ...[...Array(3)].map(_=>createPostWithTags(['b'])),
@@ -13,5 +11,10 @@ test('Only the top three tags with most posts are displayed', () => {
         ...[...Array(3)].map(_=>createPostWithTags(['a','b'])),
     ];
 
-    expect(getTopThreeTags(posts)).toStrictEqual(['a', 'b', 'c']);
+    expect(getTagsOrderedByPostCount(posts)).toStrictEqual({
+        a: 6,
+        b: 6,
+        c: 4,
+        d: 3
+    });
 })

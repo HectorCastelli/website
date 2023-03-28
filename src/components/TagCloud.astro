@@ -1,17 +1,13 @@
 ---
 import type { MarkdownInstance } from "astro";
+import { getTagsOrderedByPostCount } from "../lib/tags";
 
 const allPosts = await Astro.glob("../posts/*.md");
 
 export function getTopThreeTags(
     allPosts: MarkdownInstance<Record<string, any>>[]
 ): string[] {
-    const tagsWithCounts: Record<string, number> = allPosts
-        .flatMap((post) => post.frontmatter.tags)
-        .reduce((acc, tag) => {
-            acc[tag] = acc[tag] ? acc[tag] + 1 : 1;
-            return acc;
-        }, {});
+    const tagsWithCounts = getTagsOrderedByPostCount(allPosts);
     return Object.keys(tagsWithCounts)
         .sort((a: string, b: string) => tagsWithCounts[b] - tagsWithCounts[a])
         .slice(0, 3);
