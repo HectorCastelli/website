@@ -1,19 +1,33 @@
-import type { MarkdownInstance } from "astro";
+import { getCollection, CollectionEntry } from 'astro:content';
 
-export function getTagsOrderedByPostCount(allPosts: MarkdownInstance<Record<string, any>>[]) {
-    const tagsWithCounts: Record<string, number> = allPosts
-        .flatMap((post) => post.frontmatter.tags)
-        .reduce((acc, tag) => {
-            acc[tag] = acc[tag] ? acc[tag] + 1 : 1;
-            return acc;
-        }, {});
+export async function getAllTags(): Promise<CollectionEntry<"tag">[]> {
+    return await getCollection('tag');
+}
+
+export async function getAllPostsWithTag(tag:string): Promise<CollectionEntry<'blog'>[]> {
+    return await getCollection('blog', ({ data }) => data.tags.includes(tag));
+}
+
+interface TagWithBlog {
+    tag: CollectionEntry<"tag">;
+    blog: CollectionEntry<"blog">[];
+}
+
+export async function getTagsWithPosts(): Promise<TagWithBlog[]> {
+    const tags = await getAllTags();
+
+    const tagsWithCounts = Promise.all(tags.flatMap(async (tag)=>({
+        tag,
+        blog: await getAllPostsWithTag(tag.slug)
+    })));
+
     return tagsWithCounts;
 }
 
-export function getTopAndRemainder(allTags: Record<string, number>, topCount: number = 3): [string[], string[]] {
-    const tagsRankedByCount = Object.keys(allTags)
-        .sort((a: string, b: string) => allTags[b] - allTags[a]);
-    const topTags = tagsRankedByCount.slice(0, topCount);
-    const remainderTags = tagsRankedByCount.slice(topCount);
+export async function getTopTagsThenRemainder(topCount: number = 3): Promise<[string[], string[]]> {
+    const tagsWithPosts = await getTagsWithPosts();
+    const tagsRankedByCount = tagsWithPosts.sort((a, b) => b.blog.length - a.blog.length);
+    const topTags = tagsRankedByCount.slice(0, topCount).map(tagWithBlog=>tagWithBlog.tag.slug);
+    const remainderTags = tagsRankedByCount.slice(topCount).map(tagWithBlog=>tagWithBlog.tag.slug);
     return [topTags, remainderTags];
 }

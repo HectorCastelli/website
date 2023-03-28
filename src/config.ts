@@ -35,7 +35,7 @@ export default {
             },
             {
                 text: "Feed (RSS)",
-                href: '/feed.rss',
+                href: '/rss.xml',
             },
         ]
     }

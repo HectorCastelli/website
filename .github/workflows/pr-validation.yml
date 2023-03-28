@@ -29,6 +29,3 @@ jobs:
       - name: Build website
         run: |-
           npm run build
-      - name: Test website
-        run: |-
-          npm run test

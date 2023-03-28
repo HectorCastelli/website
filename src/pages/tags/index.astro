@@ -1,10 +1,8 @@
 ---
 import CommonLayout from "../../layouts/CommonLayout.astro";
-import { getTagsOrderedByPostCount, getTopAndRemainder } from "../../lib/tags";
+import { getTopTagsThenRemainder } from "../../lib/tags";
 
-const allPosts = await Astro.glob("../../posts/*.md");
-const allTags = getTagsOrderedByPostCount(allPosts);
-const [topSixTags, remainingTags] = getTopAndRemainder(allTags, 2);
+const [topSixTags, remainingTags] = await getTopTagsThenRemainder(2);
 ---
 
 <CommonLayout>

@@ -2,17 +2,14 @@
 import type { Link } from "../lib/links";
 
 import config from "../config";
-import { getTagsOrderedByPostCount, getTopAndRemainder } from "../lib/tags";
+import { getTopTagsThenRemainder } from "../lib/tags";
 
 interface Props {
     links: Link[];
 }
 
 const { links } = Astro.props;
-
-const allPosts = await Astro.glob("../posts/*.md");
-const allTags = getTagsOrderedByPostCount(allPosts);
-const [topTags, _] = getTopAndRemainder(allTags, 3);
+const [topTags, _] = await getTopTagsThenRemainder(3);
 ---
 
 <footer

@@ -1,31 +1,44 @@
 ---
-import type { MarkdownInstance } from 'astro';
-import CommonLayout from '../../layouts/CommonLayout.astro';
+import { getCollection, CollectionEntry } from "astro:content";
+import CommonLayout from "../../layouts/CommonLayout.astro";
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob("../../posts/*.md");
+    const tags = await getCollection("tag");
 
-  return allPosts.flatMap(post=>post.frontmatter.tags).map(tag=>({
-    params: {
-        tag,
-    },
-    props: {
-        posts: allPosts
-    }
-  }))
+    return Promise.all(
+        tags.map(async (tag) => ({
+            params: {
+                tag: tag.slug,
+            },
+            props: {
+                currentTag: tag,
+                posts: await getCollection("blog", ({ data }) =>
+                    data.tags.includes(tag.slug)
+                ),
+            },
+        }))
+    );
 }
 
 interface Props {
-    posts: MarkdownInstance<Record<string, any>>[];
+    currentTag: CollectionEntry<"tag">;
+    posts: CollectionEntry<"blog">[];
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
-const filteredPosts = posts.filter((post) => post.frontmatter.tags.includes(tag));
+const { currentTag, posts } = Astro.props;
+const { Content } = await currentTag.render();
 ---
+
 <CommonLayout>
-    <h1>Here are the posts with the tag: {tag}</h1>
-    <ol>
-        {filteredPosts.map(post=><li>{post.frontmatter.title}</li>)}
-    </ol>
+    <h1>{currentTag.data.name}</h1>
+    <section>
+        <Content/>
+    </section>
+    <section>
+        <h2>Here are the posts with this tag:</h2>
+        <ol>
+            {posts.map((post) => <li>{post.data.title}</li>)}
+        </ol>
+    </section>
 </CommonLayout>
