@@ -3,15 +3,17 @@ import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import BaseLayout from "./BaseLayout.astro";
 
-import config from '../config';
+import config from "../config";
 ---
 
 <BaseLayout>
-    <Header links={config.header.links} />
-    <main 
-    class="lg:max-w-screen-xl mx-auto min-w-screen h-max lg:min-h-screen p-4 md:p-11"
->
-        <slot />
-    </main>
-    <Footer links={config.footer.links} />
+    <div class="flex flex-col min-h-screen">
+        <Header links={config.header.links} />
+        <main
+            class="lg:max-w-screen-xl mx-auto min-h-fit p-4 md:p-11 flex-1"
+        >
+            <slot />
+        </main>
+        <Footer links={config.footer.links} />
+    </div>
 </BaseLayout>
