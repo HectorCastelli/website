@@ -12,8 +12,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "coverage": "vitest run --coverage"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/rss": "^2.3.1",
