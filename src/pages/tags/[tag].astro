@@ -1,6 +1,6 @@
 ---
 import type { MarkdownInstance } from 'astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import CommonLayout from '../../layouts/CommonLayout.astro';
 
 export async function getStaticPaths() {
   const allPosts = await Astro.glob("../../posts/*.md");
@@ -23,9 +23,9 @@ const { tag } = Astro.params;
 const { posts } = Astro.props;
 const filteredPosts = posts.filter((post) => post.frontmatter.tags.includes(tag));
 ---
-<BaseLayout>
+<CommonLayout>
     <h1>Here are the posts with the tag: {tag}</h1>
     <ol>
         {filteredPosts.map(post=><li>{post.frontmatter.title}</li>)}
     </ol>
-</BaseLayout>
+</CommonLayout>

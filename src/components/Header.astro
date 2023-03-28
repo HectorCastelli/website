@@ -1,9 +1,8 @@
 ---
+import type { Link } from '../lib/links';
+
 interface Props {
-    links: {
-        text: string;
-        href: URL;
-    }[];
+    links: Link[];
 }
 
 const { links } = Astro.props;
