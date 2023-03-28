@@ -11,19 +11,19 @@ export default {
         links: [
             {
                 text: "About me",
-                href: new URL(`${CNAME}/about`)
+                href: '/about',
             },
             {
                 text: "Projects",
-                href: new URL(`${CNAME}/projects`)
+                href: '/projects',
             },
             {
                 text: "Blog",
-                href: new URL(`${CNAME}/blog`)
+                href: '/blog',
             },
             {
                 text: "Contact",
-                href: new URL(`${CNAME}/contact`)
+                href: '/contact',
             },
         ]
     },
@@ -31,11 +31,11 @@ export default {
         links: [
             {
                 text: "Homepage",
-                href: new URL(`${CNAME}/`)
+                href: '/',
             },
             {
                 text: "Feed (RSS)",
-                href: new URL(`${CNAME}/feed.rss`)
+                href: '/feed.rss',
             },
         ]
     }

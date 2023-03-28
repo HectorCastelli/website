@@ -8,8 +8,8 @@ interface Props {
 const { links } = Astro.props;
 ---
 
-<header>
-    <nav>
+<header class="flex-shrink-0 p-4 py-12 bg-slate-800 text-slate-200 dark:bg-slate-200 dark:text-slate-800">
+    <nav class="flex flex-row gap-6 lg:gap-24 align-middle justify-center">
         {links.map((link) => <a href={link.href}>{link.text}</a>)}
     </nav>
 </header>

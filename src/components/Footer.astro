@@ -1,14 +1,39 @@
 ---
+import type { Link } from "../lib/links";
+
+import config from "../config";
+import { getTagsOrderedByPostCount, getTopAndRemainder } from "../lib/tags";
+
 interface Props {
     links: Link[];
 }
 
 const { links } = Astro.props;
+
+const allPosts = await Astro.glob("../posts/*.md");
+const allTags = getTagsOrderedByPostCount(allPosts);
+const [topTags, _] = getTopAndRemainder(allTags, 3);
 ---
 
-<footer>
-    <p>All rights reserved.</p>
-    <nav>
-        {links.map((link) => <a href={link.href}>{link.text}</a>)}
-    </nav>
+<footer
+    class="p-2 py-8 bg-slate-800 text-slate-600 dark:bg-slate-200 dark:text-slate-500 flex-shrink-0 text-center text-sm"
+>
+    <p>All rights reserved, {config.author}.</p>
+    <section class="flex flex-row gap-12 align-middle justify-center">
+        <nav class="flex flex-col gap-1 align-middle">
+            {links.map((link) => <a href={link.href}>{link.text}</a>)}
+        </nav>
+        <nav class="flex flex-col gap-1 align-middle">
+            <h1>Top tags:</h1>
+            <ol class="text-left text-sm">
+                {
+                    topTags.map((tag) => (
+                        <li>
+                            <a href={`tags/${tag}`}>{tag}</a>
+                        </li>
+                    ))
+                }
+            </ol>
+        </nav>
+    </section>
 </footer>
