@@ -18,7 +18,7 @@ const [topTags, _] = getTopAndRemainder(allTags, 3);
 <footer
     class="p-2 py-8 bg-slate-800 text-slate-600 dark:bg-slate-200 dark:text-slate-500 flex-shrink-0 text-center text-sm"
 >
-    <p>All rights reserved, {config.author}.</p>
+    <p class="mb-4">All rights reserved, {config.author}.</p>
     <section class="flex flex-row gap-12 align-middle justify-center">
         <nav class="flex flex-col gap-1 align-middle">
             {links.map((link) => <a href={link.href}>{link.text}</a>)}
