@@ -8,7 +8,7 @@ interface Props {
     links: Link[];
 }
 
-const { links } = Astro.props;
+const { links } = Astro.props;/
 const [topTags, _] = await getTopTagsThenRemainder(3);
 ---
 
@@ -26,7 +26,7 @@ const [topTags, _] = await getTopTagsThenRemainder(3);
                 {
                     topTags.map((tag) => (
                         <li>
-                            <a href={`tags/${tag}`}>{tag}</a>
+                            <a href={`/tags/${tag}`}>{tag}</a>
                         </li>
                     ))
                 }
