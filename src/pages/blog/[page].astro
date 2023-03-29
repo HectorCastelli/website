@@ -2,12 +2,13 @@
 import { CollectionEntry, getCollection } from "astro:content";
 import BlogEntry from "../../components/BlogEntry.astro";
 import CommonLayout from "../../layouts/CommonLayout.astro";
+import config from "../../config";
 
 export async function getStaticPaths({ paginate }) {
     const blogs = await getCollection("blog");
     blogs.sort((a,b)=>b.data.pubDate.getTime()-a.data.pubDate.getTime());
     
-    return paginate(blogs, { pageSize: 2 });
+    return paginate(blogs, { pageSize: config.pagination.blog });
 }
 const { page } = Astro.props;
 ---

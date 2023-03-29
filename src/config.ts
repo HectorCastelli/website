@@ -38,5 +38,8 @@ export default {
                 href: '/rss.xml',
             },
         ]
+    },
+    pagination: {
+        blog: 6,
     }
 }
