@@ -1,7 +1,7 @@
 import rss from '@astrojs/rss';
 import { getCollection } from 'astro:content';
 
-import Config from "../config";
+import Config from "@config";
 const { author, description} = Config;
 
 export async function get(context) {
@@ -15,8 +15,6 @@ export async function get(context) {
         pubDate: post.data.pubDate,
         description: post.data.description,
         customData: post.data.customData,
-        // Compute RSS link from post `slug`
-        // This example assumes all posts are rendered as `/blog/[slug]` routes
         link: `/blog/${post.slug}/`,
       })),
     customData: `<language>en-us</language>`,
