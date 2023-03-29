@@ -1,7 +1,5 @@
 import { getCollection, CollectionEntry } from 'astro:content';
 
-// TODO: add test coverage to this set of functions
-
 export async function getAllTags(): Promise<CollectionEntry<"tag">[]> {
     return await getCollection('tag');
 }
