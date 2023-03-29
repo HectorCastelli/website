@@ -12,7 +12,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "blog-create": "node scripts/blog/create.js"
   },
   "dependencies": {
     "@astrojs/rss": "^2.3.1",
