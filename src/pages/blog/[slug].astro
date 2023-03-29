@@ -1,0 +1,45 @@
+---
+import { getCollection, CollectionEntry } from "astro:content";
+import CommonLayout from "../../layouts/CommonLayout.astro";
+
+export async function getStaticPaths() {
+    const blogs = await getCollection("blog");
+
+    return Promise.all(
+    blogs.map(async (blog) => ({
+            params: {
+                slug: blog.slug,
+            },
+            props: {
+                currentBlog: blog,
+            },
+        }))
+    );
+}
+
+interface Props {
+    currentBlog: CollectionEntry<"blog">;
+}
+
+const { currentBlog } = Astro.props;
+const { Content } = await currentBlog.render();
+---
+
+<CommonLayout>
+    <header class="mb-4">
+        <h1 class="text-3xl">{currentBlog.data.title}</h1>
+        <h3 class="text-sm font-thin">{currentBlog.data.pubDate.toDateString()}</h3>
+        <ul class="flex flex-row flex-wrap gap-4 align-middle">
+            {
+                currentBlog.data.tags.map((tag) => (
+                    <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
+                        <a href={`/tags/${tag}`}>{tag}</a>
+                    </li>
+                ))
+            }
+        </ul>
+    </header>
+    <main>
+        <Content/>
+    </main>
+</CommonLayout>
