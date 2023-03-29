@@ -37,7 +37,7 @@ const { Content } = await currentTag.render();
     </section>
     <section>
         <h2 class="text-lg">Here are the posts with this tag:</h2>
-        <ol>
+        <ol class="flex flex-col gap-2">
             {posts.map((post) => <li><BlogEntry entry={post}/></li>)}
         </ol>
     </section>
