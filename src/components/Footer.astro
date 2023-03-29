@@ -5,10 +5,10 @@ import config from "@config";
 import { getTopTagsThenRemainder } from "@lib/tags";
 
 interface Props {
-    links: Link[];
+    links?: Link[];
 }
 
-const { links } = Astro.props;
+const { links = config.footer.links  } = Astro.props;
 const [topTags, _] = await getTopTagsThenRemainder(3);
 ---
 

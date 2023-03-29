@@ -1,11 +1,12 @@
 ---
-import type { Link } from '../lib/links';
+import type { Link } from '@lib/links';
+import config from "@config";
 
 interface Props {
-    links: Link[];
+    links?: Link[];
 }
 
-const { links } = Astro.props;
+const { links = config.header.links } = Astro.props;
 ---
 
 <header class="flex-shrink-0 p-4 py-12 bg-slate-800 text-slate-200 dark:bg-slate-200 dark:text-slate-800">
