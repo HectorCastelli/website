@@ -1,5 +1,6 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
+import BlogEntry from "../../components/BlogEntry.astro";
 import CommonLayout from "../../layouts/CommonLayout.astro";
 
 export async function getStaticPaths() {
@@ -30,14 +31,14 @@ const { Content } = await currentTag.render();
 ---
 
 <CommonLayout>
-    <h1>{currentTag.data.name}</h1>
-    <section>
+    <h1 class="text-3xl">{currentTag.data.name}</h1>
+    <section class="mb-4">
         <Content/>
     </section>
     <section>
-        <h2>Here are the posts with this tag:</h2>
+        <h2 class="text-lg">Here are the posts with this tag:</h2>
         <ol>
-            {posts.map((post) => <li>{post.data.title}</li>)}
+            {posts.map((post) => <li><BlogEntry entry={post}/></li>)}
         </ol>
     </section>
 </CommonLayout>

@@ -9,10 +9,10 @@ const [topSixTags, remainingTags] = await getTopTagsThenRemainder(2);
     <h1 class="text-xl mb-3">
         I post about all sorts of things, but here are the more popular topics:
     </h1>
-    <ol class="grid grid-cols-3">
+    <ol class="flex flex-row flex-wrap gap-4 align-middle">
         {
             topSixTags.map((tag) => (
-                <li>
+                <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
                     <a href={`/tags/${tag}`}>{tag}</a>
                 </li>
             ))
@@ -21,10 +21,12 @@ const [topSixTags, remainingTags] = await getTopTagsThenRemainder(2);
     {
         remainingTags.length > 0 ? (
             <>
-                <h2 class="text-lg mb-3 mt-6">And these are the less popular, alphabetically:</h2>
-                <ol class="grid grid-cols-5">
+                <h2 class="text-lg mb-3 mt-6">
+                    And these are the less popular, alphabetically:
+                </h2>
+                <ol class="flex flex-row flex-wrap gap-4 align-middle">
                     {remainingTags.sort().map((tag) => (
-                        <li>
+                        <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
                             <a href={`/tags/${tag}`}>{tag}</a>
                         </li>
                     ))}
