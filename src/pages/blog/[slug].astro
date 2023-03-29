@@ -1,6 +1,7 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
 import CommonLayout from "@layouts/CommonLayout.astro";
+import Tag from "@components/Tag.astro";
 
 export async function getStaticPaths() {
     const blogs = await getCollection("blog");
@@ -33,7 +34,7 @@ const { Content } = await currentBlog.render();
             {
                 currentBlog.data.tags.map((tag) => (
                     <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-                        <a href={`/tags/${tag}`}>{tag}</a>
+                        <Tag tag={tag} />
                     </li>
                 ))
             }

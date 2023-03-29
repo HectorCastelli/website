@@ -10,7 +10,7 @@ const title = await rl.question('What is the title of the post? ');
 
 const fileContents = `---
 title: "${title}"
-pubDate: "${new Date().toISOString().substring(0,10)}"
+pubDate: ${new Date().toISOString().substring(0,10)}
 description: ""
 tags: []
 ---

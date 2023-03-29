@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import Tag from "@components/Tag.astro";
 
 interface Props {
     entry: CollectionEntry<"blog">;
@@ -16,7 +17,7 @@ const { entry } = Astro.props;
             {
                 entry.data.tags.map((tag) => (
                     <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-                        <a href={`/tags/${tag}`}>{tag}</a>
+                        <Tag tag={tag} />
                     </li>
                 ))
             }

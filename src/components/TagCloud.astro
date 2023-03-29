@@ -1,5 +1,6 @@
 ---
-import { getTopTagsThenRemainder } from "@lib/tags";
+import { getTag, getTopTagsThenRemainder } from "@lib/tags";
+import Tag from "./Tag.astro";
 
 const [tags, _] = await getTopTagsThenRemainder(3);
 ---
@@ -8,12 +9,7 @@ const [tags, _] = await getTopTagsThenRemainder(3);
     {
         tags.map((tag) => (
             <li>
-                <a
-                    href={`/tags/${tag}`}
-                    class="text-cyan-900 hover:text-cyan-700 dark:text-cyan-200 dark:hover:text-cyan-400"
-                >
-                    {tag}
-                </a>
+                <Tag tag={tag} />
             </li>
         ))
     }

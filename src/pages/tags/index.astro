@@ -1,5 +1,7 @@
 ---
 import CommonLayout from "@layouts/CommonLayout.astro";
+import Tag from "@components/Tag.astro";
+
 import { getTopTagsThenRemainder } from "@lib/tags";
 
 const [topSixTags, remainingTags] = await getTopTagsThenRemainder(2);
@@ -13,7 +15,7 @@ const [topSixTags, remainingTags] = await getTopTagsThenRemainder(2);
         {
             topSixTags.map((tag) => (
                 <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-                    <a href={`/tags/${tag}`}>{tag}</a>
+                    <Tag tag={tag} />
                 </li>
             ))
         }
@@ -27,7 +29,7 @@ const [topSixTags, remainingTags] = await getTopTagsThenRemainder(2);
                 <ol class="flex flex-row flex-wrap gap-4 align-middle">
                     {remainingTags.sort().map((tag) => (
                         <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-                            <a href={`/tags/${tag}`}>{tag}</a>
+                            <Tag tag={tag} />
                         </li>
                     ))}
                 </ol>

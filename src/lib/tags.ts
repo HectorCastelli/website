@@ -1,10 +1,14 @@
-import { getCollection, CollectionEntry } from 'astro:content';
+import { getCollection, CollectionEntry, getEntryBySlug } from 'astro:content';
 
 export async function getAllTags(): Promise<CollectionEntry<"tag">[]> {
     return await getCollection('tag');
 }
 
-export async function getAllPostsWithTag(tag:string): Promise<CollectionEntry<'blog'>[]> {
+export async function getTag(tag: string): Promise<CollectionEntry<'tag'> | undefined> {
+    return await getEntryBySlug('tag', tag);
+}
+
+export async function getAllPostsWithTag(tag: string): Promise<CollectionEntry<'blog'>[]> {
     return await getCollection('blog', ({ data }) => data.tags.includes(tag));
 }
 
@@ -16,7 +20,7 @@ interface TagWithBlog {
 export async function getTagsWithPosts(): Promise<TagWithBlog[]> {
     const tags = await getAllTags();
 
-    const tagsWithCounts = Promise.all(tags.flatMap(async (tag)=>({
+    const tagsWithCounts = Promise.all(tags.flatMap(async (tag) => ({
         tag,
         blog: await getAllPostsWithTag(tag.slug)
     })));
@@ -27,7 +31,7 @@ export async function getTagsWithPosts(): Promise<TagWithBlog[]> {
 export async function getTopTagsThenRemainder(topCount: number = 3): Promise<[string[], string[]]> {
     const tagsWithPosts = await getTagsWithPosts();
     const tagsRankedByCount = tagsWithPosts.sort((a, b) => b.blog.length - a.blog.length);
-    const topTags = tagsRankedByCount.slice(0, topCount).map(tagWithBlog=>tagWithBlog.tag.slug);
-    const remainderTags = tagsRankedByCount.slice(topCount).map(tagWithBlog=>tagWithBlog.tag.slug);
+    const topTags = tagsRankedByCount.slice(0, topCount).map(tagWithBlog => tagWithBlog.tag.slug);
+    const remainderTags = tagsRankedByCount.slice(topCount).map(tagWithBlog => tagWithBlog.tag.slug);
     return [topTags, remainderTags];
 }
