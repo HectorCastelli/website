@@ -10,10 +10,6 @@ export default {
     header: {
         links: [
             {
-                text: "About me",
-                href: '/about',
-            },
-            {
                 text: "Projects",
                 href: '/projects',
             },
@@ -32,6 +28,10 @@ export default {
             {
                 text: "Homepage",
                 href: '/',
+            },
+            {
+                text: "Blog",
+                href: '/blog',
             },
             {
                 text: "Feed (RSS)",
