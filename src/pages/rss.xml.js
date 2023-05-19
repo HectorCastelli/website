@@ -17,6 +17,11 @@ export async function get(context) {
         customData: post.data.customData,
         link: `/blog/${post.slug}/`,
       })),
-    customData: `<language>en-us</language>`,
+    customData: `
+    <language>en-us</language>
+    <atom:link href="${context.site}/rss.xml" rel="self" type="application/rss+xml" />
+    `,
+    xmlns: { atom: 'http://www.w3.org/2005/Atom' },
+    stylesheet: '/pretty-feed-v3.xsl',
   });
 }
