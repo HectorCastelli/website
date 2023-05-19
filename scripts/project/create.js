@@ -14,6 +14,8 @@ url: ""
 image: ""
 description: ""
 status: "ongoing"
+status: "completed"
+status: "abandoned"
 ---
 `
 

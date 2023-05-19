@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+    entry: CollectionEntry<"project">;
+}
+
+const { entry } = Astro.props;
+---
+
+<a href={entry.data.url} class="flex flex-col p-2 px-4">
+    <h1 class="order-2 text-lg font-bold">
+        {entry.data.name}
+    </h1>
+    {entry.data.image ? (
+        <img
+            src={entry.data.image}
+            class="order-1 h-32"
+        />
+    ) : (
+        ""
+    )}
+    {entry.data.description ? (
+        <p class="order-3">{entry.data.description}</p>
+    ) : (
+        ""
+    )}
+</a>
