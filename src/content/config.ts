@@ -15,4 +15,13 @@ export const collections = {
             tags: z.array(z.string()),
         }),
     }),
+    'project': defineCollection({
+        schema: z.object({
+            name: z.string(),
+            image: z.string().url().optional(),
+            description: z.string().optional(),
+            url: z.string().url(),
+            status: z.enum(["ongoing", "completed", "abandoned"])
+        })
+    }),
 };

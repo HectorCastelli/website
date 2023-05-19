@@ -1,0 +1,22 @@
+---
+import CommonLayout from "@layouts/CommonLayout.astro";
+import Tag from "@components/Tag.astro";
+
+import { getOngoingProjects } from "@lib/projects";
+
+const currentProjects = await getOngoingProjects();
+---
+
+<CommonLayout>
+    <h1 class="text-xl mb-3">Here are some things I am working on:</h1>
+    <ol class="flex flex-row flex-wrap gap-4 align-middle">
+        {
+            currentProjects.sort().map((project) => (
+                <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
+                    <h1>{project.data.name}</h1>
+                    {project.data.description ? <p>{project.data.description}</p> : <></>}
+                </li>
+            ))
+        }
+    </ol>
+</CommonLayout>

@@ -14,7 +14,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "blog-create": "node scripts/blog/create.js",
-    "tag-create": "node scripts/tag/create.js"
+    "tag-create": "node scripts/tag/create.js",
+    "project-create": "node scripts/project/create.js"
   },
   "dependencies": {
     "@astrojs/rss": "^2.3.1",
