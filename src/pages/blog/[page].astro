@@ -6,9 +6,12 @@ import config from "@config";
 
 export async function getStaticPaths({ paginate }) {
     const blogs = await getCollection("blog");
-    blogs.sort((a,b)=>b.data.pubDate.getTime()-a.data.pubDate.getTime());
-    
-    return paginate(blogs, { pageSize: config.pagination.blog });
+    // Filter out posts that are in the future
+    const publishedBlogs = blogs
+        .filter((b) => b.data.pubDate.getTime() < new Date().getTime())
+        .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+    return paginate(publishedBlogs, { pageSize: config.pagination.blog });
 }
 const { page } = Astro.props;
 ---
