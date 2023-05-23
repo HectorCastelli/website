@@ -4,8 +4,11 @@ import { getCollection } from 'astro:content';
 import Config from "@config";
 const { author, description} = Config;
 
+
+import {getAllBlogPosts} from "@lib/blogs";
+
 export async function get(context) {
-    const blog = await getCollection('blog');
+    const blog = await getAllBlogPosts();
   return rss({
     title: `gohector - ${author}`,
     description: description,
