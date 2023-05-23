@@ -4,34 +4,6 @@ pubDate: 2023-10-23
 description: "A self-reflection of good product skills and practices I've picked up over the years."
 tags: ["career", "personal"]
 ---
-
-# Notes
-Product skills: (from https://www.chameleon.io/blog/product-manager-skills)
-- prioritization
-  - SCRUM was a driving force in getting better at this, even if the value returned is not great
-- Road-mapping
-- data analytics and research
-- strategic thinking
-- user-centric approach
-
-
-What i've learned from being a feature lead
-- prioritization
-- planning complex steps
-- value-proposition
-- communication
-- stakeholder management
-- communication with team
-- communication with PMs
-- think about user xp
-- manage tech debt proactively
-- encourage tech excellence
-- enable innovative/creative approaches
-- emphasize the problem, leave the solution open
-- facilitation
-
----
-
 Our field has recently been involved in an uproar of *AI*-powered tools that promise to accelerate--or even replace--the parts of our jobs that we've traditionally have been trained on. 
 Traditional training for software engineers puts an emphasis on syntax knowledge, data structures, and algorithms. While this knowledge is still important, the future lies elsewhere.
 
@@ -44,6 +16,10 @@ The practices and skills involved in building useful software revolve around a s
 While the sentiment itself is simple, the implications it brings into the entire software development lifecycle are vast. To better explore these ramifications, I will talk about the techniques and practices in three contexts: before, during, and after.
 
 # Before
+
+In most environments where code is written there is a significant amount of effort exercised even before a single key is pressed. In a more traditional environment, these aspects would fall under your Project Managers, Product Owners, or any other fancy title for "the person that tell us what to do".
+
+This model is unsustainable and produces churn and rework. In the spirit of agility, we aim to shorten the feedback cycle dramatically by getting involved at this stage.
 
 ## Know your users
 
@@ -94,3 +70,34 @@ While this sentiment seems easy to explain, the ramifications of employing this 
 ## Manage debt wisely
 
 ## Prioritize efforts
+
+
+---
+
+
+# Notes
+Product skills: (from https://www.chameleon.io/blog/product-manager-skills)
+- prioritization
+  - SCRUM was a driving force in getting better at this, even if the value returned is not great
+- Road-mapping
+- data analytics and research
+- strategic thinking
+- user-centric approach
+
+
+What i've learned from being a feature lead
+- prioritization
+- planning complex steps
+- value-proposition
+- communication
+- stakeholder management
+- communication with team
+- communication with PMs
+- think about user xp
+- manage tech debt proactively
+- encourage tech excellence
+- enable innovative/creative approaches
+- emphasize the problem, leave the solution open
+- facilitation
+
+---
