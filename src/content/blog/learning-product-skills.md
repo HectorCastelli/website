@@ -13,13 +13,13 @@ Regardless of the clear deficiency of the methods and materials employed to grow
 
 The practices and skills involved in building useful software revolve around a single sentiment: **Think about the user experience**.
 
-While the sentiment itself is simple, the implications it brings into the entire software development lifecycle are vast. To better explore these ramifications, I will talk about the techniques and practices in three contexts: before, during, and after.
+While it is a simple phrase, the implications it brings into the entire software development lifecycle are vast. To better explore these ramifications, I will talk about the techniques and practices in three contexts: before, during, and after.
 
 # Before
 
-In most environments where code is written there is a significant amount of effort exercised even before a single key is pressed. In a more traditional environment, these aspects would fall under your Project Managers, Product Owners, or any other fancy title for "the person that tell us what to do".
+In most environments where code is written there is a significant amount of effort exercised even before a single key is pressed. In a more traditional environment, these aspects would fall under your Project Managers, Product Owners, or any other fancy title for "the person that knows what to do". The traditional responsibilities of these individuals has them discovering problems, designing solutions and creating a comprehensive plan with all the tasks that need to be executed for said solution to be delivered.
 
-This model is unsustainable and produces churn and rework. In the spirit of agility, we aim to shorten the feedback cycle dramatically by getting involved at this stage.
+In the plainest of terms, this approach is inefficient, error prone and introduces multiple layers of indirection that offer little value.
 
 ## Know your users
 
