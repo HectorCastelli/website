@@ -13,91 +13,63 @@ Regardless of the clear deficiency of the methods and materials employed to grow
 
 The practices and skills involved in building useful software revolve around a single sentiment: **Think about the user experience**.
 
-While it is a simple phrase, the implications it brings into the entire software development lifecycle are vast. To better explore these ramifications, I will talk about the techniques and practices in three contexts: before, during, and after.
+While it is a simple phrase, the implications it brings into the entire software development lifecycle are vast. To better explore these ramifications, I will talk about the techniques and practices in three contexts: before, during, and after. Keep in mind that this sentiment applies to every single person involved.
 
 # Before
 
-In most environments where code is written there is a significant amount of effort exercised even before a single key is pressed. In a more traditional environment, these aspects would fall under your Project Managers, Product Owners, or any other fancy title for "the person that knows what to do". The traditional responsibilities of these individuals has them discovering problems, designing solutions and creating a comprehensive plan with all the tasks that need to be executed for said solution to be delivered.
+In most environments where code is written there is a significant amount of effort exercised even before a single key is pressed. The main goal of this preliminary work is to identify what should be worked on next, and (if possible) eliminate wastage and uncertainty. In a more traditional environment, these aspects would fall under your Project Managers, Product Owners, Business Analysts, *etc*.
 
-In the plainest of terms, this approach is inefficient, error prone and introduces multiple layers of indirection that offer little value.
+The traditional responsibilities of these individuals includes discovering problems, designing solutions, and creating a comprehensive plan with all the tasks that need to be executed for said solution to be delivered. However, since plans rarely work ([here](https://developertea.com/episodes/6a379315-9e11-4c68-a248-ea8045314a32) is an interesting take on how to make plans better), this approach is inefficient.
+
+> To be very clear, I am **not** advocating for you to go fire all of these people and ask your development team to take care of that workload.
 
 ## Know your users
 
+Learn how thigns are or will be used
+
 ## Identify the value of initiatives
+
+Guesstimate or measure the impact of a change
 
 ## Prioritize your efforts
 
+Use the impact and value to strategize on which things are the most important. No need to plan them extensively, just capture their relative precedence order
+
 ## Communicate with your team
 
-## Plan against complexity
+Clearly communicate this information. The idea is to give a clear directive so others are empowered to make choices that deliver on the most important things and deprioritize less important stuff.
+
+This also helps teams avoid multitasking (the definition of "fuck multipe things at once" and focus on the important parts)
+
+## Plan for complex execution
+
+Find safe approaches, validate ideas earlier, minimize end-user impact while maximizing value.
+
+Maybe this really is "risk management"/"think about risks"?
 
 # During
 
 ## Communicate with stakeholders
 
+Constant channels of information are needed to keep everyone involved in the loop.
+
+Not excessive reporting, but transparency is important. This means transparency on roadmaps, metrics, and work done.
+
+This channel is also important because enables **everyone** to share insights and refine the value-add of initiatives. Otherwise, this is pretty much waterfall.
+
 ## Leave room for creative solutions
+
+Avoid prescribing solutions too early, leave your smart engineers to find oportunities to solve multiple problems at once or to revolutionize.
 
 ## Manage your tech debt wisely
 
+Recognize that "quick fix" is a tool to be employed for a reason, but sometimes we need to go back and properly fix stuff to avoid losing velocity (or encurring risk).
+
 ## Encourage tech excellence
+
+In line with the two previous things... encourage to do the right thing in the first place. Avoid at all cost creating a culture of "fast" before "right". That will cause problems down the line.
 
 # After
 
 ## Understand you might not really know your user that well...
 Let them talk to you and give quick feedback.
-
-
-
-The biggest differentiator in my career has been the ability to develop software that solves real problems. I hold a strong belief that the skills involved in building useful software are what developers should focus on next. These skills revolve around a singular sentiment: **Think about the user experience**.
-
-While this sentiment seems easy to explain, the ramifications of employing this directive in what and how you build software are the reason why this is more effective than the alternatives.
-
-## Know your user
-
-## Understand you don't really know your user
-
-## Identifying value
-
-## Think about the user experience
-
-## Communicate effectively
-
-### With your stakeholders
-### With your team
-
-## Leave room for creative solutions
-
-## Manage debt wisely
-
-## Prioritize efforts
-
-
----
-
-
-# Notes
-Product skills: (from https://www.chameleon.io/blog/product-manager-skills)
-- prioritization
-  - SCRUM was a driving force in getting better at this, even if the value returned is not great
-- Road-mapping
-- data analytics and research
-- strategic thinking
-- user-centric approach
-
-
-What i've learned from being a feature lead
-- prioritization
-- planning complex steps
-- value-proposition
-- communication
-- stakeholder management
-- communication with team
-- communication with PMs
-- think about user xp
-- manage tech debt proactively
-- encourage tech excellence
-- enable innovative/creative approaches
-- emphasize the problem, leave the solution open
-- facilitation
-
----
