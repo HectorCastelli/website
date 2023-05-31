@@ -31,9 +31,18 @@ Learn how thigns are or will be used
 
 Guesstimate or measure the impact of a change
 
+Explore the nuance of value estimation with multiple streams of work.
+
 ## Prioritize your efforts
 
 Use the impact and value to strategize on which things are the most important. No need to plan them extensively, just capture their relative precedence order
+
+Highlight the need to think beyond a singular feature
+
+Propose managing own backlog and roadmap as a way to clearly communicate value, as well as how that allows teams to propose solutions to multiple problems at once.
+
+Highligh how this can help make informed decisions regarding tech-debt.
+
 
 ## Communicate with your team
 
@@ -56,6 +65,8 @@ Constant channels of information are needed to keep everyone involved in the loo
 Not excessive reporting, but transparency is important. This means transparency on roadmaps, metrics, and work done.
 
 This channel is also important because enables **everyone** to share insights and refine the value-add of initiatives. Otherwise, this is pretty much waterfall.
+
+Clarify how having a clearer picture of the value-add for each change can help on moments of crisis, when things change, or when new things need to be tackled.
 
 ## Leave room for creative solutions
 
