@@ -19,9 +19,9 @@ While it is a simple phrase, the implications it brings into the entire software
 
 In most environments where code is written there is a significant amount of effort exercised even before a single key is pressed. The main goal of this preliminary work is to identify what should be worked on next, and (if possible) eliminate wastage and uncertainty. In a more traditional environment, these aspects would fall under your Project Managers, Product Owners, Business Analysts, *etc*.
 
-The traditional responsibilities of these individuals includes discovering problems, designing solutions, and creating a comprehensive plan with all the tasks that need to be executed for said solution to be delivered. However, since plans rarely work ([here](https://developertea.com/episodes/6a379315-9e11-4c68-a248-ea8045314a32) is an interesting take on how to make plans better), this approach is inefficient.
+The traditional responsibilities of these individuals includes (amongst many other) discovering problems, designing solutions, and creating a comprehensive plan with all the tasks that need to be executed for said solution to be delivered. However, since plans rarely work ([here](https://developertea.com/episodes/6a379315-9e11-4c68-a248-ea8045314a32) is an interesting take on how to make plans better), this approach is inefficient.
 
-> To be very clear, I am **not** advocating for you to go fire all of these people and ask your development team to take care of that workload.
+To be very clear, I am **not** advocating for these roles to be removed or that workload to be thrown to your development team.
 
 ## Know your users
 
