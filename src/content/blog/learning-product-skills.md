@@ -1,6 +1,6 @@
 ---
 title: "Learning product skills"
-pubDate: 2023-10-23
+pubDate: 2025-10-23
 description: "A self-reflection of good product skills and practices I've picked up over the years."
 tags: ["career", "personal"]
 ---
