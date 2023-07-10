@@ -14,7 +14,7 @@ name: "${title}"
 `
 
 try {
-  fs.writeFileSync(`./src/content/tag/${title.toLocaleLowerCase().replaceAll(/[^a-z]/ig,'-')}.md`, fileContents);
+  fs.writeFileSync(`./src/content/tag/${title.toLocaleLowerCase().replaceAll(/[^a-z]/ig, '-')}.md`, fileContents);
   console.log('Tag created with success')
   // file written successfully
 } catch (err) {

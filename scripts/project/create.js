@@ -20,7 +20,7 @@ status: "abandoned"
 `
 
 try {
-  fs.writeFileSync(`./src/content/project/${name.toLocaleLowerCase().replaceAll(/[^a-z]/ig,'-')}.md`, fileContents);
+  fs.writeFileSync(`./src/content/project/${name.toLocaleLowerCase().replaceAll(/[^a-z]/ig, '-')}.md`, fileContents);
   console.log('Project created with success')
   // file written successfully
 } catch (err) {

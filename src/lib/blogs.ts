@@ -1,4 +1,4 @@
-import { getCollection, CollectionEntry} from 'astro:content';
+import { getCollection, CollectionEntry } from 'astro:content';
 
 export async function getAllBlogPosts(): Promise<CollectionEntry<"blog">[]> {
     const posts = await getCollection('blog');

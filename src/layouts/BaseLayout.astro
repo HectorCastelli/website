@@ -1,10 +1,9 @@
 ---
 import Announcement from "@components/Announcement.astro";
 import BaseHead from "@components/BaseHead.astro";
+import Config from "@config";
 
 const { title } = Astro.props.frontmatter || Astro.props;
-
-import Config from "@config";
 const { author, description, keywords, announcement } = Config;
 ---
 
@@ -18,8 +17,10 @@ const { author, description, keywords, announcement } = Config;
             keywords={keywords}
         />
     </head>
-    <body class="bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 min-w-screen min-h-screen">
-        {announcement?<Announcement text={announcement}/>:null}
+    <body
+        class="bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 min-w-screen min-h-screen"
+    >
+        {announcement ? <Announcement text={announcement} /> : null}
         <slot />
     </body>
 </html>

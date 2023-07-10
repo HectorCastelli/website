@@ -1,5 +1,5 @@
 ---
-import type { Link } from '@lib/links';
+import type { Link } from "@lib/links";
 import config from "@config";
 
 interface Props {
@@ -9,13 +9,25 @@ interface Props {
 const { links = config.header.links } = Astro.props;
 ---
 
-<header class="flex-shrink-0 p-4 py-12 bg-slate-800 text-slate-200 dark:bg-slate-200 dark:text-slate-800">
-    <nav class="flex flex-row gap-6 lg:gap-24 items-center align-middle justify-center">
+<header
+    class="flex-shrink-0 p-4 py-12 bg-slate-800 text-slate-200 dark:bg-slate-200 dark:text-slate-800"
+>
+    <nav
+        class="flex flex-row gap-6 lg:gap-24 items-center align-middle justify-center"
+    >
         <a href="/">
-            <img src="/avatar.jpg" alt="a cartoonized depiction of the author"
-            class="w-10 aspect-square rounded-full object-contain ring-stone-400 ring-4 hover:ring-8 transition-shadow duration-500"
-        >
+            <img
+                src="/avatar.jpg"
+                alt="a cartoonized depiction of the author"
+                class="w-10 aspect-square rounded-full object-contain ring-stone-400 ring-4 hover:ring-8 transition-shadow duration-500"
+            />
         </a>
-        {links.map((link) => <a class="my-auto" href={link.href}>{link.text}</a>)}
+        {
+            links.map((link) => (
+                <a class="my-auto" href={link.href}>
+                    {link.text}
+                </a>
+            ))
+        }
     </nav>
 </header>

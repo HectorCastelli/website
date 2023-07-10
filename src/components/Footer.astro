@@ -8,7 +8,7 @@ interface Props {
     links?: Link[];
 }
 
-const { links = config.footer.links  } = Astro.props;
+const { links = config.footer.links } = Astro.props;
 const [topTags, _] = await getTopTagsThenRemainder(3);
 ---
 

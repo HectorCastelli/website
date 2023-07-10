@@ -10,14 +10,14 @@ const title = await rl.question('What is the title of the post? ');
 
 const fileContents = `---
 title: "${title}"
-pubDate: ${new Date().toISOString().substring(0,10)}
+pubDate: ${new Date().toISOString().substring(0, 10)}
 description: ""
 tags: []
 ---
 `
 
 try {
-  fs.writeFileSync(`./src/content/blog/${title.toLocaleLowerCase().replaceAll(/[^a-z]/ig,'-')}.md`, fileContents);
+  fs.writeFileSync(`./src/content/blog/${title.toLocaleLowerCase().replaceAll(/[^a-z]/ig, '-')}.md`, fileContents);
   console.log('Post created with success')
   // file written successfully
 } catch (err) {

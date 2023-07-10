@@ -16,7 +16,7 @@ const completedProjects = await getCompletedProjects();
 
 <CommonLayout>
     {
-        currentProjects.length>0 ? (
+        currentProjects.length > 0 ? (
             <>
                 <h1 class="text-xl mb-3">
                     Here are some things I am working on:
@@ -34,7 +34,7 @@ const completedProjects = await getCompletedProjects();
         )
     }
     {
-        completedProjects.length>0 ? (
+        completedProjects.length > 0 ? (
             <>
                 <h2 class="text-xl mb-3">
                     Here are some of my previous projects:
@@ -52,7 +52,7 @@ const completedProjects = await getCompletedProjects();
         )
     }
     {
-        abandonedProjects.length>0 ? (
+        abandonedProjects.length > 0 ? (
             <>
                 <h2 class="text-xl mb-3">
                     And these were the things I never quite managed to finish...
