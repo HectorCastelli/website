@@ -3,8 +3,13 @@ import Announcement from "@components/Announcement.astro";
 import BaseHead from "@components/BaseHead.astro";
 import Config from "@config";
 
-const { title } = Astro.props.frontmatter || Astro.props;
+interface Props {
+    title?: string;
+    frontmatter?: any;
+}
 const { author, description, keywords, announcement } = Config;
+
+const title = Astro.props.frontmatter?.title ? `${Astro.props.frontmatter.title} - gohector.com` : Astro.props.title || "";
 ---
 
 <html lang="en">
