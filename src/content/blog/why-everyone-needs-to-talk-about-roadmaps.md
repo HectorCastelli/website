@@ -1,7 +1,7 @@
 ---
 title: "Why everyone needs to talk about roadmaps"
 pubDate: 2025-07-10
-description: ""
+description: "How can you make your team effectively use your roadmap?"
 tags: ["career", "planning"]
 ---
 Over the course of the years, the way we build software has changed.
