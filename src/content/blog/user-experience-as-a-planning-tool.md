@@ -5,7 +5,6 @@ description: "How empathy can be your best tool when planning"
 tags: ["planning"]
 ---
 
-
 ## Know your users
 
 Learn how thigns are or will be used
@@ -18,3 +17,9 @@ Explore the nuance of value estimation with multiple streams of work.
 
 ## Understand you might not really know your user that well...
 Let them talk to you and give quick feedback.
+
+## Use your own product
+
+## Experiment
+
+## Talk about the problem more, not jsut hte solution
