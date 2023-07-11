@@ -35,7 +35,7 @@ You may want to represent these values with a lower resolution:
 | Feature 2 | Big | Medium |
 | Feature 3 | Medium | Big |
 
-This saves you time discussing if the 10% impact of the extra 10% of your users from "Feature 1" really is more important than the $500 from "Feature 2". Instead, you can agree that they are equivalent.
+This saves you time discussing if the impact of the extra 10% of your users from "Feature 1" really is more important than the $500 from "Feature 2". Instead, you can agree that they are equivalent.
 
 ## Prioritize across features
 
