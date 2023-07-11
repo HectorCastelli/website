@@ -13,6 +13,7 @@ export const collections = {
             pubDate: z.date(),
             description: z.string().optional(),
             tags: z.array(z.string()),
+            footNotes: z.array(z.string()).optional(),
         }),
     }),
     'project': defineCollection({
