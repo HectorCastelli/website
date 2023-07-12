@@ -13,6 +13,10 @@ const { title, author, description, keywords } = Astro.props;
 <title>{title}</title>
 <meta name="author" content={author} />
 <meta name="description" content={description} />
-<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg">
-<link rel="icon" type="image/png" href="/favicon/favicon.png">
 {keywords && <meta name="keywords" content={keywords?.join(", ")} />}
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon/favicon.png" />
+<script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="f44226ef-3a9e-46ba-b98a-2dec9cb6129c"></script>

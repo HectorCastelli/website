@@ -2,6 +2,8 @@
 
 My [personal website](https://gohector.com), as well as the articles and posts that power it.
 
+[Analytics](https://analytics.umami.is/share/4JOEokFotSrQAsr4/GoHector) tracked with [Umami](https://umami.is/).
+
 Built with [Astro](https://astro.build/).
 
 ## Commands
