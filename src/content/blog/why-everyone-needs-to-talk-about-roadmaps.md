@@ -27,19 +27,19 @@ First, capture the expected value and impact. Write this down in a way that is e
 
 For example, given the following features and their expected impact:
 
-| Feature | Revenue Growth | Users Impacted |
-| --- | --- | --- |
-| Feature 1 | $12000 | 60% |
-| Feature 2 | $12500 | 50% |
-| Feature 3 | $5000 | 90% |
+| Feature   | Revenue Growth | Users Impacted |
+| --------- | -------------- | -------------- |
+| Feature 1 | $12000         | 60%            |
+| Feature 2 | $12500         | 50%            |
+| Feature 3 | $5000          | 90%            |
 
 You may want to represent these values with a lower resolution:
 
-| Feature | Revenue Growth | Users Impacted |
-| --- | --- | --- |
-| Feature 1 | Big | Medium |
-| Feature 2 | Big | Medium |
-| Feature 3 | Medium | Big |
+| Feature   | Revenue Growth | Users Impacted |
+| --------- | -------------- | -------------- |
+| Feature 1 | Big            | Medium         |
+| Feature 2 | Big            | Medium         |
+| Feature 3 | Medium         | Big            |
 
 This saves you time discussing if the impact of the extra 10% of your users from "Feature 1" really is more important than the $500 from "Feature 2". Instead, you can agree that they are equivalent.
 
