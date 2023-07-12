@@ -37,6 +37,10 @@ export default {
                 text: "Feed (RSS)",
                 href: '/rss.xml',
             },
+            {
+                text: "Analytics",
+                href: 'https://analytics.umami.is/share/4JOEokFotSrQAsr4/GoHector'
+            }
         ]
     },
     pagination: {
