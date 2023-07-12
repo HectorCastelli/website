@@ -1,4 +1,4 @@
 ---
-name: "Career"
+name: Career
 ---
 About growing a career.

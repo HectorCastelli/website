@@ -2,7 +2,7 @@
 title: "Learning product skills"
 pubDate: 2025-10-23
 description: "A self-reflection of good product skills and practices I've picked up over the years."
-tags: ["career", "personal"]
+tags: ["personal"]
 ---
 Our field has recently been involved in an uproar of *AI*-powered tools that promise to accelerate--or even replace--the parts of our jobs that we've traditionally have been trained on. 
 Traditional training for software engineers puts an emphasis on syntax knowledge, data structures, and algorithms. While this knowledge is still important, the future lies elsewhere.

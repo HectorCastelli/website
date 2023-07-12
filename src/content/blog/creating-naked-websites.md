@@ -2,7 +2,7 @@
 title: "Creating naked websites"
 pubDate: 2018-02-05
 description: "Is the web losing its functionality in the pursuit of pretty?"
-tags: ['web-development', 'tooling']
+tags: ['web-development']
 ---
 Most web developers and designers will approach their clients with fancy layouts and sketches. But is this the best approach? I don't think so.
 
