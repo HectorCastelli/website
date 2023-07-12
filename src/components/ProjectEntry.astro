@@ -17,7 +17,7 @@ const { entry } = Astro.props;
     </a>
     {
         entry.data.image ? (
-            <img src={entry.data.image} class="order-1 h-32" />
+            <img src={entry.data.image} class="order-1 h-32 aspect-video object-contain" />
         ) : (
             ""
         )

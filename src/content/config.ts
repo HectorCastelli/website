@@ -1,5 +1,4 @@
 import { z, defineCollection } from 'astro:content';
-import { cname } from '@config';
 export const collections = {
     'tag': defineCollection({
         schema: z.object({
@@ -19,14 +18,7 @@ export const collections = {
         schema: z.object({
             name: z.string(),
             url: z.string().url().optional(),
-            image: z.preprocess((val) => {
-                let stringVal = String(val);
-                if (stringVal.startsWith("/")) {
-                    return String(`${cname}${stringVal}`)
-                } else {
-                    return stringVal
-                }
-            }, z.string().url()).optional(),
+            image: z.string().optional(),
             status: z.enum(["ongoing", "completed", "abandoned"])
         })
     }),

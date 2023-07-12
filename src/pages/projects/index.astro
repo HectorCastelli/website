@@ -21,7 +21,7 @@ const completedProjects = await getCompletedProjects();
                 <h1 class="text-xl mb-3">
                     Here are some things I am working on:
                 </h1>
-                <ol class="grid grid-cols-2 md:grid-cols-3 gap-4 align-middle">
+                <ol class="grid grid-cols-2 lg:grid-cols-3 gap-4 align-middle">
                     {currentProjects.sort().map((project) => (
                         <li class="bg-cyan-100 dark:bg-cyan-900 rounded-sm">
                             <ProjectEntry entry={project} />
@@ -39,7 +39,7 @@ const completedProjects = await getCompletedProjects();
                 <h2 class="text-xl mb-3">
                     Here are some of my previous projects:
                 </h2>
-                <ol class="grid grid-cols-2 md:grid-cols-3 gap-4 align-middle">
+                <ol class="grid grid-cols-2 lg:grid-cols-3 gap-4 align-middle">
                     {completedProjects.sort().map((project) => (
                         <li class="bg-cyan-100 dark:bg-cyan-900 rounded-sm">
                             <ProjectEntry entry={project} />
@@ -57,7 +57,7 @@ const completedProjects = await getCompletedProjects();
                 <h2 class="text-xl mb-3">
                     And these were the things I never quite managed to finish...
                 </h2>
-                <ol class="grid grid-cols-2 md:grid-cols-3 gap-4 align-middle">
+                <ol class="grid grid-cols-2 lg:grid-cols-3 gap-4 align-middle">
                     {abandonedProjects.sort().map((project) => (
                         <li class="bg-cyan-100 dark:bg-cyan-900 rounded-sm">
                             <ProjectEntry entry={project} />
