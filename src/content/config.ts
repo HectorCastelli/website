@@ -1,6 +1,5 @@
-// 1. Import utilities from `astro:content`
 import { z, defineCollection } from 'astro:content';
-// 3. Export a single `collections` object to register your collection(s)
+import { cname } from '@config';
 export const collections = {
     'tag': defineCollection({
         schema: z.object({
@@ -19,9 +18,15 @@ export const collections = {
     'project': defineCollection({
         schema: z.object({
             name: z.string(),
-            image: z.string().url().optional(),
-            description: z.string().optional(),
-            url: z.string().url(),
+            url: z.string().url().optional(),
+            image: z.preprocess((val) => {
+                let stringVal = String(val);
+                if (stringVal.startsWith("/")) {
+                    return String(`${cname}${stringVal}`)
+                } else {
+                    return stringVal
+                }
+            }, z.string().url()).optional(),
             status: z.enum(["ongoing", "completed", "abandoned"])
         })
     }),
