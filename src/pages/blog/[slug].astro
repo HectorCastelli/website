@@ -44,11 +44,11 @@ const { Content } = await currentBlog.render();
         </ul>
     </header>
     <main
-        class="prose prose-slate prose-a:text-cyan-900 prose-a:hover:text-cyan-700 dark:prose-a:text-cyan-200 dark:prose-a:hover:text-cyan-400"
+        class="prose dark:prose-invert prose-slate prose-a:text-cyan-900 prose-a:hover:text-cyan-700 dark:prose-a:text-cyan-200 dark:prose-a:hover:text-cyan-400"
     >
         <Content />
     </main>
-    {currentBlog.data.footNotes ? <aside class="mt-16 prose prose-sm prose-slate prose-a:text-cyan-900 prose-a:hover:text-cyan-700 dark:prose-a:text-cyan-200 dark:prose-a:hover:text-cyan-400">
+    {currentBlog.data.footNotes ? <aside class="mt-16 prose dark:prose-invert prose-sm prose-slate prose-a:text-cyan-900 prose-a:hover:text-cyan-700 dark:prose-a:text-cyan-200 dark:prose-a:hover:text-cyan-400">
         <h1>Footnotes</h1>
         <ul>
             {currentBlog.data.footNotes.map(f=><li><Fragment set:html={micromark(f)}/></li>)}
