@@ -30,6 +30,7 @@ const { Content } = await currentBlog.render();
 <CommonLayout title={currentBlog.data.title}>
     <header class="mb-4">
         <h1 class="text-6xl">{currentBlog.data.title}</h1>
+        {currentBlog.data.description ? <p class="text-md font-thin mb-2">{currentBlog.data.description}</p> : ''}
         <h3 class="text-sm font-thin">
             {currentBlog.data.pubDate.toDateString()}
         </h3>
