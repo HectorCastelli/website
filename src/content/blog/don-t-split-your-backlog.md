@@ -19,26 +19,10 @@ Likewise, when the resources or impact required are similar, the stakeholder inv
 
 The theme is clear, working on similar items allows for better, or at least more predictable, output.
 
-## Where categorization 
+## Reaching a compromise
 
-Lose sight of competing priorities
+The key action here is to **merge regularly**, the separate backlogs that exist.
 
-Fail to adapt to Conway's law, cause problems and frustrations
+By the time this activity happens, items should be well-understood and that the headspace of those involved in merging the backlogs should be focused on deciding which items are more aligned to the goals of the project.
 
-## How can we reconcile these two opposites?
-
-The key action here is to merge, **regularly**, the separate backlogs that exist.
-
-By the point this activity happens, items should be well-understood, and the effort should be used deciding the order of importance of the items relative to each other.
-
-
-
-## A compromise
-
-Talk about how we should supress our instinct and merge all the backlogs.
-
-Link to previous post about shared roadmap.
-
-HIghlight that in the end, there are three types of things: Things that need to happen soon, things that need to happen eventually, and things that don't really need to happen.
-
-Final note that this is not a one-off exercise and should be always evolving and re-prioritizing.
+Finally, the merged backlog is the **only** backlog that matters when planning is a topic. Your separate backlogs are not useful for the teams executing the work, and expecting them to execute on all separate topics at the same rate should never be expected.
