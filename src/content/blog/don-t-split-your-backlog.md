@@ -5,9 +5,9 @@ description: "Humans are categorization machines, but bad habits can prevent us 
 tags: ["planning"]
 ---
 
-[Humans like to categorize](https://www.scientificamerican.com/article/wired-for-categorization/), and while this instinct is useful, it may need to be tamed when it comes to work.
+[Humans like to categorize](https://www.scientificamerican.com/article/wired-for-categorization/), and while this instinct is useful, it may need taming when it comes to work.
 
-A common anti-pattern in multidisciplinary teams is the "categorized backlog", where initiatives get placed neatly into buckets based on their characteristics. This, usually, ends up with two effects: confusion regarding the priorities of the team, and frustration when the work inevitably spills out from that theoretical neat bucket.
+A common anti-pattern in multidisciplinary teams is the "categorized backlog": where initiatives get placed neatly into buckets based on their characteristics. This, usually, ends up with two effects: confusion regarding the priorities of the team, and frustration when the work inevitably spills out from that theoretical neat bucket.
 
 ## Why do we still do it?
 
