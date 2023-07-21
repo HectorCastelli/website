@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths-ignore:
-      - .vscode/*
+      - .vscode/**
       - README.md
-      - scripts/
+      - scripts/**
   workflow_dispatch:
 
 permissions:
