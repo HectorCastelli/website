@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - .vscode/*
+      - README.md
+      - scripts/
   workflow_dispatch:
 
 permissions:
