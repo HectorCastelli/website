@@ -14,9 +14,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  check-changelog:
-    uses: powerd6/.github/.github/workflows/check-changelog.yml@main
-    secrets: inherit
   build:
     runs-on: ubuntu-latest
     steps:
