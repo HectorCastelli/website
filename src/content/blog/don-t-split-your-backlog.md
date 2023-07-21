@@ -26,3 +26,7 @@ The key action here is to **merge regularly**, the separate backlogs that exist.
 By the time this activity happens, items should be well-understood and that the headspace of those involved in merging the backlogs should be focused on deciding which items are more aligned to the goals of the project.
 
 Finally, the merged backlog is the **only** backlog that matters when planning is a topic. Your separate backlogs are not useful for the teams executing the work, and expecting them to execute on all separate topics at the same rate should never be expected.
+
+----
+notes:
+> just a high level view from your article, sadly backlog can be taken as many things in the industry, I will give a definition... also, I think you need more visuals, such as why something will not fit in your backlog if it is your team work
