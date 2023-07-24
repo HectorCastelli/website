@@ -64,3 +64,10 @@ Be reassured, this is not a deficiency of your efforts to merge the backlogs. It
 Finally, the merged backlog is the **only** backlog that matters. Your separate backlogs are not useful for the teams executing the work, and expecting them to execute on all separate topics at the same rate should never be expected.
 
 By all means, keep splitting into smaller, focused, groups to discuss and discover the necessary information. Just don't forget to merge.
+
+Notes:
+
+What happens when business doesn't agree on priorities:
+- Team will try to risk-manage and take the least risky options and keep themselves safe instead of focusing on business value.
+- "What happens when you have too many initiatives in the backlog"?
+- Not only look at priorities for your team, also check other teams, because things may impact you as well.
