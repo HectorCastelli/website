@@ -1,7 +1,12 @@
 {
   "recommendations": [
     "astro-build.astro-vscode",
-    "yoavbls.pretty-ts-errors"
+    "bradlc.vscode-tailwindcss",
+    "meganrogge.template-string-converter",
+    "standard.vscode-standard",
+    "streetsidesoftware.code-spell-checker",
+    "yoavbls.pretty-ts-errors",
+    "yzhang.markdown-all-in-one"
   ],
   "unwantedRecommendations": []
 }
