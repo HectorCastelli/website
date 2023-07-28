@@ -1,17 +1,17 @@
 ---
 title: "Your split backlog is failing your team"
 pubDate: 2023-07-24
-description: "How poorly communicated priorities poison organizations and lead to underperforming teams"
+description: "How poorly-communicated priorities poison organizations and lead to underperforming teams"
 tags: ["planning", "software"]
 ---
 
-As companies scale, the size of initiatives they can take-on increases, as does the complexity. While ad-hoc decisions could work for small companies, the scale of teams (their size, and diversity) forces companies to reconsider how they communicate intent and strategy regarding their product changes.
+As companies scale, the size of initiatives they can take-on increases, as does the complexity. The scales of teams (their size, and diversity) forces companies to reconsider how they communicate the intent and strategy behind their product changes.
 
 ## Starting with a backlog
 
 The common approach to capture the scope and communicate the priority of work items is the backlog: A sorted list containing all work items required to be completed, ordered by a combination of value, priority, timeliness, and feasibility.
 
-This backlog is meant to be used by the teams executing the work as a guide. A healthy organization will allow for teams to make decisions regarding how they execute the work from the backlog. Some examples of this are:
+This backlog should be a guide for the teams executing the work. Additionally, a healthy organization will allow for teams to make decisions regarding how they execute the work from the backlog. Some examples of these decisions are:
 
 - **Changing the execution order**: Given two work items of similar scope and value, but one of them is blocked, the team will chose to take the unblocked one and postpone the other;
 - **Discovering details**: Given a work item that is not clearly understood, the team may choose to delay it's execution, and spend more time trying to discover the missing or incomplete information;
