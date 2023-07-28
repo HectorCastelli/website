@@ -128,7 +128,7 @@ Usually, this boils down to "delete your multiple excel files and use your JIRA 
 
 Do not fall back into the previous model, where each stakeholder fights for attention and confuses the teams regarding what's next in the roadmap.
 
-For some teams, this means "talk to the PM first", for others it means "we don't discuss unprioritized initiatives".
+For some teams, this means "align with the project manager first", using them as a safety-layer in front of the team. For others, it means refusing to work on unprioritized initiatives.
 
 ### 👍 Do: Allow teams to safely decide
 
