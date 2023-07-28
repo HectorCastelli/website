@@ -114,12 +114,22 @@ When communicating with the teams, avoid communication that relies on "quotas" f
 - ["Multitasking isn't working: a science-backed approach to a better day" by Allaya Cooks-Campbell](https://www.betterup.com/blog/multitasking)
 - ["Why Multitasking Doesn't Work" by Douglas Merrill](https://www.forbes.com/sites/douglasmerrill/2012/08/17/why-multitasking-doesnt-work/).
 
-Realistically, teams work with more fluidity and quotas make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort. Instead, define goals -These should be feasible, even when taking into account all the other initiatives that will be worked on- for your team at a time-resolution larger than their unit-of-planning, which is usually sprints.
+Realistically, teams work with more fluidity and quotas make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort. Instead, define goals for your team at a time-resolution larger than their unit-of-planning, which is usually sprints. Importantly, these goals should be feasible, even when taking into account all the other initiatives that will be worked on.
 
-### 👍 Do: Allow teams to safely decide
+### 👍 Do: Provide clear information
 
 Make sure that the teams are able to access the relevant information to make the correct calls.
 
 Document the expected value, impact, and the dependencies. Prefer searchable and linkable formats that facilitate the discovery of this information instead of relying on word-of-mouth or fractured sources of information. Regardless of how your team works, the reasons behind the execution should be clear.
 
 Usually, this boils down to "delete your multiple excel files and use your JIRA tickets".
+
+### 🙅 Do not: Ask for work before prioritization
+
+Do not fall back into the previous model, where each stakeholder fights for attention and confuses the teams regarding what's next in the roadmap.
+
+For some teams, this means "talk to the PM first", for others it means "we don't discuss unprioritized initiatives".
+
+### 👍 Do: Allow teams to safely decide
+
+Allow teams to make decisions based on the information provided, without fearing for their jobs if they make a mistake. Foster [psychological safety](https://www.themuse.com/advice/effective-teams-psychological-safety-in-the-workplace), and make sure tha when things don't go as planned, you learn from the mistakes and move past them without assigning blame.
