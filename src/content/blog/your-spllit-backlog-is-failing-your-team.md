@@ -114,12 +114,12 @@ When communicating with the teams, avoid communication that relies on "quotas" f
 - ["Multitasking isn't working: a science-backed approach to a better day" by Allaya Cooks-Campbell](https://www.betterup.com/blog/multitasking)
 - ["Why Multitasking Doesn't Work" by Douglas Merrill](https://www.forbes.com/sites/douglasmerrill/2012/08/17/why-multitasking-doesnt-work/).
 
-Realistically, teams work with more fluidity and hard-quotas make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort.
+Realistically, teams work with more fluidity and quotas make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort. Instead, define goals -These should be feasible, even when taking into account all the other initiatives that will be worked on- for your team at a time-resolution larger than their unit-of-planning, which is usually sprints.
 
 ### 👍 Do: Allow teams to safely decide
 
 Make sure that the teams are able to access the relevant information to make the correct calls.
 
-Document the expected value, impact, and the dependencies. Prefer searchable and linkable formats that facilitate the discovery of this information instead of relying on word-of-moth or fractured source of information.
+Document the expected value, impact, and the dependencies. Prefer searchable and linkable formats that facilitate the discovery of this information instead of relying on word-of-mouth or fractured sources of information. Regardless of how your team works, the reasons behind the execution should be clear.
 
 Usually, this boils down to "delete your multiple excel files and use your JIRA tickets".
