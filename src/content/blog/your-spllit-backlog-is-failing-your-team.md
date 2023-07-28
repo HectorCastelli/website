@@ -19,7 +19,7 @@ This backlog should be a guide for the teams executing the work. Additionally, a
 
 ## Dealing with complexity
 
-As the nature of work increase in complexity, things get harder to prioritize. Since [humans like to categorize](https://www.scientificamerican.com/article/wired-for-categorization/), the "categorized backlog" appears as a way to simplify the prioritization and planning of work. This pattern usually appears with the creation of "parallel" backlogs, managed by different group of stakeholders, which cover one area or type of work.
+As the nature of work increase in complexity, things get harder to prioritize. Since [humans like to categorize](https://www.scientificamerican.com/article/wired-for-categorization/), the "categorized backlog" appears as a way to simplify the prioritization and planning process. This pattern usually manifests with the creation of "parallel" backlogs, managed by different group of stakeholders, which cover one area or type of work.
 
 Two very frequent occurrences are: Product vs. [Tech-Debt](https://martinfowler.com/bliki/TechnicalDebt.html); and the "one backlog per feature" approach. If you work on a multidisciplinary team, these probably exist within your organization.
 
