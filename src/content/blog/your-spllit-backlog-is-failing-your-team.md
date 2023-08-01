@@ -5,7 +5,7 @@ description: "How poorly-communicated priorities poison organizations and lead t
 tags: ["planning", "software"]
 ---
 
-As companies scale, the size of initiatives they can take-on increases, as does the complexity. The scales of teams (their size, and diversity) forces companies to reconsider how they communicate the intent and strategy behind their product changes.
+As companies scale, the size of initiatives they can take on increases, as does the complexity. The scales of teams (their size, and diversity) forces companies to reconsider how they communicate the intent and strategy behind their product changes.
 
 ## Starting with a backlog
 
@@ -14,7 +14,7 @@ The common approach to capture the scope and communicate the priority of work it
 This backlog should be a guide for the teams executing the work. Additionally, a healthy organization will allow for teams to make decisions regarding how they execute the work from the backlog. Some examples of these decisions are:
 
 - **Changing the execution order**: Given two work items of similar scope and value, but one of them is blocked, the team will chose to take the unblocked one and postpone the other;
-- **Discovering details**: Given a work item that is not clearly understood, the team may choose to delay it's execution, and spend more time trying to discover the missing or incomplete information;
+- **Discovering details**: Given a work item that is not clearly understood, the team may choose to delay the execution, and spend more time trying to discover the missing or incomplete information;
 - **Cancelling work**: Given a work item that implements a feature that already exists elsewhere, the team will cancel the immediate work item and spend their energy elsewhere.
 
 ## Dealing with complexity
@@ -38,7 +38,7 @@ Unfortunately, this approach has three common side-effects: Alienated stakeholde
 
 Stakeholders accountable for specific areas of a backlog may be alienated to the needs of other stakeholder or the organization. As they work on refining and prioritizing their specific section of the backlog, their view (and subsequently the way they communicate) regarding priorities becomes biased.
 
-One very common manifestation of this is the usage of "First-priority", without the full context of the other initiatives. This, in turn, results in a loss of credibility and impact regarding the information presented.
+A common consequence of this is the use of "First-priority", without the full context of the other initiatives. This, in turn, results in a loss of credibility and impact regarding the information presented.
 
 ### Short-sighted prioritization
 
@@ -93,7 +93,7 @@ With this in mind, here are the likely choices and their implications:
 
 The team picks "Time-based notifications" first, since it doesn't have dependencies and was explicitly asked for by the stakeholders of group one.
 
-Then, then they choose "Store greeters" second, as it is the only task from group two that doesn't have dependencies. This means that the most important activity from the second group is now blocked by it's dependency for an extra cycle.
+Then, then they choose "Store greeters" second, as it is the only task from group two without dependencies. This means that the most important activity from the second group is now blocked by it's dependency for an extra cycle.
 
 #### Scenario two:
 
@@ -103,11 +103,11 @@ Since that task is also an ask the first group of stakeholder, they also add "St
 
 ## Consequences
 
-### Create inequity
+### Creating inequity
 
 When the responsibility of executing work items is assigned to the teams, the stakeholders retain accountability. However, due to the lack of clarity, things that might be obvious to the stakeholders are not to the teams. This means that those responsible for the work are unclear on the priorities that those accountable will ultimately judge them on.
 
-### Harming psychological safety
+### Harms psychological safety
 
 The inequity opens the door for toxic behaviors between the stakeholders and the teams. This harms psychological safety in the organization.
 
@@ -115,7 +115,7 @@ The inequity opens the door for toxic behaviors between the stakeholders and the
 
 Psychological safety is [essential for innovation](https://www.thoughtworks.com/en-es/insights/blog/product-innovation/psychological-safety-product-innovation). By harming it, teams are discouraged from sharing ideas, questions, concerns or making mistakes.
 
-The fear of making mistakes encourages teams to take as little risk as possible.
+The fear of making mistakes leads teams to avoid taking risks whenever possible.
 
 ### Poisoning communication
 
@@ -140,7 +140,7 @@ When communicating with the teams, avoid communication that relies on "quotas" f
 - ["Multitasking isn't working: a science-backed approach to a better day" by Allaya Cooks-Campbell](https://www.betterup.com/blog/multitasking)
 - ["Why Multitasking Doesn't Work" by Douglas Merrill](https://www.forbes.com/sites/douglasmerrill/2012/08/17/why-multitasking-doesnt-work/).
 
-Realistically, teams work with more fluidity and quotas make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort. Instead, define goals for your team at a time-resolution larger than their unit-of-planning, which is usually sprints. Importantly, these goals should be feasible, even when taking into account all the other initiatives that will be worked on.
+In reality, teams work with more fluidity, and implementing quotas can make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort. Instead, define goals for your team at a time-resolution larger than their unit-of-planning, which is usually sprints. Importantly, these goals should be feasible, even when taking into account all the other initiatives that will be worked on.
 
 ### 👍 Do: Provide clear information
 
@@ -154,22 +154,22 @@ Usually, this boils down to "delete your multiple excel files and use your JIRA 
 
 Do not fall back into the previous model, where each stakeholder fights for attention and confuses the teams regarding what's next in the roadmap.
 
-For some teams, this means "align with the project manager first", using them as a safety-layer in front of the team. For others, it means refusing to work on unprioritized initiatives.
+For some teams, this means "align with the project manager first," using them as a safety layer in front of the team. For others, it means refusing to work on unprioritized initiatives.
 
 ### 👍 Do: Allow teams to safely decide
 
 Allow teams to make decisions based on the information provided, without fearing for their jobs if they make a mistake. Foster [psychological safety](https://www.themuse.com/advice/effective-teams-psychological-safety-in-the-workplace), and make sure that when things don't go as planned, you learn from the mistakes and move past them without assigning blame.
 
-## Revisiting our example
+## Revisiting the Example
 
 In the example, the way priorities were communicated was not clear and the team implementing the changes was the one ultimately making the decision on which feature they would tackle first, without the necessary knowledge to do so.
 
 If the mitigating measures above were implemented, the conversations to determine priorities could have been closer to the optimal choice.
 
-When analyzing all initiatives together (like we did with the table of all the initiatives and their values), we would see that the most valuable piece was "In-store digital coupons". We would also notice that it requires the work for "Targeted emails" to be complete before it begins.
+When analyzing all initiatives together (as we did with the table of all the initiatives and their values), we would see that the most valuable piece was "In-store digital coupons". We would also notice that it requires the work for "Targeted emails" to be complete before it begins.
 
 The team picks "Targeted emails" first, to tackle the dependency of the most-valuable feature. This enables the business to deliver massive value in the next period.
 
 Since the priorities are clear and the team feels empowered to make a non-obvious choice: To minimize context changes and to avoid blocking, the team chooses to tackle "Time-based notifications" next.
 
-This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also minimized cognitive load for the next cycle.
+This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also reduced cognitive load for the next cycle.
