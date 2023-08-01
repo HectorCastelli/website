@@ -54,26 +54,52 @@ Contrary to the effect on those discovering work items, teams executing work ite
 
 Additionally, as priorities are presented, there may be no clear way to distinguish which of the "first priorities" is the *firstest*.
 
-### An example:
+## An example:
 
-Imagine a retailer that has physical and digital presence. In this retailer, two groups of stakeholders are refining features, one focusing on the digital experience, and one focusing on the physical experience. The two teams have their own way of visualizing their features, separated from other groups.
+Imagine a retailer that has physical and digital presence. In this retailer, two groups of stakeholders are refining features, one focusing on the digital experience, and one focusing on the physical experience. The two teams have their own way of visualizing their features, separated from the other group.
 
 This is the (aggregated) list of initiatives for each stakeholder group:
 
 | Stakeholder group | Initiative | Revenue growth | Prerequisites |
 | :---: | --- | :---: | --- |
-| Group A | Time-based notifications | 3% | | 
-| Group A | Targeted emails | 2% | | 
-| Group B | In-store digital coupons | 10% | Targeted emails | 
-| Group B | Store greeters | 1% | | 
+| Group 1 | Time-based notifications | 3% | | 
+| Group 1 | Targeted emails | 2% | | 
+| Group 2 | In-store digital coupons | 10% | Targeted emails | 
+| Group 2 | Store greeters | 1% | | 
 
-For "Group A", the "Time-based notifications" initiative should be the first priority. While for "Group B", the "In-store digital coupons" is the way to go, but needs some work to happen before it can be delivered.
+Keep in mind that a table like the one above is not available to any of those involved, and is here to illustrate the scenario to you, the reader.
 
-Without the collaboration between the two groups of stakeholders, the teams involved in the execution will hear the following statements:
+For the first group, the "Time-based notifications" initiative should be the first priority. While for the second group, the "In-store digital coupons" is the way to go, but needs some work to happen before it can be delivered.
 
-> Group A: Team, please focus on time-based notifications as your top priority.
+Without the collaboration between the two groups of stakeholders, the teams involved in the execution hear the following statements:
 
-> Group B: Team, we want you to enable in-store digital coupons as soon as possible. We know this requires targeted emails, so please tackle that first.
+> First group: Team, please focus on time-based notifications as your top priority.
+
+> Second group: Team, we want you to enable in-store digital coupons as soon as possible. We know this requires targeted emails, so please tackle that first.
+
+With this level of information, the correct course of action is not clear to the team, and therefore there is risk that it will not be executed.
+
+### Likely outcomes and their risks
+
+Let's assume that: 
+
+- the team only has the capacity to execute on two of these initiatives immediately;
+- all initiatives are about the same in terms of effort required;
+- the team believes wants their choice to make both groups of stakeholders happy;
+
+With this in mind, here are the likely choices and their implications:
+
+#### Scenario one:
+
+The team picks "Time-based notifications" first, since it doesn't have dependencies and was explicitly asked for by the stakeholders of group one.
+
+Then, then they choose "Store greeters" second, as it is the only task from group two that doesn't have dependencies. This means that the most important activity from the second group is now blocked by it's dependency for an extra cycle.
+
+#### Scenario two:
+
+The team chooses to execute "Targeted emails" to tackle the dependency first.
+
+Since that task is also an ask the first group of stakeholder, they also add "Store greeters" from the second group of stakeholders. The first group of stakeholders may feel like their priorities were not heard.
 
 ## Consequences
 
@@ -132,4 +158,18 @@ For some teams, this means "align with the project manager first", using them as
 
 ### 👍 Do: Allow teams to safely decide
 
-Allow teams to make decisions based on the information provided, without fearing for their jobs if they make a mistake. Foster [psychological safety](https://www.themuse.com/advice/effective-teams-psychological-safety-in-the-workplace), and make sure tha when things don't go as planned, you learn from the mistakes and move past them without assigning blame.
+Allow teams to make decisions based on the information provided, without fearing for their jobs if they make a mistake. Foster [psychological safety](https://www.themuse.com/advice/effective-teams-psychological-safety-in-the-workplace), and make sure that when things don't go as planned, you learn from the mistakes and move past them without assigning blame.
+
+## Revisiting our example
+
+In the example, the way priorities were communicated was not clear and the team implementing the changes was the one ultimately making the decision on which feature they would tackle first, without the necessary knowledge to do so.
+
+If the mitigating measures above were implemented, the conversations to determine priorities could have been closer to the optimal choice.
+
+When analyzing all initiatives together (like we did with the table of all the initiatives and their values), we would see that the most valuable piece was "In-store digital coupons". We would also notice that it requires the work for "Targeted emails" to be complete before it begins.
+
+The team picks "Targeted emails" first, to tackle the dependency of the most-valuable feature. This enables the business to deliver massive value in the next period.
+
+Since the priorities are clear and the team feels empowered to make a non-obvious choice: To minimize context changes and to avoid blocking, the team chooses to tackle "Time-based notifications" next.
+
+This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also minimized cognitive load for the next cycle.
