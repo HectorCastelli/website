@@ -95,11 +95,41 @@ The team picks "Time-based notifications" first, since it doesn't have dependenc
 
 Then, then they choose "Store greeters" second, as it is the only task from group two without dependencies. This means that the most important activity from the second group is now blocked by it's dependency for an extra cycle.
 
+```mermaid
+gantt
+    dateFormat DDD
+    axisFormat %j
+    title Scenario One
+
+    section Group 1
+    Time-based notifications :active, a, 0, 60d
+    Targeted emails : b, after a, 60d
+
+    section Group 2
+    In-store digital coupons : c, after b d, 60d
+    Store greeters :active, d, 0, 60d
+```
+
 #### Scenario two:
 
 The team chooses to execute "Targeted emails" to tackle the dependency first.
 
 Since that task is also an ask the first group of stakeholder, they also add "Store greeters" from the second group of stakeholders. The first group of stakeholders may feel like their priorities were not heard.
+
+```mermaid
+gantt
+    dateFormat DDD
+    axisFormat %j
+    title Scenario Two
+
+    section Group 1
+    Time-based notifications : a, after b, 60d
+    Targeted emails :active b, 0, 60d
+
+    section Group 2
+    In-store digital coupons : c, after b d, 60d
+    Store greeters :active, d, 0, 60d
+```
 
 ## Consequences
 
@@ -173,3 +203,18 @@ The team picks "Targeted emails" first, to tackle the dependency of the most-val
 Since the priorities are clear and the team feels empowered to make a non-obvious choice: To minimize context changes and to avoid blocking, the team chooses to tackle "Time-based notifications" next.
 
 This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also reduced cognitive load for the next cycle.
+
+```mermaid
+gantt
+    dateFormat DDD
+    axisFormat %j
+    title Revisited Scenario
+
+    section Group 1
+    Time-based notifications :active, a, 0, 60d
+    Targeted emails :active b, 0, 60d
+
+    section Group 2
+    In-store digital coupons : c, after a b, 60d
+    Store greeters : d, after a b, 60d
+```
