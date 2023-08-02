@@ -6,7 +6,7 @@ export default {
     description: "My personal website",
     keywords: ["blog", "portfolio", "personal"],
     // announcement: undefined,
-    announcement: "This website is under construction. There is a high change some links will not work.",
+    announcement: "This website is under construction. There is a high chance some links will not work.",
     header: {
         links: [
             {
