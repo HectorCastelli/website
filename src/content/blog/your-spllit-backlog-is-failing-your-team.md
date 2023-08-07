@@ -1,7 +1,7 @@
 ---
 title: "Your split backlog is failing your team"
-pubDate: 2023-07-24
-description: "How poorly-communicated priorities poison organizations and lead to underperforming teams"
+pubDate: 2023-08-07
+description: "How poorly-communicated priorities poison organizations and lead to under-performing teams"
 tags: ["planning", "software"]
 ---
 
@@ -179,9 +179,7 @@ When analyzing all initiatives together (as we did with the table of all the ini
 
 The team picks "Targeted emails" first, to tackle the dependency of the most-valuable feature. This enables the business to deliver massive value in the next period.
 
-Since the priorities are clear and the team feels empowered to make a non-obvious choice: To minimize context changes and to avoid blocking, the team chooses to tackle "Time-based notifications" next.
-
-This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also reduced cognitive load for the next cycle.
+Since the priorities are clear and the team feels empowered to make a non-obvious choice: To minimize context changes and to avoid blocking, the team chooses to tackle "Time-based notifications" next. This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also reduced cognitive load for the next cycle.
 
 ![Revisited roadmap][revisited-roadmap]
 
