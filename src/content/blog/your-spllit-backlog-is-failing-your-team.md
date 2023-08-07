@@ -93,45 +93,25 @@ With this in mind, here are the likely choices and their implications:
 
 The team picks "Time-based notifications" first, since it doesn't have dependencies and was explicitly asked for by the stakeholders of group one.
 
-Then, then they choose "Store greeters" second, as it is the only task from group two without dependencies. This means that the most important activity from the second group is now blocked by it's dependency for an extra cycle.
+Then, then they choose "Store greeters" second, as it is the only task from group two without dependencies.
 
-```mermaid
-gantt
-    dateFormat DDD
-    axisFormat %j
-    title Scenario One
+![Scenario one][scenario-one]
 
-    section Group 1
-    Time-based notifications :active, a, 0, 60d
-    Targeted emails : b, after a, 60d
-
-    section Group 2
-    In-store digital coupons : c, after b d, 60d
-    Store greeters :active, d, 0, 60d
-```
+This means that the most important activity from the second group is now blocked by it's dependency for an extra cycle, meaning that the value add is delayed and the business suffers for it.
 
 #### Scenario two:
 
 The team chooses to execute "Targeted emails" to tackle the dependency first.
 
-Since that task is also an ask the first group of stakeholder, they also add "Store greeters" from the second group of stakeholders. The first group of stakeholders may feel like their priorities were not heard.
+Since that task is also an ask the first group of stakeholder, they also add "Store greeters" from the second group of stakeholders.
 
-```mermaid
-gantt
-    dateFormat DDD
-    axisFormat %j
-    title Scenario Two
+![Scenario two][scenario-two]
 
-    section Group 1
-    Time-based notifications : a, after b, 60d
-    Targeted emails :active b, 0, 60d
-
-    section Group 2
-    In-store digital coupons : c, after b d, 60d
-    Store greeters :active, d, 0, 60d
-```
+Regardless of the intentions, the first group of stakeholders may feel like their priorities were not heard. The team is also more stressed, which affects the business due to [lower productivity, lower quality, and higher attrition](https://arxiv.org/pdf/1701.05789.pdf).
 
 ## Consequences
+
+Despite the mistakes in the above example being simple to spot, things are often more complicated in the real world. Additionally, some of the effects are more subtle, and much more threatening to the life of an organization.
 
 ### Creating inequity
 
@@ -167,7 +147,6 @@ When communicating with the teams, avoid communication that relies on "quotas" f
 
 - ["You Can’t Multitask, So Stop Trying" by Paul Atchley](https://hbr.org/2010/12/you-cant-multi-task-so-stop-tr)
 - ["Why human brains are not designed to multi-task" by Julia Thomas](https://brainfodder.org/multi-tasking-doesnt-work/)
-- ["Multitasking isn't working: a science-backed approach to a better day" by Allaya Cooks-Campbell](https://www.betterup.com/blog/multitasking)
 - ["Why Multitasking Doesn't Work" by Douglas Merrill](https://www.forbes.com/sites/douglasmerrill/2012/08/17/why-multitasking-doesnt-work/).
 
 In reality, teams work with more fluidity, and implementing quotas can make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort. Instead, define goals for your team at a time-resolution larger than their unit-of-planning, which is usually sprints. Importantly, these goals should be feasible, even when taking into account all the other initiatives that will be worked on.
@@ -204,17 +183,8 @@ Since the priorities are clear and the team feels empowered to make a non-obviou
 
 This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also reduced cognitive load for the next cycle.
 
-```mermaid
-gantt
-    dateFormat DDD
-    axisFormat %j
-    title Revisited Scenario
+![Revisited roadmap][revisited-roadmap]
 
-    section Group 1
-    Time-based notifications :active, a, 0, 60d
-    Targeted emails :active b, 0, 60d
-
-    section Group 2
-    In-store digital coupons : c, after a b, 60d
-    Store greeters : d, after a b, 60d
-```
+[scenario-one]: /images/content/blog/your-split-backlog-is-failing-your-team/scenario-one.mmd.svg "Scenario one: The most valuable feature is left to the last moment, and the business suffers for it."
+[scenario-two]: /images/content/blog/your-split-backlog-is-failing-your-team/scenario-two.mmd.svg "Scenario two: The team tries to balance stakeholders and they suffer with change of context."
+[revisited-roadmap]: /images/content/blog/your-split-backlog-is-failing-your-team/revisited-scenario.mmd.svg "A possible solution: The team focuses on similar tasks, ensuring that value is delivered timely and with less stress."
