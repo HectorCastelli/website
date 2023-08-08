@@ -45,5 +45,16 @@ export default {
     },
     pagination: {
         blog: 6,
-    }
+    },
+    socialLinks: [
+        {
+            name: "🐦 twitter",
+            link: "https://twitter.com/ZektorH"
+        },
+
+        {
+            name: "🗄️ linkedIn",
+            link: "https://www.linkedin.com/in/hectorzacharias/"
+        }
+    ]
 }
