@@ -2,7 +2,7 @@
 import { getTag } from "@lib/tags";
 
 interface Props {
-    tag: string;
+  tag: string;
 }
 
 const { tag } = Astro.props;
@@ -10,15 +10,4 @@ const { tag } = Astro.props;
 const tagEntry = await getTag(tag);
 ---
 
-{
-    tagEntry ? (
-        <a
-            href={`/tags/${tagEntry?.slug}`}
-            class="text-cyan-900 hover:text-cyan-700 dark:text-cyan-200 dark:hover:text-cyan-400"
-        >
-            {tagEntry?.data.name}
-        </a>
-    ) : (
-        ""
-    )
-}
+{tagEntry ? <a href={`/tags/${tagEntry?.slug}`}>{tagEntry?.data.name}</a> : ""}

@@ -8,34 +8,32 @@ const [topSixTags, remainingTags] = await getTopTagsThenRemainder();
 ---
 
 <CommonLayout title="Blog Tags">
-    <h1 class="text-xl mb-3">
-        I post about all sorts of things, but here are the more popular topics:
-    </h1>
-    <ol class="flex flex-row flex-wrap gap-4 align-middle">
-        {
-            topSixTags.map((tag) => (
-                <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-                    <Tag tag={tag} />
-                </li>
-            ))
-        }
-    </ol>
+  <h1>
+    I post about all sorts of things, but here are the more popular topics:
+  </h1>
+  <ol>
     {
-        remainingTags.length > 0 ? (
-            <>
-                <h2 class="text-lg mb-3 mt-6">
-                    And these are the less popular, alphabetically:
-                </h2>
-                <ol class="flex flex-row flex-wrap gap-4 align-middle">
-                    {remainingTags.sort().map((tag) => (
-                        <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-                            <Tag tag={tag} />
-                        </li>
-                    ))}
-                </ol>
-            </>
-        ) : (
-            ""
-        )
+      topSixTags.map((tag) => (
+        <li>
+          <Tag tag={tag} />
+        </li>
+      ))
     }
+  </ol>
+  {
+    remainingTags.length > 0 ? (
+      <>
+        <h2>And these are the less popular, alphabetically:</h2>
+        <ol>
+          {remainingTags.sort().map((tag) => (
+            <li>
+              <Tag tag={tag} />
+            </li>
+          ))}
+        </ol>
+      </>
+    ) : (
+      ""
+    )
+  }
 </CommonLayout>

@@ -3,36 +3,33 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
 <BaseLayout title="Page not found!">
-    <main
-        class="lg:max-w-screen-xl mx-auto h-max p-4 md:p-11 flex flex-col gap-y-4 justify-center items-center"
-    >
-        <h2 class="text-7xl">Oops...</h2>
-        <h1 class="text-2xl">Seems like I've misplaced a link.</h1>
-        <p class="text-lg">
-            If you expected something to be in this location, please <a
-                class="text-cyan-900 hover:text-cyan-700 dark:text-cyan-200 dark:hover:text-cyan-400"
-                id="report-link">report it</a
-            >, and I will look into it promptly.
-        </p>
-        <script is:inline>
-            window.onload = (e) => {
-                var issue = {
-                    title: "404 page found: ",
-                    body: [
-                        `I've reached an URL that responded with a 404 link.`,
-                        ``,
-                        `The URL is question is "${document.URL}".`,
-                    ].join("\n"),
-                    labels: ["bug"],
-                };
-                document.getElementById(
-                    "report-link"
-                ).href = `https://github.com/hectorcastelli/website/issues/new?title=${encodeURIComponent(
-                    issue.title
-                )}&body=${encodeURIComponent(
-                    issue.body
-                )}&labels=${encodeURIComponent(issue.labels.join(","))}`;
-            };
-        </script>
-    </main>
+  <main>
+    <h2>Oops...</h2>
+    <h1>Seems like I've misplaced a link.</h1>
+    <p>
+      If you expected something to be in this location, please <a
+        id="report-link">report it</a
+      >, and I will look into it promptly.
+    </p>
+    <script is:inline>
+      window.onload = (e) => {
+        var issue = {
+          title: "404 page found: ",
+          body: [
+            `I've reached an URL that responded with a 404 link.`,
+            ``,
+            `The URL is question is "${document.URL}".`,
+          ].join("\n"),
+          labels: ["bug"],
+        };
+        document.getElementById(
+          "report-link"
+        ).href = `https://github.com/hectorcastelli/website/issues/new?title=${encodeURIComponent(
+          issue.title
+        )}&body=${encodeURIComponent(issue.body)}&labels=${encodeURIComponent(
+          issue.labels.join(",")
+        )}`;
+      };
+    </script>
+  </main>
 </BaseLayout>

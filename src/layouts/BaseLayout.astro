@@ -4,28 +4,28 @@ import BaseHead from "@components/BaseHead.astro";
 import Config from "@config";
 
 interface Props {
-    title?: string;
-    frontmatter?: any;
+  title?: string;
+  frontmatter?: any;
 }
 const { author, description, keywords, announcement } = Config;
 
-const title = Astro.props.frontmatter?.title ? `${Astro.props.frontmatter.title} - gohector.com` : Astro.props.title || "";
+const title = Astro.props.frontmatter?.title
+  ? `${Astro.props.frontmatter.title} - gohector.com`
+  : Astro.props.title || "";
 ---
 
 <html lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <BaseHead
-            title={title}
-            author={author}
-            description={description}
-            keywords={keywords}
-        />
-    </head>
-    <body
-        class="bg-zinc-100 text-zinc-900 dark:bg-zinc-900 dark:text-zinc-100 min-w-screen min-h-screen"
-    >
-        {announcement ? <Announcement text={announcement} /> : null}
-        <slot />
-    </body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <BaseHead
+      title={title}
+      author={author}
+      description={description}
+      keywords={keywords}
+    />
+  </head>
+  <body>
+    {announcement ? <Announcement text={announcement} /> : null}
+    <slot />
+  </body>
 </html>

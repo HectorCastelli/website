@@ -5,32 +5,30 @@ import config from "@config";
 import { getTopTagsThenRemainder } from "@lib/tags";
 
 interface Props {
-    links?: Link[];
+  links?: Link[];
 }
 
 const { links = config.footer.links } = Astro.props;
 const [topTags, _] = await getTopTagsThenRemainder(3);
 ---
 
-<footer
-    class="p-2 py-8 bg-slate-800 text-slate-600 dark:bg-slate-200 dark:text-slate-500 flex-shrink-0 text-center text-sm"
->
-    <p class="mb-4">All rights reserved, {config.author}.</p>
-    <section class="flex flex-row gap-12 align-middle justify-center">
-        <nav class="flex flex-col gap-1 align-middle">
-            {links.map((link) => <a href={link.href}>{link.text}</a>)}
-        </nav>
-        <nav class="flex flex-col gap-1 align-middle">
-            <h1>Top tags:</h1>
-            <ol class="text-left text-sm">
-                {
-                    topTags.map((tag) => (
-                        <li>
-                            <a href={`/tags/${tag}`}>{tag}</a>
-                        </li>
-                    ))
-                }
-            </ol>
-        </nav>
-    </section>
+<footer>
+  <p>All rights reserved, {config.author}.</p>
+  <section>
+    <nav>
+      {links.map((link) => <a href={link.href}>{link.text}</a>)}
+    </nav>
+    <nav>
+      <h1>Top tags:</h1>
+      <ol>
+        {
+          topTags.map((tag) => (
+            <li>
+              <a href={`/tags/${tag}`}>{tag}</a>
+            </li>
+          ))
+        }
+      </ol>
+    </nav>
+  </section>
 </footer>

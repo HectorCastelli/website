@@ -6,40 +6,40 @@ import config from "@config";
 import { getAllBlogPosts } from "@lib/blogs";
 
 export async function getStaticPaths({ paginate }) {
-    const blogs = await getAllBlogPosts();
+  const blogs = await getAllBlogPosts();
 
-    return paginate(blogs, { pageSize: config.pagination.blog });
+  return paginate(blogs, { pageSize: config.pagination.blog });
 }
 const { page } = Astro.props;
 ---
 
 <CommonLayout title={`Blog - Page ${page.currentPage}`}>
-    <h1 class="text-xl mb-3">
-        {
-            page.currentPage == 1
-                ? "I post about all sorts of things, but here are the my latest posts:"
-                : "And here are some other posts:"
-        }
-    </h1>
-
+  <h1>
     {
-        page.lastPage != 1 ? (
-            <h2>
-                Page {page.currentPage} of {page.lastPage}
-            </h2>
-        ) : (
-            ""
-        )
+      page.currentPage == 1
+        ? "I post about all sorts of things, but here are the my latest posts:"
+        : "And here are some other posts:"
     }
-    <ol class="flex flex-col gap-4">
-        {
-            page.data.map((blog) => (
-                <li>
-                    <BlogEntry entry={blog} />
-                </li>
-            ))
-        }
-    </ol>
-    {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-    {page.url.next ? <a href={page.url.next}>Next</a> : null}
+  </h1>
+
+  {
+    page.lastPage != 1 ? (
+      <h2>
+        Page {page.currentPage} of {page.lastPage}
+      </h2>
+    ) : (
+      ""
+    )
+  }
+  <ol>
+    {
+      page.data.map((blog) => (
+        <li>
+          <BlogEntry entry={blog} />
+        </li>
+      ))
+    }
+  </ol>
+  {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
+  {page.url.next ? <a href={page.url.next}>Next</a> : null}
 </CommonLayout>
