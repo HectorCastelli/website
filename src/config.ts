@@ -23,8 +23,8 @@ export default {
                 href: '/blog',
             },
             {
-                text: "Contact",
-                href: '/contact',
+                text: "Tags",
+                href: '/tags',
             },
         ]
     },
@@ -53,12 +53,15 @@ export default {
     },
     socialLinks: [
         {
-            name: "🐦 twitter",
+            name: "E-mail",
+            link: "mailto:hector.zacharias@gmail.com"
+        },
+        {
+            name: "Twitter",
             link: "https://twitter.com/ZektorH"
         },
-
         {
-            name: "🗄️ linkedIn",
+            name: "LinkedIn",
             link: "https://www.linkedin.com/in/hectorzacharias/"
         }
     ]
