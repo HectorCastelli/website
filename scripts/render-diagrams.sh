@@ -5,7 +5,7 @@ do
     ./node_modules/.bin/mmdc \
         --input $f \
         --outputFormat svg \
-        --backgroundColor '#FFFFFFDD'  \
+        --backgroundColor transparent  \
         --theme neutral  \
         --width 1024 \
         --quiet
