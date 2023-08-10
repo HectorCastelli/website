@@ -49,7 +49,7 @@ export default {
         ]
     },
     pagination: {
-        blog: 6,
+        blog: 4,
     },
     socialLinks: [
         {
