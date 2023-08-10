@@ -23,7 +23,7 @@ const data = {
 const astroMode = import.meta.env.MODE;
 
 const titleChunks = chunkString(data.title, 30);
-const descriptionChunks = chunkString(data.description, 80);
+const descriptionChunks = data.description ? chunkString(data.description, 80) : [];
 ---
 
 <!DOCTYPE html>
@@ -75,7 +75,6 @@ const descriptionChunks = chunkString(data.description, 80);
               },
             ]
           : []),
-
         ...titleChunks.map((chunk, index) => {
           return {
             content: chunk,
