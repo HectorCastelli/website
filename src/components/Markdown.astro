@@ -1,0 +1,11 @@
+---
+import { micromark } from "micromark";
+
+interface Props {
+  markdown: string;
+}
+
+const { markdown } = Astro.props;
+---
+
+<Fragment set:html={micromark(markdown)} />
