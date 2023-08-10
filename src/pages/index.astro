@@ -49,9 +49,6 @@ const recentPosts = await getAllBlogPosts().then(p=>p.slice(0,3));
       <nav>
         <ul class="flex flex-col gap-2">
           <li>
-            <LinkChip href="/contact" title="contact">Talk to me</LinkChip>
-          </li>
-          <li>
             <LinkChip href="/blog" title="blog">
               Thoughts & ramblings
             </LinkChip>
