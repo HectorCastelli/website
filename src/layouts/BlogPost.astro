@@ -1,32 +1,52 @@
 ---
-import Header from '@components/Header.astro';
-import Base from './Base.astro';
-import type { CollectionEntry } from 'astro:content';
-import StyledProse from '@components/StyledProse.astro';
-import Tag from '@components/Tag.astro';
+import Header from "@components/Header.astro";
+import Base from "./Base.astro";
+import type { CollectionEntry } from "astro:content";
+import StyledProse from "@components/StyledProse.astro";
+import Tag from "@components/Tag.astro";
+import Footer from "@components/Footer.astro";
+import Markdown from "@components/Markdown.astro";
 
 interface Props {
-    post: CollectionEntry<"blog">;
+  post: CollectionEntry<"blog">;
 }
 
-const {data, render} = Astro.props.post;
-const {Content} = await render();
-const {title, description, footNotes, tags, pubDate} = data;
+const { data, render } = Astro.props.post;
+const { Content } = await render();
+const { title, description, footNotes, tags, pubDate } = data;
 ---
+
 <Base frontmatter={data}>
-    <Header />
-    <main class="md:mx-auto w-screen lg:max-w-5xl p-4 md:p-12 bg-stone-50 text-stone-900">
-        <h1 class="font-bold text-5xl mb-8 text-center">{title}</h1>
-        <h2 class="font-bold text-xl mb-4">{description}</h2>
-        <aside class="flex flex-row justify-between mb-2">
-            <p>Published on {pubDate.toLocaleDateString()}</p>
-            <p>Tags: {tags.map(tag=><Tag tag={tag} suffix=';'/>)}</p>
-        </aside>
-        <hr class="mb-8"/>
-        <StyledProse>
-            <Content />
-        <StyledProse />
-        {footNotes?.map(note=><p>{note}</p>)}
-    </main>
-    <!-- <Footer/> -->
+  <Header />
+  <main
+    class="md:mx-auto w-screen lg:max-w-5xl p-4 md:p-12 bg-stone-50 text-stone-900"
+  >
+    <h1 class="font-bold text-5xl mb-8 text-center">{title}</h1>
+    <h2 class="font-bold text-xl mb-4">{description}</h2>
+    <aside class="flex flex-row justify-between mb-2">
+      <p>Published on {pubDate.toLocaleDateString()}</p>
+      <p>Tags: {tags.map((tag) => <Tag tag={tag} suffix=";" />)}</p>
+    </aside>
+    <hr class="mb-8" />
+    <StyledProse>
+      <Content />
+      {
+        footNotes ? (
+          <aside>
+            <h1 class="text-lg">Footnotes:</h1>
+            <ol>
+              {footNotes.map((note) => (
+                <li>
+                  <Markdown markdown={note} />
+                </li>
+              ))}
+            </ol>
+          </aside>
+        ) : (
+          ""
+        )
+      }
+    </StyledProse>
+  </main>
+  <Footer />
 </Base>
