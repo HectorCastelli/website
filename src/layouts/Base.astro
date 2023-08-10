@@ -16,6 +16,8 @@ const data = {
   ...Astro.props,
   ...Astro.props.frontmatter,
 };
+
+const astroMode = import.meta.env.MODE;
 ---
 
 <!DOCTYPE html>
@@ -35,12 +37,18 @@ const data = {
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon/favicon.png" />
-    <!-- Analytics -->
-    <script
-      async
-      src="https://analytics.umami.is/script.js"
-      data-website-id="f44226ef-3a9e-46ba-b98a-2dec9cb6129c"
-    ></script>
+    <!-- Analytics (only on production)-->
+    {
+      astroMode != "development" ? (
+        <script
+          async
+          src="https://analytics.umami.is/script.js"
+          data-website-id="f44226ef-3a9e-46ba-b98a-2dec9cb6129c"
+        />
+      ) : (
+        ''
+      )
+    }
   </head>
   <body
     class="relative min-h-screen bg-gradient-to-br from-green-300 from-10% to-emerald-600 to-80% flex flex-col"
