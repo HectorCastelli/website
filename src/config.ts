@@ -11,6 +11,10 @@ export default {
     header: {
         links: [
             {
+                text: "Home",
+                href: '/',
+            },
+            {
                 text: "Projects",
                 href: '/projects',
             },
