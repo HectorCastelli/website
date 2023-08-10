@@ -35,8 +35,8 @@ const { title, description, footNotes, tags, pubDate } = data;
           <aside>
             <h1 class="text-lg">Footnotes:</h1>
             <ol>
-              {footNotes.map((note) => (
-                <li>
+              {footNotes.map((note, index) => (
+                <li id={`footnote-${index+1}`}>
                   <Markdown markdown={note} />
                 </li>
               ))}
