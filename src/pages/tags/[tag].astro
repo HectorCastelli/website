@@ -1,7 +1,9 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
-import BlogEntry from "@components/BlogEntry.astro";
 import { getAllBlogPostsRelatedTo } from "@lib/blogs";
+import BlogChip from "@components/BlogChip.astro";
+import Gallery from "@layouts/Gallery.astro";
+import StyledProse from "@components/StyledProse.astro";
 
 export async function getStaticPaths() {
   const tags = await getCollection("tag");
@@ -28,25 +30,17 @@ interface Props {
 const { currentTag, posts } = Astro.props;
 const { Content } = await currentTag.render();
 ---
-<!-- 
-<CommonLayout title={`Blog Tag - ${currentTag.data.name}`}>
-  <h1>{currentTag.data.name}</h1>
-  <section>
+<Gallery title={currentTag.data.name}>
+  <StyledProse>
     <Content />
-  </section>
-  <section>
-    <h2>Here are the posts with this tag:</h2>
-    <ol>
-      {
-        posts
-          .filter((b) => b.data.pubDate.getTime() < new Date().getTime())
-          .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-          .map((post) => (
-            <li>
-              <BlogEntry entry={post} />
-            </li>
-          ))
-      }
-    </ol>
-  </section>
-</CommonLayout> -->
+  </StyledProse>
+  <ol>
+    {
+      posts.map(post => (
+        <li class="mb-4">
+          <BlogChip post={post.slug} />
+        </li>
+      ))
+    }
+  </ol>
+</Gallery>
