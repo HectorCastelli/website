@@ -1,67 +1,48 @@
 ---
-import Tag from "@components/Tag.astro";
-
 import {
   getOngoingProjects,
   getAbandonedProjects,
   getCompletedProjects,
 } from "@lib/projects";
-import ProjectEntry from "@components/ProjectEntry.astro";
+
+import Gallery from "@layouts/Gallery.astro";
 
 const currentProjects = await getOngoingProjects();
 const abandonedProjects = await getAbandonedProjects();
 const completedProjects = await getCompletedProjects();
 ---
 
-<!-- <CommonLayout title="Projects">
-  {
-    currentProjects.length > 0 ? (
-      <>
-        <h1>Here are some things I am working on:</h1>
-        <ol>
-          {currentProjects.sort().map((project) => (
-            <li>
-              <ProjectEntry entry={project} />
-            </li>
-          ))}
-        </ol>
-      </>
-    ) : (
-      ""
-    )
-  }
-  {
-    completedProjects.length > 0 ? (
-      <>
-        <h2>Here are some of my previous projects:</h2>
-        <ol>
-          {completedProjects.sort().map((project) => (
-            <li>
-              <ProjectEntry entry={project} />
-            </li>
-          ))}
-        </ol>
-      </>
-    ) : (
-      ""
-    )
-  }
-  {
-    abandonedProjects.length > 0 ? (
-      <>
-        <h2 class="text-xl mb-3">
-          And these were the things I never quite managed to finish...
-        </h2>
-        <ol class="grid grid-cols-2 lg:grid-cols-3 gap-4 align-middle">
-          {abandonedProjects.sort().map((project) => (
-            <li class="bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-              <ProjectEntry entry={project} />
-            </li>
-          ))}
-        </ol>
-      </>
-    ) : (
-      ""
-    )
-  }
-</CommonLayout> -->
+<Gallery title="Projects">
+  <section class="mb-8">
+    <h1 class="mb-8">Here are some things I am working on:</h1>
+    <ol>
+      {
+        currentProjects.map((project) => (
+          <li class="mb-4">{project.data.name}</li>
+        ))
+      }
+    </ol>
+  </section>
+  <section class="mb-8">
+    <h1 class="mb-8">Here are some of my previous projects:</h1>
+    <ol>
+      {
+        completedProjects.map((project) => (
+          <li class="mb-4">{project.data.name}</li>
+        ))
+      }
+    </ol>
+  </section>
+  <section>
+    <h1 class="mb-8">
+      And these were the things I never quite managed to finish...
+    </h1>
+    <ol>
+      {
+        abandonedProjects.map((project) => (
+          <li class="mb-4">{project.data.name}</li>
+        ))
+      }
+    </ol>
+  </section>
+</Gallery>
