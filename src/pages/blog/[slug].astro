@@ -1,7 +1,5 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
-import { micromark } from "micromark";
-import Tag from "@components/Tag.astro";
 import BlogPost from "@layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
@@ -25,5 +23,4 @@ interface Props {
 
 const { currentBlog } = Astro.props;
 ---
-
 <BlogPost post={currentBlog} />
