@@ -2,6 +2,9 @@
 import Announcement from "@components/Announcement.astro";
 import Link from "@components/Link.astro";
 import Base from "@layouts/Base.astro";
+import { getTopTagsThenRemainder } from "@lib/tags";
+
+const [tags,_] = await getTopTagsThenRemainder(3)
 
 ---
 <Base>
@@ -12,9 +15,7 @@ import Base from "@layouts/Base.astro";
       <p class="mb-4">
         I'm a maker that enjoys the software craft,
         as well as some other topics, such as:
-        <Link href="/tags/planning">planning,</Link>
-        <Link href="/tags/architecture">architecture,</Link>
-        <Link href="/tags/tooling">tooling,</Link>
+        {tags.map(t => <Link href={`/tags/${t}"`}>{t},</Link>)}
         and more!
       </p>
       <h3 class="mb-4">
