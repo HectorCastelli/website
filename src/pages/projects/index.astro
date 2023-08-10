@@ -1,5 +1,4 @@
 ---
-import CommonLayout from "@layouts/CommonLayout.astro";
 import Tag from "@components/Tag.astro";
 
 import {
@@ -14,7 +13,7 @@ const abandonedProjects = await getAbandonedProjects();
 const completedProjects = await getCompletedProjects();
 ---
 
-<CommonLayout title="Projects">
+<!-- <CommonLayout title="Projects">
   {
     currentProjects.length > 0 ? (
       <>
@@ -65,4 +64,4 @@ const completedProjects = await getCompletedProjects();
       ""
     )
   }
-</CommonLayout>
+</CommonLayout> -->

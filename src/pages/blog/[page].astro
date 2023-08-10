@@ -1,6 +1,5 @@
 ---
 import BlogEntry from "@components/BlogEntry.astro";
-import CommonLayout from "@layouts/CommonLayout.astro";
 import config from "@config";
 
 import { getAllBlogPosts } from "@lib/blogs";
@@ -12,7 +11,7 @@ export async function getStaticPaths({ paginate }) {
 }
 const { page } = Astro.props;
 ---
-
+<!-- 
 <CommonLayout title={`Blog - Page ${page.currentPage}`}>
   <h1>
     {
@@ -42,4 +41,4 @@ const { page } = Astro.props;
   </ol>
   {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
   {page.url.next ? <a href={page.url.next}>Next</a> : null}
-</CommonLayout>
+</CommonLayout> -->

@@ -1,8 +1,8 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
 import {micromark} from "micromark";
-import CommonLayout from "@layouts/CommonLayout.astro";
 import Tag from "@components/Tag.astro";
+import Article from "@layouts/Article.astro";
 
 export async function getStaticPaths() {
     const blogs = await getCollection("blog");
@@ -24,35 +24,5 @@ interface Props {
 }
 
 const { currentBlog } = Astro.props;
-const { Content } = await currentBlog.render();
 ---
-
-<CommonLayout title={currentBlog.data.title}>
-    <header >
-        <h1 >{currentBlog.data.title}</h1>
-        {currentBlog.data.description ? <p>{currentBlog.data.description}</p> : ''}
-        <h3 >
-            {currentBlog.data.pubDate.toDateString()}
-        </h3>
-        <ul >
-            {
-                currentBlog.data.tags.map((tag) => (
-                    <li >
-                        <Tag tag={tag} />
-                    </li>
-                ))
-            }
-        </ul>
-    </header>
-    <main
-    >
-        <Content />
-    </main>
-    {currentBlog.data.footNotes ? <aside >
-        <h1>Footnotes</h1>
-        <ul>
-            {currentBlog.data.footNotes.map(f=><li><Fragment set:html={micromark(f)}/></li>)}
-            </ul>
-    </aside>: <>}
-    
-</CommonLayout>
+<Article post={currentBlog}/>
