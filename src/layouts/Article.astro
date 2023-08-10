@@ -1,0 +1,26 @@
+---
+import Header from '@components/Header.astro';
+import Base from './Base.astro';
+import type { CollectionEntry } from 'astro:content';
+import StyledProse from '@components/StyledProse.astro';
+
+interface Props {
+    post: CollectionEntry<"blog">;
+}
+
+const {data, render} = Astro.props.post;
+const {Content} = await render();
+const {title, description, footNotes, tags} = data;
+---
+<Base frontmatter={data}>
+    <Header />
+    <main class="md:mx-auto w-screen lg:max-w-5xl p-4 md:p-12 bg-stone-500 bg-opacity-25 text-stone-50">
+        <h1 class="text-4xl">{title}</h1>
+        <h2 class="text-xl">{description}</h2>
+        <hr />
+        <StyledProse>
+            <Content />
+        <StyledProse />
+    </main>
+    <!-- <Footer/> -->
+</Base>
