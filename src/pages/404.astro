@@ -1,35 +1,37 @@
 ---
-import BaseLayout from "@layouts/BaseLayout.astro";
+import Link from "@components/Link.astro";
+import Navigation from "@layouts/Navigation.astro";
 ---
 
-<BaseLayout title="Page not found!">
-  <main>
-    <h2>Oops...</h2>
-    <h1>Seems like I've misplaced a link.</h1>
-    <p>
-      If you expected something to be in this location, please <a
-        id="report-link">report it</a
-      >, and I will look into it promptly.
-    </p>
-    <script is:inline>
-      window.onload = (e) => {
-        var issue = {
-          title: "404 page found: ",
-          body: [
-            `I've reached an URL that responded with a 404 link.`,
-            ``,
-            `The URL is question is "${document.URL}".`,
-          ].join("\n"),
-          labels: ["bug"],
-        };
-        document.getElementById(
-          "report-link"
-        ).href = `https://github.com/hectorcastelli/website/issues/new?title=${encodeURIComponent(
-          issue.title
-        )}&body=${encodeURIComponent(issue.body)}&labels=${encodeURIComponent(
-          issue.labels.join(",")
-        )}`;
+<Navigation frontmatter={{ title: "Page not found!" }}>
+  <h2 class="text-8xl mb-4">Oops...</h2>
+  <h1 class="text-3xl mb-8">Seems like I've misplaced a link.</h1>
+  <p>
+    If you expected something to be in this location, please <Link
+      id="report-link"
+      href=""
+    >
+      report it
+    </Link>, and I will look into it promptly.
+  </p>
+  <script is:inline>
+    window.onload = (e) => {
+      var issue = {
+        title: "404 page found: ",
+        body: [
+          `I've reached an URL that responded with a 404 link.`,
+          ``,
+          `The URL is question is "${document.URL}".`,
+        ].join("\n"),
+        labels: ["bug"],
       };
-    </script>
-  </main>
-</BaseLayout>
+      document.getElementById(
+        "report-link"
+      ).href = `https://github.com/hectorcastelli/website/issues/new?title=${encodeURIComponent(
+        issue.title
+      )}&body=${encodeURIComponent(issue.body)}&labels=${encodeURIComponent(
+        issue.labels.join(",")
+      )}`;
+    };
+  </script>
+</Navigation>
