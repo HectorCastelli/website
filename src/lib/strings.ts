@@ -12,5 +12,5 @@ export function chunkString(source: string, chunkSize: number): string[] {
             result.push('');
         }
     })
-    return result.filter(x=>x);
+    return result.filter(x => x);
 }
