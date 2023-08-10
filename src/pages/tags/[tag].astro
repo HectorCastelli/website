@@ -30,9 +30,9 @@ const { currentTag, posts } = Astro.props;
 const { Content } = await currentTag.render();
 ---
 
-<Gallery title={currentTag.data.name}>
-  <StyledProse>
-    <Content />
+<Gallery title={currentTag.data.name} description={currentTag.body}>
+<StyledProse>
+  <Content />
   </StyledProse>
   <ol>
     {
