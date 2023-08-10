@@ -1,19 +1,10 @@
 ---
-import type { Link } from "@lib/links";
 import config from "@config";
-
-interface Props {
-  links?: Link[];
-}
-
-const { links = config.header.links } = Astro.props;
+const {links} = config.header;
 ---
 
-<header>
-  <nav>
-    <a href="/">
-      <img src="/avatar.jpg" alt="a cartoonized depiction of the author" />
-    </a>
+<header class="max-w-xl mx-auto p-6 py-12 text-stone-50 text-xl font-bold tracking-wider">
+  <nav class="flex justify-center gap-4">
     {links.map((link) => <a href={link.href}>{link.text}</a>)}
   </nav>
 </header>
