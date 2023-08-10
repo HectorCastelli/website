@@ -1,39 +1,41 @@
 ---
-import CommonLayout from "@layouts/CommonLayout.astro";
 import Tag from "@components/Tag.astro";
 
 import { getTopTagsThenRemainder } from "@lib/tags";
+import Gallery from "@layouts/Gallery.astro";
 
-const [topSixTags, remainingTags] = await getTopTagsThenRemainder();
+const [topTags, otherTags] = await getTopTagsThenRemainder();
 ---
 
-<CommonLayout title="Blog Tags">
-  <h1>
-    I post about all sorts of things, but here are the more popular topics:
-  </h1>
-  <ol>
-    {
-      topSixTags.map((tag) => (
-        <li>
-          <Tag tag={tag} />
-        </li>
-      ))
-    }
-  </ol>
+<Gallery title="Tags">
+  <section class="mb-8">
+    <h2 class="text-xl mb-4">
+      I post about all sorts of things, but here are the more popular topics:
+    </h2>
+    <ol>
+      {
+        topTags.map((tag) => (
+          <li class="mb-2">
+            <Tag tag={tag} />
+          </li>
+        ))
+      }
+    </ol>
+  </section>
   {
-    remainingTags.length > 0 ? (
-      <>
-        <h2>And these are the less popular, alphabetically:</h2>
+    otherTags.length > 0 ? (
+      <section>
+        <h2 class="text-xl mb-4">And these are the less popular, alphabetically:</h2>
         <ol>
-          {remainingTags.sort().map((tag) => (
-            <li>
+          {otherTags.sort().map((tag) => (
+            <li class="mb-2">
               <Tag tag={tag} />
             </li>
           ))}
         </ol>
-      </>
+      </section>
     ) : (
       ""
     )
   }
-</CommonLayout>
+</Gallery>
