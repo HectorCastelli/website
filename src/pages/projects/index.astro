@@ -6,6 +6,7 @@ import {
 } from "@lib/projects";
 
 import Gallery from "@layouts/Gallery.astro";
+import ProjectChip from "@components/ProjectChip.astro";
 
 const currentProjects = await getOngoingProjects();
 const abandonedProjects = await getAbandonedProjects();
@@ -14,33 +15,39 @@ const completedProjects = await getCompletedProjects();
 
 <Gallery title="Projects">
   <section class="mb-8">
-    <h1 class="mb-8">Here are some things I am working on:</h1>
-    <ol>
+    <h1 class="text-xl mb-8">Here are some things I am working on:</h1>
+    <ol class="flex flex-wrap gap-2 justify-start">
       {
         currentProjects.map((project) => (
-          <li class="mb-4">{project.data.name}</li>
+          <li>
+            <ProjectChip project={project} />
+          </li>
         ))
       }
     </ol>
   </section>
   <section class="mb-8">
-    <h1 class="mb-8">Here are some of my previous projects:</h1>
-    <ol>
+    <h1 class="text-xl mb-8">Here are some of my previous projects:</h1>
+    <ol class="flex flex-wrap gap-2 justify-start">
       {
         completedProjects.map((project) => (
-          <li class="mb-4">{project.data.name}</li>
+          <li>
+            <ProjectChip project={project} />
+          </li>
         ))
       }
     </ol>
   </section>
   <section>
-    <h1 class="mb-8">
+    <h1 class="text-xl mb-8">
       And these were the things I never quite managed to finish...
     </h1>
-    <ol>
+    <ol class="flex flex-wrap gap-2 justify-start">
       {
         abandonedProjects.map((project) => (
-          <li class="mb-4">{project.data.name}</li>
+          <li>
+            <ProjectChip project={project} />
+          </li>
         ))
       }
     </ol>
