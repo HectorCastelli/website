@@ -5,19 +5,15 @@ import Tag from "./Tag.astro";
 const [tags, _] = await getTopTagsThenRemainder(3);
 ---
 
-<ul class="flex flex-wrap align-middle justify-between text-2xl px-8">
-    {
-        tags.map((tag) => (
-            <li>
-                <Tag tag={tag} />,
-            </li>
-        ))
-    }
-    <li>
-        and <a
-            href="/tags"
-            class="text-cyan-900 hover:text-cyan-700 dark:text-cyan-200 dark:hover:text-cyan-400"
-            >more</a
-        >!
-    </li>
+<ul>
+  {
+    tags.map((tag) => (
+      <li>
+        <Tag tag={tag} />,
+      </li>
+    ))
+  }
+  <li>
+    and <a href="/tags">more</a>!
+  </li>
 </ul>

@@ -60,12 +60,12 @@ Imagine a retailer that has physical and digital presence. In this retailer, two
 
 This is the (aggregated) list of initiatives for each stakeholder group:
 
-| Stakeholder group | Initiative | Revenue growth | Prerequisites |
-| :---: | --- | :---: | --- |
-| Group 1 | Time-based notifications | 3% | | 
-| Group 1 | Targeted emails | 2% | | 
-| Group 2 | In-store digital coupons | 10% | Targeted emails | 
-| Group 2 | Store greeters | 1% | | 
+| Stakeholder group | Initiative               | Revenue growth | Prerequisites   |
+| :---------------: | ------------------------ | :------------: | --------------- |
+|      Group 1      | Time-based notifications |       3%       |                 |
+|      Group 1      | Targeted emails          |       2%       |                 |
+|      Group 2      | In-store digital coupons |      10%       | Targeted emails |
+|      Group 2      | Store greeters           |       1%       |                 |
 
 Keep in mind that a table like the one above is not available to any of those involved, and is here to illustrate the scenario to you, the reader.
 

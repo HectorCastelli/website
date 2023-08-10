@@ -1,45 +1,32 @@
 ---
-import BlogEntry from "@components/BlogEntry.astro";
-import CommonLayout from "@layouts/CommonLayout.astro";
+import BlogChip from "@components/BlogChip.astro";
 import config from "@config";
+import Gallery from "@layouts/Gallery.astro";
 
 import { getAllBlogPosts } from "@lib/blogs";
 
 export async function getStaticPaths({ paginate }) {
-    const blogs = await getAllBlogPosts();
+  const blogs = await getAllBlogPosts();
 
-    return paginate(blogs, { pageSize: config.pagination.blog });
+  return paginate(blogs, { pageSize: config.pagination.blog });
 }
 const { page } = Astro.props;
 ---
-
-<CommonLayout title={`Blog - Page ${page.currentPage}`}>
-    <h1 class="text-xl mb-3">
-        {
-            page.currentPage == 1
-                ? "I post about all sorts of things, but here are the my latest posts:"
-                : "And here are some other posts:"
-        }
-    </h1>
-
+<Gallery page={page} title="Blog">
+  <h1 class="mb-8">
     {
-        page.lastPage != 1 ? (
-            <h2>
-                Page {page.currentPage} of {page.lastPage}
-            </h2>
-        ) : (
-            ""
-        )
+      page.currentPage == 1
+        ? "I post about all sorts of things, but here are the my latest posts:"
+        : "And here are some other posts:"
     }
-    <ol class="flex flex-col gap-4">
-        {
-            page.data.map((blog) => (
-                <li>
-                    <BlogEntry entry={blog} />
-                </li>
-            ))
-        }
-    </ol>
-    {page.url.prev ? <a href={page.url.prev}>Previous</a> : null}
-    {page.url.next ? <a href={page.url.next}>Next</a> : null}
-</CommonLayout>
+  </h1>
+  <ol>
+    {
+      page.data.map(post => (
+        <li class="mb-4">
+          <BlogChip post={post.slug} />
+        </li>
+      ))
+    }
+  </ol>
+</Gallery>

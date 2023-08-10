@@ -2,6 +2,7 @@ const CNAME = "https://gohector.com"
 
 export default {
     cname: CNAME,
+    title: "gohector.com",
     author: "Hector Castelli Zacharias",
     description: "My personal website",
     keywords: ["blog", "portfolio", "personal"],
@@ -9,6 +10,10 @@ export default {
     announcement: "This website is under construction. There is a high chance some links will not work.",
     header: {
         links: [
+            {
+                text: "Home",
+                href: '/',
+            },
             {
                 text: "Projects",
                 href: '/projects',
@@ -18,15 +23,15 @@ export default {
                 href: '/blog',
             },
             {
-                text: "Contact",
-                href: '/contact',
+                text: "Tags",
+                href: '/tags',
             },
         ]
     },
     footer: {
         links: [
             {
-                text: "Homepage",
+                text: "Home",
                 href: '/',
             },
             {
@@ -44,16 +49,19 @@ export default {
         ]
     },
     pagination: {
-        blog: 6,
+        blog: 4,
     },
     socialLinks: [
         {
-            name: "🐦 twitter",
+            name: "E-mail",
+            link: "mailto:hector.zacharias@gmail.com"
+        },
+        {
+            name: "Twitter",
             link: "https://twitter.com/ZektorH"
         },
-
         {
-            name: "🗄️ linkedIn",
+            name: "LinkedIn",
             link: "https://www.linkedin.com/in/hectorzacharias/"
         }
     ]

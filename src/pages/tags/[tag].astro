@@ -1,59 +1,46 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
-import BlogEntry from "@components/BlogEntry.astro";
-import CommonLayout from "@layouts/CommonLayout.astro";
 import { getAllBlogPostsRelatedTo } from "@lib/blogs";
+import BlogChip from "@components/BlogChip.astro";
+import Gallery from "@layouts/Gallery.astro";
+import StyledProse from "@components/StyledProse.astro";
 
 export async function getStaticPaths() {
-    const tags = await getCollection("tag");
+  const tags = await getCollection("tag");
 
-    return Promise.all(
-        tags.map(async (tag) => ({
-            params: {
-                tag: tag.slug,
-            },
-            props: {
-                currentTag: tag,
-                posts: await getAllBlogPostsRelatedTo(tag),
-            },
-        }))
-    );
+  return Promise.all(
+    tags.map(async (tag) => ({
+      params: {
+        tag: tag.slug,
+        
+      },
+      props: {
+        currentTag: tag,
+        posts: await getAllBlogPostsRelatedTo(tag),
+      },
+    }))
+  );
 }
 
 interface Props {
-    currentTag: CollectionEntry<"tag">;
-    posts: CollectionEntry<"blog">[];
+  currentTag: CollectionEntry<"tag">;
+  posts: CollectionEntry<"blog">[];
 }
 
 const { currentTag, posts } = Astro.props;
 const { Content } = await currentTag.render();
 ---
-
-<CommonLayout title={`Blog Tag - ${currentTag.data.name}`}>
-    <h1 class="text-3xl">{currentTag.data.name}</h1>
-    <section
-        class="mb-4 prose dark:prose-invert prose-slate prose-a:text-cyan-900 prose-a:hover:text-cyan-700 dark:prose-a:text-cyan-200 dark:prose-a:hover:text-cyan-400"
-    >
-        <Content />
-    </section>
-    <section>
-        <h2 class="text-lg">Here are the posts with this tag:</h2>
-        <ol class="flex flex-col gap-2">
-            {
-                posts
-                    .filter(
-                        (b) => b.data.pubDate.getTime() < new Date().getTime()
-                    )
-                    .sort(
-                        (a, b) =>
-                            b.data.pubDate.getTime() - a.data.pubDate.getTime()
-                    )
-                    .map((post) => (
-                        <li>
-                            <BlogEntry entry={post} />
-                        </li>
-                    ))
-            }
-        </ol>
-    </section>
-</CommonLayout>
+<Gallery title={currentTag.data.name}>
+  <StyledProse>
+    <Content />
+  </StyledProse>
+  <ol>
+    {
+      posts.map(post => (
+        <li class="mb-4">
+          <BlogChip post={post.slug} />
+        </li>
+      ))
+    }
+  </ol>
+</Gallery>

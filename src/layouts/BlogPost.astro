@@ -1,0 +1,45 @@
+---
+import Navigation from "./Navigation.astro";
+import type { CollectionEntry } from "astro:content";
+import StyledProse from "@components/StyledProse.astro";
+import Tag from "@components/Tag.astro";
+import Markdown from "@components/Markdown.astro";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { data, render } = Astro.props.post;
+const { Content } = await render();
+const { title, description, footNotes, tags, pubDate } = data;
+---
+
+<Navigation frontmatter={data}>
+    <h1 class="font-bold text-5xl mb-8 text-center">{title}</h1>
+    <h2 class="font-bold text-xl mb-4">{description}</h2>
+    <aside class="flex flex-row justify-between mb-2">
+      <p>Published on {pubDate.toLocaleDateString()}</p>
+      <p>Tags: {tags.map((tag) => <Tag tag={tag} suffix=";" />)}</p>
+    </aside>
+    <hr class="mb-8" />
+    <StyledProse>
+      <Content />
+      {
+        footNotes ? (
+          <aside>
+            <h1 class="text-lg">Footnotes:</h1>
+            <ol>
+              {footNotes.map((note, index) => (
+                <li id={`footnote-${index+1}`}>
+                  <Markdown markdown={note} />
+                </li>
+              ))}
+            </ol>
+          </aside>
+        ) : (
+          ""
+        )
+      }
+    </StyledProse>
+  </Navigation>
+</Base>

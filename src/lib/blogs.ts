@@ -1,8 +1,12 @@
-import { getCollection, CollectionEntry } from 'astro:content';
+import { getCollection, CollectionEntry, getEntryBySlug } from 'astro:content';
 
 export async function getAllBlogPosts(): Promise<CollectionEntry<"blog">[]> {
     const posts = await getCollection('blog');
     return filterAndOrderBlogPosts(posts);
+}
+
+export async function getBlogPost(post: string): Promise<CollectionEntry<'blog'> | undefined> {
+    return await getEntryBySlug('blog', post);
 }
 
 export async function getAllBlogPostsRelatedTo(tag: CollectionEntry<"tag">): Promise<CollectionEntry<'blog'>[]> {

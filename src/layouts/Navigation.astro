@@ -1,0 +1,22 @@
+---
+import Header from "@components/Header.astro";
+import Base from "./Base.astro";
+import Footer from "@components/Footer.astro";
+
+interface Props {
+  frontmatter?: any;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Base frontmatter={frontmatter}>
+  <Header />
+  <main
+    class="md:mx-auto w-screen lg:max-w-5xl p-4 md:p-12 bg-stone-50 text-stone-900"
+  >
+  <slot />
+  </main>
+  <Footer />
+</Base>
+  

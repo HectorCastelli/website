@@ -1,8 +1,8 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
 import {micromark} from "micromark";
-import CommonLayout from "@layouts/CommonLayout.astro";
 import Tag from "@components/Tag.astro";
+import BlogPost from "@layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
     const blogs = await getCollection("blog");
@@ -24,36 +24,5 @@ interface Props {
 }
 
 const { currentBlog } = Astro.props;
-const { Content } = await currentBlog.render();
 ---
-
-<CommonLayout title={currentBlog.data.title}>
-    <header class="mb-4">
-        <h1 class="text-6xl">{currentBlog.data.title}</h1>
-        {currentBlog.data.description ? <p class="text-md font-thin mb-2">{currentBlog.data.description}</p> : ''}
-        <h3 class="text-sm font-thin">
-            {currentBlog.data.pubDate.toDateString()}
-        </h3>
-        <ul class="flex flex-row flex-wrap gap-4 align-middle">
-            {
-                currentBlog.data.tags.map((tag) => (
-                    <li class="p-1 bg-cyan-100 dark:bg-cyan-900 rounded-sm">
-                        <Tag tag={tag} />
-                    </li>
-                ))
-            }
-        </ul>
-    </header>
-    <main
-        class="prose dark:prose-invert prose-slate prose-a:text-cyan-900 prose-a:hover:text-cyan-700 dark:prose-a:text-cyan-200 dark:prose-a:hover:text-cyan-400"
-    >
-        <Content />
-    </main>
-    {currentBlog.data.footNotes ? <aside class="mt-16 prose dark:prose-invert prose-sm prose-slate prose-a:text-cyan-900 prose-a:hover:text-cyan-700 dark:prose-a:text-cyan-200 dark:prose-a:hover:text-cyan-400">
-        <h1>Footnotes</h1>
-        <ul>
-            {currentBlog.data.footNotes.map(f=><li><Fragment set:html={micromark(f)}/></li>)}
-            </ul>
-    </aside>: <>}
-    
-</CommonLayout>
+<BlogPost post={currentBlog}/>
