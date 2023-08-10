@@ -1,34 +1,27 @@
 ---
-import type { Link } from "@lib/links";
-
 import config from "@config";
 import { getTopTagsThenRemainder } from "@lib/tags";
+import Link from "./Link.astro";
+import Tag from "./Tag.astro";
 
-interface Props {
-  links?: Link[];
-}
-
-const { links = config.footer.links } = Astro.props;
+const { author } = config;
+const { links } = config.footer;
 const [topTags, _] = await getTopTagsThenRemainder(3);
 ---
 
-<footer>
-  <p>All rights reserved, {config.author}.</p>
-  <section>
-    <nav>
-      {links.map((link) => <a href={link.href}>{link.text}</a>)}
+<footer
+  class="max-w-xl mx-auto p-6 py-12 text-stone-50 text-sm font-bold tracking-wider"
+>
+  <p>All rights reserved, {author}.</p>
+  <nav class="flex flex-col justify-center gap-4">
+    <nav class="flex justify-center gap-4">
+      {links.map((link) => <Link href={link.href}>{link.text}</Link>)}
     </nav>
     <nav>
-      <h1>Top tags:</h1>
-      <ol>
-        {
-          topTags.map((tag) => (
-            <li>
-              <a href={`/tags/${tag}`}>{tag}</a>
-            </li>
-          ))
-        }
+      <ol class="flex flex-row justify-center gap-4">
+        <h1>Top tags:</h1>
+        {topTags.map((tag) => <li><Tag tag={tag} /></li>)}
       </ol>
     </nav>
-  </section>
+  </nav>
 </footer>
