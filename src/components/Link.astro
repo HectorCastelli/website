@@ -1,11 +1,12 @@
 ---
 interface Props {
   href: string;
+  id?: string;
 }
 
-const { href } = Astro.props;
+const { href, id } = Astro.props;
 ---
 
-<a href={href} class="underline underline-offset-2">
+<a href={href} class="underline underline-offset-2" id={id ? id : href.replaceAll(/[^a-zA-Z0-9]/g,'_')}>
   <slot>
 </a>
