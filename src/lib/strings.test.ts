@@ -1,7 +1,9 @@
 import { assert, expect, test } from 'vitest';
 import { chunkString } from './strings';
 
-// Edit an assertion and save to see HMR in action
+test('Works on empty strings', () => {
+	expect(chunkString("", 1)).toStrictEqual([]);
+});
 
 test('Cannot chunk single words', () => {
 	expect(chunkString("word", 5)).toStrictEqual([
