@@ -2,6 +2,7 @@ const CNAME = "https://gohector.com"
 
 export default {
     cname: CNAME,
+    title: "gohector.com",
     author: "Hector Castelli Zacharias",
     description: "My personal website",
     keywords: ["blog", "portfolio", "personal"],
