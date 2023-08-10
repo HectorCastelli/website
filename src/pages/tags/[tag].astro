@@ -12,7 +12,6 @@ export async function getStaticPaths() {
     tags.map(async (tag) => ({
       params: {
         tag: tag.slug,
-        
       },
       props: {
         currentTag: tag,
@@ -30,13 +29,14 @@ interface Props {
 const { currentTag, posts } = Astro.props;
 const { Content } = await currentTag.render();
 ---
+
 <Gallery title={currentTag.data.name}>
   <StyledProse>
     <Content />
   </StyledProse>
   <ol>
     {
-      posts.map(post => (
+      posts.map((post) => (
         <li class="mb-4">
           <BlogChip post={post.slug} />
         </li>

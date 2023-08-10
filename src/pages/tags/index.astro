@@ -25,7 +25,9 @@ const [topTags, otherTags] = await getTopTagsThenRemainder();
   {
     otherTags.length > 0 ? (
       <section>
-        <h2 class="text-xl mb-4">And these are the less popular, alphabetically:</h2>
+        <h2 class="text-xl mb-4">
+          And these are the less popular, alphabetically:
+        </h2>
         <ol>
           {otherTags.sort().map((tag) => (
             <li class="mb-2">

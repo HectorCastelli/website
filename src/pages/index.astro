@@ -4,11 +4,11 @@ import LinkChip from "@components/LinkChip.astro";
 import Tag from "@components/Tag.astro";
 import Base from "@layouts/Base.astro";
 import { getTopTagsThenRemainder } from "@lib/tags";
-import {getAllBlogPosts} from "@lib/blogs";
+import { getAllBlogPosts } from "@lib/blogs";
 import Blog from "@components/Blog.astro";
 
 const [tags, _] = await getTopTagsThenRemainder(3);
-const recentPosts = await getAllBlogPosts().then(p=>p.slice(0,3));
+const recentPosts = await getAllBlogPosts().then((p) => p.slice(0, 3));
 ---
 
 <Base>
@@ -28,14 +28,17 @@ const recentPosts = await getAllBlogPosts().then(p=>p.slice(0,3));
       </section>
       <section class="mb-8">
         <h3 class="mb-2">
-          I publish my thoughts on my <Link href="/blog">blog</Link>, here are the most recent ones:
+          I publish my thoughts on my <Link href="/blog">blog</Link>, here are
+          the most recent ones:
         </h3>
         <ol class="flex flex-col justify-around gap-1 md:gap-2">
-          {recentPosts.map(post=>
-            <li class="text-base">
-              <Blog post={post.slug}/>
-            </li>
-          )}
+          {
+            recentPosts.map((post) => (
+              <li class="text-base">
+                <Blog post={post.slug} />
+              </li>
+            ))
+          }
         </ol>
       </section>
       <section>
@@ -49,9 +52,7 @@ const recentPosts = await getAllBlogPosts().then(p=>p.slice(0,3));
       <nav>
         <ul class="flex flex-col gap-2">
           <li>
-            <LinkChip href="/blog" title="blog">
-              Thoughts & ramblings
-            </LinkChip>
+            <LinkChip href="/blog" title="blog">Thoughts & ramblings</LinkChip>
           </li>
           <li>
             <LinkChip href="/projects" title="projects">Other stuff</LinkChip>

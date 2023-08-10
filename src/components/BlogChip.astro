@@ -19,10 +19,15 @@ const blogEntry = await getBlogPost(post);
         <Link href={`/blog/${blogEntry.slug}`}>{blogEntry.data.title}</Link>
       </h1>
       <h2>{blogEntry.data.description}</h2>
-        <aside class="flex flex-row justify-between mb-2">
+      <aside class="flex flex-row justify-between mb-2">
         <p>Published on {blogEntry.data.pubDate.toLocaleDateString()}</p>
-        <p>Tags: {blogEntry.data.tags.map((tag) => <Tag tag={tag} suffix=";" />)}</p>
-        </aside>
+        <p>
+          Tags:{" "}
+          {blogEntry.data.tags.map((tag) => (
+            <Tag tag={tag} suffix=";" />
+          ))}
+        </p>
+      </aside>
     </article>
   ) : (
     ""

@@ -1,28 +1,29 @@
 ---
 import { getCollection, CollectionEntry } from "astro:content";
-import {micromark} from "micromark";
+import { micromark } from "micromark";
 import Tag from "@components/Tag.astro";
 import BlogPost from "@layouts/BlogPost.astro";
 
 export async function getStaticPaths() {
-    const blogs = await getCollection("blog");
+  const blogs = await getCollection("blog");
 
-    return Promise.all(
-        blogs.map(async (blog) => ({
-            params: {
-                slug: blog.slug,
-            },
-            props: {
-                currentBlog: blog,
-            },
-        }))
-    );
+  return Promise.all(
+    blogs.map(async (blog) => ({
+      params: {
+        slug: blog.slug,
+      },
+      props: {
+        currentBlog: blog,
+      },
+    }))
+  );
 }
 
 interface Props {
-    currentBlog: CollectionEntry<"blog">;
+  currentBlog: CollectionEntry<"blog">;
 }
 
 const { currentBlog } = Astro.props;
 ---
-<BlogPost post={currentBlog}/>
+
+<BlogPost post={currentBlog} />

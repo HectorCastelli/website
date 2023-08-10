@@ -20,12 +20,24 @@ const [topTags, _] = await getTopTagsThenRemainder(3);
     <nav>
       <ol class="flex flex-row justify-center gap-4">
         <h1>Top <Link href="/tags">tags</Link>:</h1>
-        {topTags.map((tag) => <li><Tag tag={tag} /></li>)}
+        {
+          topTags.map((tag) => (
+            <li>
+              <Tag tag={tag} />
+            </li>
+          ))
+        }
       </ol>
     </nav>
   </nav>
   <ul class="flex flex-row justify-center gap-4">
     <h1>Contact me:</h1>
-    {socialLinks.map(link=><li><Link href={link.link}>{link.name}</Link></li>)}
+    {
+      socialLinks.map((link) => (
+        <li>
+          <Link href={link.link}>{link.name}</Link>
+        </li>
+      ))
+    }
   </ul>
 </footer>

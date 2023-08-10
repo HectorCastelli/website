@@ -11,4 +11,10 @@ const { post } = Astro.props;
 const blogEntry = await getBlogPost(post);
 ---
 
-{blogEntry ? <Link href={`/blog/${blogEntry?.slug}`}>{blogEntry?.data.title}</Link> : ""}
+{
+  blogEntry ? (
+    <Link href={`/blog/${blogEntry?.slug}`}>{blogEntry?.data.title}</Link>
+  ) : (
+    ""
+  )
+}

@@ -12,4 +12,13 @@ const { tag, suffix } = Astro.props;
 const tagEntry = await getTag(tag);
 ---
 
-{tagEntry ? <Link href={`/tags/${tagEntry?.slug}`}>{tagEntry?.data.name}{suffix}</Link> : ""}
+{
+  tagEntry ? (
+    <Link href={`/tags/${tagEntry?.slug}`}>
+      {tagEntry?.data.name}
+      {suffix}
+    </Link>
+  ) : (
+    ""
+  )
+}
