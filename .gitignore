@@ -21,7 +21,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-.astro
-
 # generated social images
 public/socials/*

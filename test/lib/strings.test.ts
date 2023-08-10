@@ -1,5 +1,5 @@
-import { assert, expect, test } from 'vitest';
-import { chunkString } from './strings';
+import { expect, test } from 'vitest';
+import { chunkString } from '@lib/strings';
 
 test('Works on empty strings', () => {
 	expect(chunkString("", 1)).toStrictEqual([]);
