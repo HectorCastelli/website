@@ -4,46 +4,68 @@ import LinkChip from "@components/LinkChip.astro";
 import Tag from "@components/Tag.astro";
 import Base from "@layouts/Base.astro";
 import { getTopTagsThenRemainder } from "@lib/tags";
+import {getAllBlogPosts} from "@lib/blogs";
+import Blog from "@components/Blog.astro";
 
-const [tags,_] = await getTopTagsThenRemainder(3)
-
+const [tags, _] = await getTopTagsThenRemainder(3);
+const recentPosts = await getAllBlogPosts().then(p=>p.slice(0,3));
 ---
+
 <Base>
-  <main class="flex flex-col justify-around md:justify-between items-stretch p-12 py-6 md:p-32 md:py-12 lg:px-60 flex-grow text-white text-lg md:text-xl">
+  <main
+    class="flex flex-col justify-around md:justify-between items-stretch p-12 py-6 md:p-32 md:py-12 lg:px-60 flex-grow text-white text-lg md:text-xl"
+  >
     <section class="self-center max-w-lg">
-      <h2 class="font-medium text-xl md:text-2xl mb-4">Hey! Welcome!</h2>
-      <h1 class="font-bold text-2xl md:text-8xl mb-8">I'm Hector.</h1>
-      <p class="mb-4">
-        I'm a maker that enjoys the software craft,
-        as well as some other topics, such as:
-        {tags.map(t => <Tag tag={t} suffix=", "/>)}
-        and more!
-      </p>
-      <h3 class="mb-4">
-        I publish my thoughts on my <Link href="/blog">blog</Link>, give it a read!
-      </h3>
-      <p>
-        I also work on other <Link href="/projects">projects</Link>, some of which
-        are open. Check them out!
-      </p>
+      <section class="mb-4">
+        <h2 class="font-medium text-xl md:text-2xl mb-4">Hey! Welcome!</h2>
+        <h1 class="font-bold text-2xl md:text-8xl mb-6">I'm Hector.</h1>
+        <p>
+          I'm a maker that enjoys the software craft, as well as some other
+          topics, such as:
+          {tags.map((t) => <Tag tag={t} suffix=", " />)}
+          and more!
+        </p>
+      </section>
+      <section class="mb-8">
+        <h3 class="mb-2">
+          I publish my thoughts on my <Link href="/blog">blog</Link>, here are the most recent ones:
+        </h3>
+        <ol class="flex flex-col justify-around gap-1 md:gap-2">
+          {recentPosts.map(post=>
+            <li class="text-base">
+              <Blog post={post.slug}/>
+            </li>
+          )}
+        </ol>
+      </section>
+      <section>
+        <p>
+          I also work on other <Link href="/projects">projects</Link>, some of
+          which are open. Check them out!
+        </p>
+      </section>
     </section>
-    <aside class="self-end text-right">
+    <aside class="self-end text-right max-w-[60vw] md:max-w-[30vw]">
       <nav>
         <ul class="flex flex-col gap-2">
-          <li class="max-w-[30vw]">
+          <li>
             <LinkChip href="/contact" title="contact">Talk to me</LinkChip>
           </li>
-          <li class="max-w-[30vw]">
-            <LinkChip href="/blog" title="blog">Thoughts and ramblings</LinkChip>
+          <li>
+            <LinkChip href="/blog" title="blog">
+              Thoughts & ramblings
+            </LinkChip>
           </li>
-          <li class="max-w-[30vw]">
+          <li>
             <LinkChip href="/projects" title="projects">Other stuff</LinkChip>
           </li>
         </ul>
       </nav>
     </aside>
   </main>
-  <aside class="fixed bottom-0 -left-[10vh] lg:-left-[20vh] max-h-[80vh] max-w-[70vw] aspect-square -z-10">
+  <aside
+    class="absolute bottom-0 -left-[10vh] lg:-left-[20vh] max-h-[80vh] max-w-[70vw] aspect-square -z-10"
+  >
     <img
       src="avatar-transparent.png"
       alt="A charicature of the author"

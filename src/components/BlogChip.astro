@@ -1,0 +1,30 @@
+---
+import { getBlogPost } from "@lib/blogs";
+import Link from "./Link.astro";
+import Tag from "./Tag.astro";
+
+interface Props {
+  post: string;
+}
+
+const { post } = Astro.props;
+
+const blogEntry = await getBlogPost(post);
+---
+
+{
+  blogEntry ? (
+    <article class="p-2">
+      <h1 class="font-bold text-xl">
+        <Link href={`/blog/${blogEntry.slug}`}>{blogEntry.data.title}</Link>
+      </h1>
+      <h2>{blogEntry.data.description}</h2>
+        <aside class="flex flex-row justify-between mb-2">
+        <p>Published on {blogEntry.data.pubDate.toLocaleDateString()}</p>
+        <p>Tags: {blogEntry.data.tags.map((tag) => <Tag tag={tag} suffix=";" />)}</p>
+        </aside>
+    </article>
+  ) : (
+    ""
+  )
+}

@@ -1,0 +1,40 @@
+---
+import Navigation from "./Navigation.astro";
+
+interface Props {
+  title?: string;
+  page?: any;
+}
+
+const { title, page } = Astro.props;
+---
+
+<Navigation frontmatter={page ? `${title} - Page ${page.currentPage}` : title}>
+  <h1 class="font-bold text-5xl mb-8 text-center">{title}</h1>
+  <slot />
+  {
+    page ? (
+      <nav class="flex flex-row justify-center gap-12 mt-8 text-center">
+        {page.url.prev ? (
+          <a href={page.url.prev}>Previous</a>
+        ) : (
+          <a href="" class="text-slate-300 cursor-not-allowed">
+            Previous
+          </a>
+        )}
+        <h2>
+          Page {page.currentPage} of {page.lastPage}
+        </h2>
+        {page.url.next ? (
+          <a href={page.url.next}>Next</a>
+        ) : (
+          <a href="" class="text-slate-300 cursor-not-allowed">
+            Next
+          </a>
+        )}
+      </nav>
+    ) : (
+      ""
+    )
+  }
+</Navigation>

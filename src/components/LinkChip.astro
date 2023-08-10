@@ -8,7 +8,7 @@ interface Props {
 const {title, href} = Astro.props;
 ---
 
-<div class="p-2">
-    <p class="mr-4"><slot/></p>
-    <p class="font-bold uppercase"><Link href={href}>{title}</Link></p>
-</div>
+<article class="p-2">
+    <p class="mr-2"><slot/></p>
+    <h1 class="font-bold uppercase"><Link href={href}>{title}</Link></h1>
+</article>

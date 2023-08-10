@@ -1,10 +1,8 @@
 ---
-import Header from "@components/Header.astro";
-import Base from "./Base.astro";
+import Navigation from "./Navigation.astro";
 import type { CollectionEntry } from "astro:content";
 import StyledProse from "@components/StyledProse.astro";
 import Tag from "@components/Tag.astro";
-import Footer from "@components/Footer.astro";
 import Markdown from "@components/Markdown.astro";
 
 interface Props {
@@ -16,11 +14,7 @@ const { Content } = await render();
 const { title, description, footNotes, tags, pubDate } = data;
 ---
 
-<Base frontmatter={data}>
-  <Header />
-  <main
-    class="md:mx-auto w-screen lg:max-w-5xl p-4 md:p-12 bg-stone-50 text-stone-900"
-  >
+<Navigation frontmatter={data}>
     <h1 class="font-bold text-5xl mb-8 text-center">{title}</h1>
     <h2 class="font-bold text-xl mb-4">{description}</h2>
     <aside class="flex flex-row justify-between mb-2">
@@ -47,6 +41,5 @@ const { title, description, footNotes, tags, pubDate } = data;
         )
       }
     </StyledProse>
-  </main>
-  <Footer />
+  </Navigation>
 </Base>
