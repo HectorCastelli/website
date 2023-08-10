@@ -1,3 +1,9 @@
+---
+import Announcement from "@components/Announcement.astro";
+import Link from "@components/Link.astro";
+
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,21 +14,20 @@
   <body
     class="h-screen bg-gradient-to-br from-green-300 from-10% to-emerald-600 to-80%"
   >
-    <main class="flex flex-col justify-between items-stretch p-32 px-60 h-screen text-white">
-      <section class="self-center">
-        <h2 class="font-medium text-xl">Hey! Welcome!</h2>
-        <h1 class="font-bold text-4xl">I'm Hector.</h1>
-        <p>
+    <Announcement/>
+    <main class="flex flex-col justify-around md:justify-between items-stretch p-12 md:p-32 md:px-60 h-screen text-white">
+      <section class="self-center max-w-lg">
+        <h2 class="font-medium text-xl mb-4">Hey! Welcome!</h2>
+        <h1 class="font-bold text-4xl mb-8">I'm Hector.</h1>
+        <p class="mb-4">
           I'm a maker that enjoys the software craft,
           as well as some other topics, such as:
+          <Link href="/tags/planning">planning,</Link>
+          <Link href="/tags/architecture">architecture,</Link>
+          <Link href="/tags/tooling">tooling,</Link>
+          and more!
         </p>
-        <ul>
-          <li><a href="/tags/planning">planning</a></li>
-          <li><a href="/tags/architecture">architecture</a></li>
-          <li><a href="/tags/tooling">tooling</a></li>
-          <li>and more!</li>
-        </ul>
-        <h3>
+        <h3 class="mb-4">
           I publish my thoughts on my <a href="/blog">blog</a>, give it a read!
         </h3>
         <p>
@@ -55,7 +60,7 @@
         </nav>
       </aside>
     </main>
-    <aside class="fixed bottom-0 -left-[10vh] max-h-[80vh] max-w-[70vw] aspect-square -z-10">
+    <aside class="fixed bottom-0 -left-[10vh] lg:-left-[20vh] max-h-[80vh] max-w-[70vw] aspect-square -z-10">
       <img
         src="avatar-transparent.png"
         alt="A charicature of the author"
