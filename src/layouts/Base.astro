@@ -1,0 +1,51 @@
+---
+import Announcement from "@components/Announcement.astro";
+import config from "@config";
+
+interface Props {
+  title?: string;
+  author?: string;
+  description?: string;
+  keywords?: string[];
+  frontmatter?: any;
+}
+
+// Use data from the frontmatter, then from the component, then from the config as fallback.
+const data = {
+  ...config,
+  ...Astro.props,
+  ...Astro.props.frontmatter,
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO data -->
+    <title>{data.title}</title>
+    <meta name="author" content={data.author} />
+    <meta name="description" content={data.description} />
+    {
+      data.keywords && (
+        <meta name="keywords" content={data.keywords?.join(", ")} />
+      )
+    }
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon/favicon.png" />
+    <!-- Analytics -->
+    <script
+      async
+      src="https://analytics.umami.is/script.js"
+      data-website-id="f44226ef-3a9e-46ba-b98a-2dec9cb6129c"
+    ></script>
+  </head>
+  <body
+    class="h-screen bg-gradient-to-br from-green-300 from-10% to-emerald-600 to-80%"
+  >
+    <Announcement />
+    <slot />
+  </body>
+</html>
