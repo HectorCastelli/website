@@ -1,13 +1,15 @@
 ---
 import { getTag } from "@lib/tags";
+import Link from "./Link.astro";
 
 interface Props {
   tag: string;
+  suffix?: string;
 }
 
-const { tag } = Astro.props;
+const { tag, suffix } = Astro.props;
 
 const tagEntry = await getTag(tag);
 ---
 
-{tagEntry ? <a href={`/tags/${tagEntry?.slug}`}>{tagEntry?.data.name}</a> : ""}
+{tagEntry ? <Link href={`/tags/${tagEntry?.slug}`}>{tagEntry?.data.name}{suffix}</Link> : ""}

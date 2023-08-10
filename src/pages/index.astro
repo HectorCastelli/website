@@ -1,6 +1,7 @@
 ---
 import Link from "@components/Link.astro";
 import LinkChip from "@components/LinkChip.astro";
+import Tag from "@components/Tag.astro";
 import Base from "@layouts/Base.astro";
 import { getTopTagsThenRemainder } from "@lib/tags";
 
@@ -15,7 +16,7 @@ const [tags,_] = await getTopTagsThenRemainder(3)
       <p class="mb-4">
         I'm a maker that enjoys the software craft,
         as well as some other topics, such as:
-        {tags.map(t => <Link href={`/tags/${t}"`}>{t},</Link>)}
+        {tags.map(t => <Tag tag={t} suffix=", "/>)}
         and more!
       </p>
       <h3 class="mb-4">
