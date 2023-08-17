@@ -29,12 +29,15 @@ jobs:
           node-version: 16
           cache: "npm"
       - run: npm ci
+      - name: Render diagrams
+        run: |-
+          npm run build:diagrams
       - name: Run tests
         run: |-
           npm run test -- run
-      - name: Render diagrams
+      - name: Run e2e tests
         run: |-
-          ./scripts/render-diagrams.sh
+          npm run e2e
       - name: Build website
         run: |-
           npm run build

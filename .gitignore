@@ -23,3 +23,7 @@ pnpm-debug.log*
 
 # generated mermaid charts
 **.mmd.svg
+
+# Cypress test artefacts
+cypress/screenshots
+cypress/videos
