@@ -26,16 +26,19 @@ Blog posts that are set to future date are considered "drafts", and will be excl
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                  | Action                                                |
-| :----------------------- | :---------------------------------------------------- |
-| `npm install`            | Installs dependencies                                 |
-| `npm run dev`            | Starts local dev server at `localhost:3000`           |
-| `npm run sync`           | Syncs the types definitions for contents              |
-| `npm run build`          | Build your production site to `./dist/`               |
-| `npm run build:diagrams` | Build diagrams files into their svg                   |
-| `npm run preview`        | Preview your build locally, before deploying          |
-| `npm run test`           | Tests the website (but mostly some library functions) |
-| `npm run astro ...`      | Run CLI commands like `astro add`, `astro check`      |
+| Command                  | Action                                                                  |
+| :----------------------- | :---------------------------------------------------------------------- |
+| `npm install`            | Installs dependencies                                                   |
+| `npm run dev`            | Starts local dev server at `localhost:3000`                             |
+| `npm run sync`           | Syncs the types definitions for contents                                |
+| `npm run build`          | Build your production site to `./dist/`                                 |
+| `npm run build:diagrams` | Build diagrams files into their svg                                     |
+| `npm run preview`        | Preview your build locally, before deploying                            |
+| `npm run test`           | Tests the website (but mostly some library functions)                   |
+| `npm run e2e`            | Tests the website end-to-end                                            |
+| `npm run e2e:dev`        | Tests the website end-to-end continuously. This won't refresh fixtures. |
+| `npm run e2e:build`      | Refreshes fixtures for the e2e tests                                    |
+| `npm run astro ...`      | Run CLI commands like `astro add`, `astro check`                        |
 
 ### Helpers: creating content
 

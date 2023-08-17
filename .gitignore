@@ -27,3 +27,7 @@ pnpm-debug.log*
 # Cypress test artefacts
 cypress/screenshots
 cypress/videos
+
+# Cypress generated fixtures
+cypress/fixtures/blog.json
+cypress/fixtures/tag.json
