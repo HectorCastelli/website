@@ -2,7 +2,7 @@ import { getCollection, CollectionEntry, getEntryBySlug } from 'astro:content';
 
 export async function getAllBlogPosts(): Promise<CollectionEntry<"blog">[]> {
     const posts = await getCollection('blog');
-    return filterAndOrderBlogPosts(posts);
+    return orderBlogPosts(filterFutureBlogPosts(posts));
 }
 
 export async function getBlogPost(post: string): Promise<CollectionEntry<'blog'> | undefined> {
@@ -13,11 +13,14 @@ export async function getAllBlogPostsRelatedTo(tag: CollectionEntry<"tag">): Pro
     const posts = await getCollection('blog', ({ data }) =>
         data.tags.includes(tag.slug)
     );
-    return filterAndOrderBlogPosts(posts);
+    return orderBlogPosts(filterFutureBlogPosts(posts));
 }
 
-function filterAndOrderBlogPosts(blogPosts: CollectionEntry<"blog">[]): CollectionEntry<"blog">[] {
-    return blogPosts
-        .filter((b) => b.data.pubDate.getTime() < new Date().getTime())
-        .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+function filterFutureBlogPosts(blogPosts: CollectionEntry<"blog">[]): CollectionEntry<"blog">[] {
+    const buildTime = new Date().getTime()
+    return orderBlogPosts(blogPosts.filter((b) => b.data.pubDate.getTime() < buildTime));
+}
+
+function orderBlogPosts(blogPosts: CollectionEntry<"blog">[]): CollectionEntry<"blog">[] {
+    return blogPosts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 }
