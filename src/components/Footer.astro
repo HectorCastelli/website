@@ -3,6 +3,8 @@ import config from "@config";
 import { getTopTagsThenRemainder } from "@lib/tags";
 import Link from "./Link.astro";
 import Tag from "./Tag.astro";
+import LicenseBadge from "./LicenseBadge.astro";
+import Author from "./Author.astro";
 
 const { author, socialLinks } = config;
 const { links } = config.footer;
@@ -10,34 +12,35 @@ const [topTags, _] = await getTopTagsThenRemainder(3);
 ---
 
 <footer
-  class="max-w-xl mx-auto p-6 py-12 text-stone-50 text-sm font-bold tracking-wider text-center"
+  class="md:max-w-xl mx-auto p-6 py-12 text-stone-50 text-sm font-bold tracking-wider text-center"
 >
-  <p>All rights reserved, {author}.</p>
-  <nav class="flex flex-col justify-center gap-4 mb-8">
-    <nav class="flex justify-center gap-4">
-      {links.map((link) => <Link href={link.href}>{link.text}</Link>)}
-    </nav>
-    <nav>
-      <ol class="flex flex-row justify-center gap-4">
-        <h1>Top <Link href="/tags">tags</Link>:</h1>
-        {
-          topTags.map((tag) => (
-            <li>
-              <Tag tag={tag} />
-            </li>
-          ))
-        }
-      </ol>
-    </nav>
+  <Author />
+  <nav class="flex justify-center gap-4 mt-4 mb-8">
+    {links.map((link) => <Link href={link.href}>{link.text}</Link>)}
   </nav>
-  <ul class="flex flex-row justify-center gap-4">
+  <nav>
+    <ol class="flex flex-row justify-between gap-2 md:gap-4">
+      <h1>Top <Link href="/tags">tags</Link>:</h1>
+      {
+        topTags.map((tag) => (
+          <li>
+            <Tag tag={tag} />
+          </li>
+        ))
+      }
+    </ol>
+  </nav>
+  <ul class="flex flex-row justify-between flex-wrap gap-2 md:gap-4 mb-4">
     <h1>Contact me:</h1>
     {
       socialLinks.map((link) => (
         <li>
-          <Link href={link.link} rel="me">{link.name}</Link>
+          <Link href={link.link} rel="me">
+            {link.name}
+          </Link>
         </li>
       ))
     }
   </ul>
+  <LicenseBadge />
 </footer>
