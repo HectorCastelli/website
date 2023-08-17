@@ -14,9 +14,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "vitest",
-    "e2e": "npm run e2e:build; npm run dev & cypress run; exit $!",
+    "e2e": "npm run e2e:build && start-server-and-test dev http://localhost:3000/ 'cypress run'",
     "e2e:build": "npm run build && scripts/update-fixtures.sh",
-    "e2e:dev": "npm run e2e:build; npm run dev & cypress open",
+    "e2e:dev": "npm run e2e:build && start-server-and-test dev http://localhost:3000/ 'cypress open'",
     "build:diagrams": "scripts/render-diagrams.sh",
     "create:blog": "node scripts/blog/create.js",
     "create:tag": "node scripts/tag/create.js",
@@ -37,6 +37,7 @@
   "devDependencies": {
     "axe-core": "^4.7.2",
     "cypress": "^12.17.4",
-    "cypress-axe": "^1.4.0"
+    "cypress-axe": "^1.4.0",
+    "start-server-and-test": "^2.0.0"
   }
 }
