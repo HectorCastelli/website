@@ -34,6 +34,8 @@
     "vitest": "^0.34.1"
   },
   "devDependencies": {
-    "cypress": "^12.17.4"
+    "axe-core": "^4.7.2",
+    "cypress": "^12.17.4",
+    "cypress-axe": "^1.4.0"
   }
 }

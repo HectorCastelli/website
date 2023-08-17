@@ -17,7 +17,9 @@
       ],
     },
     "types": [
-      "vitest/importMeta"
+      "vitest/importMeta",
+      "cypress",
+      "cypress-axe"
     ]
   }
 }
