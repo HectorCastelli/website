@@ -16,7 +16,8 @@
     "astro": "astro",
     "blog-create": "node scripts/blog/create.js",
     "tag-create": "node scripts/tag/create.js",
-    "project-create": "node scripts/project/create.js"
+    "project-create": "node scripts/project/create.js",
+    "diagrams": "scripts/render-diagrams.sh"
   },
   "dependencies": {
     "@astrojs/rss": "^2.4.4",
