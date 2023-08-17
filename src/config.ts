@@ -24,7 +24,7 @@ export default {
             },
             {
                 text: "Tags",
-                href: '/tags',
+                href: '/tag',
             },
         ]
     },
