@@ -4,18 +4,17 @@ Cypress.Commands.add('checkAccessibility', () => {
 });
 
 function reportAccessibilityViolations(violations) {
-    cy.task(
-      'log',
-      `${violations.length} accessibility violation${
-        violations.length === 1 ? '' : 's'
-      } ${violations.length === 1 ? 'was' : 'were'} detected`
-    )
-    cy.task('table', violations.map(
-        ({ id, impact, description, nodes }) => ({
-          id,
-          impact,
-          description,
-          nodes: nodes.length
-        })
-      ))
-  }
+  cy.task(
+    'log',
+    `${violations.length} accessibility violation${violations.length === 1 ? '' : 's'
+    } ${violations.length === 1 ? 'was' : 'were'} detected`
+  )
+  cy.task('table', violations.map(
+    ({ id, impact, description, nodes }) => ({
+      id,
+      impact,
+      description,
+      nodes: nodes.length
+    })
+  ))
+}
