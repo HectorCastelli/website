@@ -18,7 +18,7 @@ const data = {
   ...Astro.props.frontmatter,
 };
 
-const {socialLinks} = config;
+const { socialLinks } = config;
 
 const astroMode = import.meta.env.MODE;
 ---
@@ -30,20 +30,23 @@ const astroMode = import.meta.env.MODE;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- SEO data -->
     <title>{data.title}</title>
-    <meta property="og:title" content={data.title}>
+    <meta property="og:title" content={data.title} />
     <meta name="author" content={data.author} />
     <meta name="description" content={data.description} />
-    <meta property="og:description" content={data.description}>
+    <meta property="og:description" content={data.description} />
     {
       data.keywords && (
         <meta name="keywords" content={data.keywords?.join(", ")} />
       )
     }
-    {
-    socialLinks.map((link) => (
-      <link rel="me" href={link.link} />
-    ))
-  }
+    <!-- Social media images -->
+    <SocialMediaImage />
+    <!-- IndieWeb (indieweb.org) -->
+    {socialLinks.map((link) => <link rel="me" href={link.link} />)}
+    <link
+      rel="webmention"
+      href="https://webmention.io/gohector.com/webmention"
+    />
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon/favicon.png" />
@@ -59,8 +62,6 @@ const astroMode = import.meta.env.MODE;
         ""
       )
     }
-    <!-- Social media images -->
-    <SocialMediaImage/>
   </head>
   <body
     class="relative min-h-screen bg-gradient-to-br from-green-300 from-10% to-emerald-600 to-80% flex flex-col"
