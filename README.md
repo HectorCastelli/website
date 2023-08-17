@@ -4,6 +4,8 @@ My [personal website](https://gohector.com), as well as the articles and posts t
 
 [Analytics](https://analytics.umami.is/share/4JOEokFotSrQAsr4/GoHector) tracked with [Umami](https://umami.is/).
 
+[Web mentions](https://webmention.io/api/mentions.atom?token=RDJRXtZAj4QOKaiMWxgtXQ) tracked with [webmention.io](https://webmention.io/).
+
 Built with [Astro](https://astro.build/).
 
 ## Commands
