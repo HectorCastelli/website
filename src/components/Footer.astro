@@ -35,7 +35,7 @@ const [topTags, _] = await getTopTagsThenRemainder(3);
     {
       socialLinks.map((link) => (
         <li>
-          <Link href={link.link}>{link.name}</Link>
+          <Link href={link.link} rel="me">{link.name}</Link>
         </li>
       ))
     }

@@ -2,11 +2,12 @@
 interface Props {
   href: string;
   id?: string;
+  rel?: string;
 }
 
-const { href, id } = Astro.props;
+const { href, id, rel } = Astro.props;
 ---
 
-<a href={href} class="underline underline-offset-2" id={id ? id : ""}>
+<a href={href} class="underline underline-offset-2" id={id ? id : ""} rel={rel ? rel : ""}>
   <slot /></a
 >

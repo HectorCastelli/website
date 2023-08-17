@@ -1,6 +1,5 @@
 ---
 import Announcement from "@components/Announcement.astro";
-import { chunkString } from "@lib/strings";
 import config from "@config";
 import SocialMediaImage from "@components/SocialMediaImage.astro";
 
@@ -18,6 +17,8 @@ const data = {
   ...Astro.props,
   ...Astro.props.frontmatter,
 };
+
+const {socialLinks} = config;
 
 const astroMode = import.meta.env.MODE;
 ---
@@ -38,6 +39,11 @@ const astroMode = import.meta.env.MODE;
         <meta name="keywords" content={data.keywords?.join(", ")} />
       )
     }
+    {
+    socialLinks.map((link) => (
+      <link rel="me" href={link.link} />
+    ))
+  }
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="icon" type="image/png" href="/favicon/favicon.png" />
