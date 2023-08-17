@@ -38,9 +38,6 @@ jobs:
       - name: Build website
         run: |-
           npm run build
-      - name: Build website (to include social images)
-        run: |-
-          npm run build
       - name: Upload website
         uses: actions/upload-artifact@v3
         with:
