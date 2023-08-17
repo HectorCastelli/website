@@ -21,5 +21,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# generated social images
-public/socials/*
+# generated mermaid charts
+**.mmd.svg
