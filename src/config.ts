@@ -63,6 +63,10 @@ export default {
         {
             name: "LinkedIn",
             link: "https://www.linkedin.com/in/hectorzacharias/"
+        },
+        {
+            name: "SMS",
+            link: "sms:+43677059383"
         }
     ]
 }
