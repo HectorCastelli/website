@@ -17,4 +17,11 @@ function reportAccessibilityViolations(violations) {
       nodes: nodes.length
     })
   ))
+  cy.task('table',
+  violations.flatMap(
+    ({ id, nodes }) => (nodes.map(n => ({
+      id,
+      node: n.html
+    }))))
+  )
 }
