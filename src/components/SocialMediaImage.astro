@@ -1,7 +1,7 @@
 ---
 import {pathToSlug} from '../pages/opengraph/[...route]';
 
-const imagePath = `${Astro.url.origin}/opengraph${pathToSlug(Astro.url.pathname).replace(/\/$/, '')}`;
+const imagePath = `${Astro.url.origin}/opengraph${pathToSlug(Astro.url.pathname).replace('/.png', '.png')}`;
 ---
 <>
         <meta property="og:image" content={imagePath}>
