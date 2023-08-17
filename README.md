@@ -14,6 +14,8 @@ My [personal website](https://gohector.com), as well as the contents that powers
 - Domain provided by [gandi.net](https://www.gandi.net/)
 - Website built with [Astro](https://astro.build/)
 - Tests use [vitest](https://vitest.dev/)
+- End-to-end tests use [cypress](https://www.cypress.io/)
+  - Accessibility tests are provided by the [Axe Accessibility Testing Tools](https://www.deque.com/axe/).
 - Diagrams created with [mermaid.js](https://mermaid.js.org/)
 
 ## Conventions
