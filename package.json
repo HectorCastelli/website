@@ -15,7 +15,7 @@
     "preview": "astro preview",
     "test": "vitest",
     "e2e": "npm run e2e:build; npm run dev & cypress run; exit $!",
-    "e2e:build": "scripts/update-fixtures.sh",
+    "e2e:build": "npm run build && scripts/update-fixtures.sh",
     "e2e:dev": "npm run e2e:build; npm run dev & cypress open",
     "build:diagrams": "scripts/render-diagrams.sh",
     "create:blog": "node scripts/blog/create.js",
