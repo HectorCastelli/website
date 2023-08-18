@@ -5,7 +5,9 @@ description: ""
 tags: ["software", "architecture"]
 ---
 
-These things make sense as rules of thumb in any level of abstraction
+These things make sense as rules of thumb in any level of abstraction.
+
+These are more true for "customer-facing" software than purely mathematical or statistical programs.
 
 ## Avoid state
 
