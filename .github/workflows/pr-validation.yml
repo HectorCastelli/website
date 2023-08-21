@@ -23,6 +23,9 @@ jobs:
           node-version: 16
           cache: "npm"
       - run: npm ci
+      - name: Get feed xsl
+        run: |-
+          npm run build:feed
       - name: Render diagrams
         run: |-
           npm run build:diagrams

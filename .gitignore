@@ -31,3 +31,6 @@ cypress/videos
 # Cypress generated fixtures
 cypress/fixtures/blog.json
 cypress/fixtures/tag.json
+
+# Pretty feed
+public/pretty-feed-v3.xsl
