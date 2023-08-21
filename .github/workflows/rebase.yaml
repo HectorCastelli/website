@@ -6,6 +6,7 @@ jobs:
   rebase:
     runs-on: ubuntu-latest
     steps:
-      - uses: peter-evans/rebase@v2
-        with:
-          base: main
+    - uses: peter-evans/rebase@v2
+      with:
+        token: ${{ secrets.REBASE_PAT }}
+        base: main
