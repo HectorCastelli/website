@@ -20,7 +20,9 @@ My [personal website](https://gohector.com), as well as the contents that powers
 
 ## Conventions
 
-Blog posts that are set to future date are considered "drafts", and will be excluded from the list of available posts. However, their permalinks are still available, and can therefore be shared with others (which is useful for feedback). This also means that the draft posts are available on the sitemap.
+Blog posts that are set to future date are considered "drafts", and will be excluded from the list of available posts. However, their permalinks are still available, and can therefore be shared with others (which is useful for feedback). This also means that the draft posts are available on the sitemap, and therefore for SEO.
+
+The ideal workflow for new articles is to publish them as drafts into a separate PR. This allows for comments in-place thanks to Github's review tools. This is the only way to avoid new articles from showing on the sitemap or to SEO.
 
 ## Commands
 
