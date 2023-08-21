@@ -17,6 +17,10 @@ be stateless if possible, if not, have a single state to manage
 
 Make code easier to test, make tests fast
 
+## Why is more important than how
+
+Code should read well and explain why things are done. How things are accomplished is useless.
+
 ## Presentation matters
 
 Data schema needs to work well with presentation, and presentation needs to be supported by schema.
