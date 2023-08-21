@@ -28,19 +28,34 @@ The ideal workflow for new articles is to publish them as drafts into a separate
 
 All commands are run from the root of the project, from a terminal:
 
-| Command                  | Action                                                                  |
-| :----------------------- | :---------------------------------------------------------------------- |
-| `npm install`            | Installs dependencies                                                   |
-| `npm run dev`            | Starts local dev server at `localhost:3000`                             |
-| `npm run sync`           | Syncs the types definitions for contents                                |
-| `npm run build`          | Build your production site to `./dist/`                                 |
-| `npm run build:diagrams` | Build diagrams files into their svg                                     |
-| `npm run preview`        | Preview your build locally, before deploying                            |
-| `npm run test`           | Tests the website (but mostly some library functions)                   |
-| `npm run e2e`            | Tests the website end-to-end                                            |
-| `npm run e2e:dev`        | Tests the website end-to-end continuously. This won't refresh fixtures. |
-| `npm run e2e:build`      | Refreshes fixtures for the e2e tests                                    |
-| `npm run astro ...`      | Run CLI commands like `astro add`, `astro check`                        |
+| Command                   | Action                                                              |
+| :------------------------ | :------------------------------------------------------------------ |
+| `npm install` or `npm ci` | Install dependencies                                                |
+| `npm run astro ...`       | Runs CLI commands like `astro add` or `astro check`                 |
+| `npm run start`           | Starts local dev server at [localhost:3000](http://localhost:3000/) |
+| `npm run dev`             | Starts the local dev server and run test suites continuously        |
+| `npm run build`           | Builds the website for production into the `./dist/` folder         |
+| `npm run test`            | Runs all tests suites                                               |
+
+Some of these commands have sub-steps that execute extra functionality. They can be called individually by their name:
+
+<details>
+  <summary>Sub-commands</summary>
+
+
+  | Command         | Sub-command                 | Action                                                                      |
+  | :-------------- | :-------------------------- | :-------------------------------------------------------------------------- |
+  | `npm install`   | `npm run postinstall:sync`          | Sync content types for astro types                                          |
+  |                 | `npm run postinstall:feed`          | Downloads [rss feed styling](feed.xsl) for users browsing the url           |
+  | `npm run build` | `npm run prebuild:diagrams`         | Renders all diagrams in the `./public` directory (`.mmd` become `.mmd.svg`) |
+  |                 | `npm run postbuild:update-fixtures` | Updates fixtures for the end-to-end tests                                   |
+  | `npm run dev`   | `npm run dev:server`                | Same as `npm run start`                                                     |
+  |                 | `npm run dev:test:unit`             | Runs the unit tests and watches for file changes                            |
+  |                 | `npm run dev:test:e2e`              | Runs the end-to-end tests and watches for file changes                      |
+  | `npm run test`  | `npm run test:unit`                 | Runs the unit tests                                                         |
+  |                 | `npm run test:e2e`                  | Runs the end-to-end tests. This runs `npm run build` before executing       |
+</details>
+
 
 ### Helpers: creating content
 
@@ -51,3 +66,5 @@ These commands will ask for input and create the appropriate files with the corr
 | `npm run create:blog`    | Create a new entry in the blog with today's date |
 | `npm run create:tag`     | Create a new tag                                 |
 | `npm run create:project` | Create a new project entry                       |
+
+[feed.xsl]: https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl

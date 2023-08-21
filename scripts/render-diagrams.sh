@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-for f in $(find ./public/images -name '*.mmd');
+for f in $(find ./public/ -name '*.mmd');
 do
     echo "Rendering $f"
     ./node_modules/.bin/mmdc \

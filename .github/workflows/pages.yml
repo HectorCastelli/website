@@ -29,21 +29,8 @@ jobs:
           node-version: 16
           cache: "npm"
       - run: npm ci
-      - name: Get feed xsl
-        run: |-
-          npm run build:feed
-      - name: Render diagrams
-        run: |-
-          npm run build:diagrams
-      - name: Run tests
-        run: |-
-          npm run test -- run
-      - name: Run e2e tests
-        run: |-
-          npm run e2e
-      - name: Build website
-        run: |-
-          npm run build
+      - run: npm run build
+      - run: npm test
       - name: Upload website
         uses: actions/upload-artifact@v3
         with:
