@@ -38,7 +38,7 @@ Your comments, your interface, and your error-messages should all reflect the un
 
 Your users should be able to give you feedback.
 
-Despite your best efforts to know your users, you will fail. Therefore, you must create mechanisms that allow for your users to correct your assumptions and point to your mistakes.
+Despite your best efforts to know your users, you will fail. Therefore, you must create mechanisms that allow for your users to correct your assumptions and point your mistakes.
 
 Some feedback points can be automated into tests, include these in your development lifecycle and make them as quick and frequent as possible.
 
