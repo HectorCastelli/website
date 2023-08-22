@@ -1,8 +1,13 @@
 ---
 title: "Axioms of development"
 pubDate: 2023-08-18
-description: "Things to keep in mind in order to write useful software"
+description: "Things to keep in mind in order to always write useful software"
 tags: ["software", "architecture"]
+footNotes: [
+    "The definition of **Axiom** is \"A statement or proposition that is regarded as being established, accepted, or self-evidently true\".
+    \n\n
+    Source: *Merriam-Webster Dictionary*. Retrieved August 22, 2023, from [https://www.merriam-webster.com/dictionary/axiom](https://www.merriam-webster.com/dictionary/axiom)"
+]
 ---
 
 I have been writing code for more than a decade. Languages, tools, and practices have changed and evolved during this time, however, one constant remains: My desire to create useful software.
