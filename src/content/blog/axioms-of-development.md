@@ -55,3 +55,16 @@ Differences between your presentation and your storage schema lead to more compl
 Stateful code must maintain and update data during its operations. This adds more complexity when developing, testing and updating code.
 
 Whenever possible, avoid depending on the state. Additionally, when avoiding state is impossible for the application, separate the code that manages state from the code that consumes/processes it.
+
+## Further reading
+
+While the ideas I've presented are general and tool-independent, there are tools and practices in the wild that you can adopt today to better align with these points.
+
+- [Empathy mapping](https://www.mindtools.com/abtn3bi/empathy-mapping): A process that helps visualize attitudes and behaviors of users to document our understanding of a users feelings and needs.
+- [Value proposition](https://en.wikipedia.org/wiki/Value_proposition)
+- [Product strategy](https://articles.centercentre.com/what-is-good-product-strategy/): Having a clear strategy can help focus initiatives and ensure highest impact per effort.
+- [Stakeholder interviews](https://cognition.happycog.com/article/better-stakeholder-interviews): A tool to capture the 
+- Journey mapping
+- Automated testing
+- Continuous integration
+- 
