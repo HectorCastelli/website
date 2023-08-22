@@ -50,6 +50,8 @@ This means that your choices on how to store the data must be aligned with how y
 
 Differences between your presentation and your storage schema lead to more complexity, and should be chosen carefully.
 
-### Avoid state
+## Avoid state
 
-be stateless if possible, if not, have a single state to manage
+Stateful code must maintain and update data during its operations. This adds more complexity when developing, testing and updating code.
+
+Whenever possible, avoid depending on the state. Additionally, when avoiding state is impossible for the application, separate the code that manages state from the code that consumes/processes it.
