@@ -58,15 +58,22 @@ Stateful code must maintain and update data during its operations. This adds mor
 
 Whenever possible, avoid depending on the state. Additionally, when avoiding state is impossible for the application, separate the code that manages state from the code that consumes/processes it.
 
-## Further reading
+## Some techniques to implement today
 
 While the ideas I've presented are general and tool-independent, there are tools and practices in the wild that you can adopt today to better align with these points.
 
-- [Empathy mapping](https://www.mindtools.com/abtn3bi/empathy-mapping): A process that helps visualize attitudes and behaviors of users to document our understanding of a users feelings and needs.
-- [Value proposition](https://en.wikipedia.org/wiki/Value_proposition)
-- [Product strategy](https://articles.centercentre.com/what-is-good-product-strategy/): Having a clear strategy can help focus initiatives and ensure highest impact per effort.
-- [Stakeholder interviews](https://cognition.happycog.com/article/better-stakeholder-interviews): A tool to capture the 
-- Journey mapping
-- Automated testing
-- Continuous integration
-- 
+| Technique                                        | What it brings to the table                                                         |
+| :----------------------------------------------- | :---------------------------------------------------------------------------------- |
+| [Empathy mapping][empathy-map]                   | Document what we know of the users needs and feelings.                              |
+| [Stakeholder interviews][stakeholder-interviews] | Capture user-feedback from a larger group without loosing (too much) comparability. |
+| [Plain language][plain-language]                 | Improves clarity and readability of written text.                                   |
+| [Continuous Testing][continuous-testing]         | Standardize your testing process and increase the frequency of execution.           |
+| [UI Prototypes][ui-prototype]                    | Explores usability and guides design of code and data schema.                       |
+| [Functional][funcitonal-thinking] core           | Ensures that state manipulation is not performed as part of core logic.             |
+
+[empathy-map]: https://www.mindtools.com/abtn3bi/empathy-mapping
+[stakeholder-interviews]: https://cognition.happycog.com/article/better-stakeholder-interviews
+[plain-language]: https://www.plainlanguage.gov/resources/articles/elements-of-plain-language/
+[continuous-testing]: https://www.techwell.com/techwell-insights/2015/08/part-pipeline-why-continuous-testing-essential
+[ui-prototype]: https://agilemodeling.com/artifacts/uiprototype.htm
+[funcitonal-thinking]: https://nealford.com/functionalthinking.html
