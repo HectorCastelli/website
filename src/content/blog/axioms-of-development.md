@@ -10,7 +10,7 @@ footNotes: [
 ]
 ---
 
-I have been writing code for more than a decade. Languages, tools, and practices have changed and evolved during this time, however, one constant remains: My desire to create useful software.
+I have been writing code for more than a decade. Languages, tools, and practices have changed and evolved during this time, however, one constant remains: the desire to create useful software.
 
 During the course of my career, my opinions have changed regarding which practices actually contribute to useful software. In this article, I hope to share some of the things I keep in mind to have a higher chance of writing useful software.
 
@@ -20,11 +20,13 @@ Software can only be useful if it is used. Those that interact with, or consume 
 
 Keep your users in mind when making decisions and writing code.
 
-## Fast is better than slow; Slow is better than broken
+## Be open to feedback
 
-Your users depend on your software, therefore it must be trustworthy.
+Your users should be able to give you feedback.
 
-Speed is great, but correctness is vital. Your code must be correct, before it is fast.
+Despite your best efforts to know your users, you will fail. Therefore, you must create mechanisms that allow for your users to correct your assumptions and point your mistakes.
+
+Integrate your user into the software development lifecycle, and integrate user feedback as early as possible.
 
 ## Why is more important than how
 
@@ -34,13 +36,13 @@ You must remember that your code is trying to achieve something for a reason, ca
 
 Your comments, your interface, and your error-messages should all reflect the underlying reasons, not the implementation.
 
-## Shorten the feedback loop
+## Fast is better than slow; Slow is better than broken
 
-Your users should be able to give you feedback.
+Your users depend on your software, therefore it must be trustworthy.
 
-Despite your best efforts to know your users, you will fail. Therefore, you must create mechanisms that allow for your users to correct your assumptions and point your mistakes.
+Speed is great, but correctness is vital. Your code must be correct, before it is fast.
 
-Some feedback points can be automated into tests, include these in your development lifecycle and make them as quick and frequent as possible.
+Integrate correctness checks into your workflow, and make them as quick and frequent as possible.
 
 ## Presentation matters
 
