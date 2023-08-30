@@ -25,7 +25,7 @@
     "test": "npm-run-all test:*",
     "test:unit": "vitest run",
     "test:e2e": "start-server-and-test start http://localhost:3000/ 'cypress run'",
-    "pretest:e2e" : "npm run build",
+    "pretest:e2e": "npm run build",
     "create:blog": "node scripts/blog/create.js",
     "create:tag": "node scripts/tag/create.js",
     "create:project": "node scripts/project/create.js"

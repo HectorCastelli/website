@@ -19,7 +19,10 @@ const blogEntry = await getBlogPost(post);
         <Link href={`/blog/${blogEntry.slug}`}>{blogEntry.data.title}</Link>
       </h1>
       <h2>{blogEntry.data.description}</h2>
-      <aside class="flex flex-row justify-between mb-2" title={`post metadata ${blogEntry.slug}`}>
+      <aside
+        class="flex flex-row justify-between mb-2"
+        title={`post metadata ${blogEntry.slug}`}
+      >
         <p>Published on {blogEntry.data.pubDate.toLocaleDateString()}</p>
         <p>
           Tags:{" "}

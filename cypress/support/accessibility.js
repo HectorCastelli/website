@@ -18,10 +18,10 @@ function reportAccessibilityViolations(violations) {
     })
   ))
   cy.task('table',
-  violations.flatMap(
-    ({ id, nodes }) => (nodes.map(n => ({
-      id,
-      node: n.html
-    }))))
+    violations.flatMap(
+      ({ id, nodes }) => (nodes.map(n => ({
+        id,
+        node: n.html
+      }))))
   )
 }

@@ -9,8 +9,8 @@ describe("index page", () => {
   it('titles are correct', () => {
     page.get('title').should('have.text', config.title)
   });
-  
-  it('announcement has correct visibility', () => { 
+
+  it('announcement has correct visibility', () => {
     if (config.announcement) {
       page.get("#announcement")
     } else {
@@ -18,7 +18,7 @@ describe("index page", () => {
     }
   })
 
-  it('Has no detectable a11y violations on load', () => {
+  it('has no detectable a11y violations on load', () => {
     cy.checkAccessibility()
   })
 })

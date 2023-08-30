@@ -7,7 +7,7 @@ describe("tag pages", () => {
             beforeEach(() => {
                 page = cy.visit(`/tag/${tag}`)
             })
-            it('Has no detectable a11y violations on load', () => {
+            it('has no detectable a11y violations on load', () => {
                 cy.checkAccessibility()
             })
         })
