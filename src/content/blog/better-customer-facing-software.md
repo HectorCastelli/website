@@ -1,7 +1,7 @@
 ---
 title: "Better customer-facing software"
 pubDate: 2023-08-18
-description: "Things to keep in mind in order to always write useful software"
+description: "Six things to keep in mind in order to always write useful software"
 tags: ["software", "architecture"]
 ---
 
