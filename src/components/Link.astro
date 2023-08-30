@@ -8,6 +8,11 @@ interface Props {
 const { href, id, rel } = Astro.props;
 ---
 
-<a href={href} class="underline underline-offset-2" id={id ? id : ""} rel={rel ? rel : ""}>
+<a
+  href={href}
+  class="underline underline-offset-2"
+  id={id ? id : ""}
+  rel={rel ? rel : ""}
+>
   <slot /></a
 >

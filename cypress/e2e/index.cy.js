@@ -10,7 +10,15 @@ describe("index page", () => {
     page.get('title').should('have.text', config.title)
   });
 
-  it('Has no detectable a11y violations on load', () => {
+  it('announcement has correct visibility', () => {
+    if (config.announcement) {
+      page.get("#announcement")
+    } else {
+      page.not("#announcement")
+    }
+  })
+
+  it('has no detectable a11y violations on load', () => {
     cy.checkAccessibility()
   })
 })

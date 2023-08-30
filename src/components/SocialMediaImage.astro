@@ -1,10 +1,13 @@
 ---
-import {pathToSlug} from '../pages/opengraph/[...route]';
+import { pathToSlug } from "../pages/opengraph/[...route]";
 
-const imagePath = `${Astro.url.origin}/opengraph${pathToSlug(Astro.url.pathname).replace('/.png', '.png')}`;
+const imagePath = `${Astro.url.origin}/opengraph${pathToSlug(
+    Astro.url.pathname
+).replace("/.png", ".png")}`;
 ---
+
 <>
-        <meta property="og:image" content={imagePath}>
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:image" content={imagePath}>
-    </>
+    <meta property="og:image" content={imagePath} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={imagePath} />
+</>

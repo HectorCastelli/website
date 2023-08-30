@@ -43,8 +43,8 @@ Some of these commands have sub-steps that execute extra functionality. They can
   <summary>Sub-commands</summary>
 
 
-  | Command         | Sub-command                 | Action                                                                      |
-  | :-------------- | :-------------------------- | :-------------------------------------------------------------------------- |
+  | Command         | Sub-command                         | Action                                                                      |
+  | :-------------- | :---------------------------------- | :-------------------------------------------------------------------------- |
   | `npm install`   | `npm run postinstall:sync`          | Sync content types for astro types                                          |
   |                 | `npm run postinstall:feed`          | Downloads [rss feed styling](feed.xsl) for users browsing the url           |
   | `npm run build` | `npm run prebuild:diagrams`         | Renders all diagrams in the `./public` directory (`.mmd` become `.mmd.svg`) |

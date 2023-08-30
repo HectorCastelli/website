@@ -9,7 +9,7 @@ export const baseImageOptions: OGImageOptions = {
     },
     bgGradient: [[134, 239, 172], [5, 150, 105]],
     border: {
-        color: [255,255,255],
+        color: [255, 255, 255],
         width: 10,
         side: 'inline-start',
     }
