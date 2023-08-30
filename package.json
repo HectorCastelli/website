@@ -30,6 +30,9 @@
     "create:tag": "node scripts/tag/create.js",
     "create:project": "node scripts/project/create.js"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
     "@astrojs/rss": "^2.4.4",
     "@astrojs/sitemap": "^2.0.1",
