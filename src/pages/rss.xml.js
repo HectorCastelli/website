@@ -1,5 +1,4 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
 
 import Config from "@config";
 const { author, description } = Config;
@@ -7,7 +6,7 @@ const { author, description } = Config;
 
 import { getAllBlogPosts } from "@lib/blogs";
 
-export async function get(context) {
+export async function GET(context) {
   const blog = await getAllBlogPosts();
   return rss({
     title: `gohector - ${author}`,

@@ -4,12 +4,18 @@ import config from "@config";
 import Gallery from "@layouts/Gallery.astro";
 
 import { getAllBlogPosts } from "@lib/blogs";
+import type { GetStaticPathsOptions, Page } from "astro";
 
-export async function getStaticPaths({ paginate }) {
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const blogs = await getAllBlogPosts();
 
   return paginate(blogs, { pageSize: config.pagination.blog });
 }
+
+interface Props {
+  page: Page;
+}
+
 const { page } = Astro.props;
 ---
 
@@ -25,7 +31,7 @@ const { page } = Astro.props;
     {
       page.data.map((post) => (
         <li class="mb-4">
-          <BlogChip post={post.slug} />
+          <BlogChip postSlug={post.slug} />
         </li>
       ))
     }

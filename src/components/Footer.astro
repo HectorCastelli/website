@@ -6,7 +6,7 @@ import Tag from "./Tag.astro";
 import LicenseBadge from "./LicenseBadge.astro";
 import Author from "./Author.astro";
 
-const { author, socialLinks } = config;
+const { socialLinks } = config;
 const { links } = config.footer;
 const [topTags, _] = await getTopTagsThenRemainder(3);
 ---

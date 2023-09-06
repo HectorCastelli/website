@@ -32,7 +32,7 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------ | :------------------------------------------------------------------ |
 | `npm install` or `npm ci` | Install dependencies                                                |
 | `npm run astro ...`       | Runs CLI commands like `astro add` or `astro check`                 |
-| `npm run start`           | Starts local dev server at [localhost:3000](http://localhost:3000/) |
+| `npm run start`           | Starts local dev server at [localhost:4321](http://localhost:4321/) |
 | `npm run dev`             | Starts the local dev server and run test suites continuously        |
 | `npm run build`           | Builds the website for production into the `./dist/` folder         |
 | `npm run test`            | Runs all tests suites                                               |
@@ -52,7 +52,8 @@ Some of these commands have sub-steps that execute extra functionality. They can
   | `npm run dev`   | `npm run dev:server`                | Same as `npm run start`                                                     |
   |                 | `npm run dev:test:unit`             | Runs the unit tests and watches for file changes                            |
   |                 | `npm run dev:test:e2e`              | Runs the end-to-end tests and watches for file changes                      |
-  | `npm run test`  | `npm run test:unit`                 | Runs the unit tests                                                         |
+  | `npm run test`  | `npm run test:check`                | Runs Typescript checks                                                      |
+  |                 | `npm run test:unit`                 | Runs the unit tests                                                         |
   |                 | `npm run test:e2e`                  | Runs the end-to-end tests. This runs `npm run build` before executing       |
 </details>
 

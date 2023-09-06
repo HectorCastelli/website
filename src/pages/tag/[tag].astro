@@ -1,5 +1,5 @@
 ---
-import { getCollection, CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import { getAllBlogPostsRelatedTo } from "@lib/blogs";
 import BlogChip from "@components/BlogChip.astro";
 import Gallery from "@layouts/Gallery.astro";
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
         currentTag: tag,
         posts: await getAllBlogPostsRelatedTo(tag),
       },
-    }))
+    })),
   );
 }
 
@@ -38,7 +38,7 @@ const { Content } = await currentTag.render();
     {
       posts.map((post) => (
         <li class="mb-4">
-          <BlogChip post={post.slug} />
+          <BlogChip postSlug={post.slug} />
         </li>
       ))
     }

@@ -4,5 +4,12 @@
         "postbuild",
         "prebuild",
         "roadmap"
+    ],
+    "Workspace_Formatter.excludePattern": [
+        "**/.*",
+        "**/.vscode",
+        "**/.astro",
+        "**/dist",
+        "**/node_modules",
     ]
 }

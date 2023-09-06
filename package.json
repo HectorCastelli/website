@@ -17,36 +17,42 @@
     "postbuild": "npm-run-all postbuild:*",
     "postbuild:update-fixtures": "scripts/update-fixtures.sh",
     "start": "astro dev",
-    "dev": "start-server-and-test 'dev:server' http://localhost:3000/ 'dev:test'",
+    "dev": "start-server-and-test 'dev:server' http://localhost:4321/ 'dev:test'",
     "dev:server": "npm run start",
     "dev:test": "npm-run-all --parallel dev:test:*",
     "dev:test:unit": "vitest",
     "dev:test:e2e": "cypress open",
     "test": "npm-run-all test:*",
+    "test:check": "astro check",
     "test:unit": "vitest run",
-    "test:e2e": "start-server-and-test start http://localhost:3000/ 'cypress run'",
+    "test:e2e": "start-server-and-test start http://localhost:4321/ 'cypress run'",
     "pretest:e2e": "npm run build",
     "create:blog": "node scripts/blog/create.js",
     "create:tag": "node scripts/tag/create.js",
     "create:project": "node scripts/project/create.js"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "@astrojs/rss": "^2.4.4",
-    "@astrojs/sitemap": "^2.0.1",
-    "@astrojs/tailwind": "^4.0.0",
-    "@mermaid-js/mermaid-cli": "^10.3.0",
-    "@tailwindcss/typography": "^0.5.9",
-    "astro": "^2.10.5",
-    "astro-og-canvas": "^0.1.8",
+    "@astrojs/rss": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "@tailwindcss/typography": "^0.5.10",
+    "astro": "^3.0.8",
+    "astro-og-canvas": "^0.2.0",
     "astro-robots-txt": "^0.5.0",
-    "tailwindcss": "^3.3.3",
-    "vitest": "^0.34.1"
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.2.0",
+    "@mermaid-js/mermaid-cli": "^10",
     "axe-core": "^4.7.2",
-    "cypress": "^12.17.4",
-    "cypress-axe": "^1.4.0",
+    "cypress": "^13.1.0",
+    "cypress-axe": "^1.5.0",
     "npm-run-all": "^4.1.5",
-    "start-server-and-test": "^2.0.0"
+    "start-server-and-test": "^2.0.0",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.3"
   }
 }

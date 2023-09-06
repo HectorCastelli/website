@@ -12,12 +12,12 @@ export const pathToSlug = (path: string) => {
   return path;
 };
 
-export const { getStaticPaths, get } = OGImageRoute({
+export const { getStaticPaths, GET } = OGImageRoute({
   param: 'route',
 
-  pages: await import.meta.glob('/src/content/(blog|tag)/**/*.md', { eager: true }),
+  pages: import.meta.glob('/src/content/(blog|tag)/**/*.md', { eager: true }),
 
-  getImageOptions: (path, page) => ({
+  getImageOptions: (_path, page) => ({
     ...baseImageOptions,
     title: getTitleFromPage(page),
     description: getDescriptionFromPage(page),
