@@ -1,6 +1,6 @@
 import { getAllBlogPosts } from "@lib/blogs";
 
-export async function get({ params, request }) {
+export async function GET({ params, request }) {
   const posts = await getAllBlogPosts();
   return {
     body: JSON.stringify({
