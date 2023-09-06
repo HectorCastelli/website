@@ -1,11 +1,21 @@
 ---
-import { micromark } from "micromark";
+import { micromark, type Options} from "micromark";
+import { gfm, gfmHtml } from "micromark-extension-gfm";
 
 interface Props {
   markdown: string;
 }
 
 const { markdown } = Astro.props;
+
+const micromarkOptions: Options = {
+  // @ts-ignore : This is an issue caused by re-exporting types from inside the gfm extesion.
+  extensions: [gfm()],
+  // @ts-ignore : This is an issue caused by re-exporting types from inside the gfm extesion.
+  htmlExtensions: [gfmHtml()],
+};
+
+const output = micromark(markdown, micromarkOptions);
 ---
 
-<Fragment set:html={micromark(markdown)} />
+<Fragment set:html={output} />
