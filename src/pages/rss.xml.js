@@ -7,7 +7,7 @@ const { author, description } = Config;
 
 import { getAllBlogPosts } from "@lib/blogs";
 
-export async function get(context) {
+export async function GET(context) {
   const blog = await getAllBlogPosts();
   return rss({
     title: `gohector - ${author}`,
