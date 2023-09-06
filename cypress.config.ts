@@ -5,7 +5,7 @@ export default defineConfig({
   // the e2e or component configuration
   e2e: {
     baseUrl: "http://localhost:4321",
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on, _config) {
       on('task', {
         log: (message) => {
           console.log(message)

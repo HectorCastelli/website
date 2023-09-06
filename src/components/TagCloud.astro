@@ -1,5 +1,5 @@
 ---
-import { getTag, getTopTagsThenRemainder } from "@lib/tags";
+import { getTopTagsThenRemainder } from "@lib/tags";
 import Tag from "./Tag.astro";
 
 const [tags, _] = await getTopTagsThenRemainder(3);

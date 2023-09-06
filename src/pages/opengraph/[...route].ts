@@ -17,7 +17,7 @@ export const { getStaticPaths, GET } = OGImageRoute({
 
   pages: import.meta.glob('/src/content/(blog|tag)/**/*.md', { eager: true }),
 
-  getImageOptions: (path, page) => ({
+  getImageOptions: (_path, page) => ({
     ...baseImageOptions,
     title: getTitleFromPage(page),
     description: getDescriptionFromPage(page),

@@ -4,12 +4,12 @@ import Link from "./Link.astro";
 import Tag from "./Tag.astro";
 
 interface Props {
-  post: string;
+  postSlug: string;
 }
 
-const { post } = Astro.props;
+const { postSlug } = Astro.props;
 
-const blogEntry = await getBlogPost(post);
+const blogEntry = await getBlogPost(postSlug);
 ---
 
 {
