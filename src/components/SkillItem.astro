@@ -1,0 +1,9 @@
+---
+import type { Skill } from 'src/pages/profile/skills';
+
+interface Props {
+    skill: Skill;
+}
+const { skill } = Astro.props;
+---
+<p class="pl-8">{skill.name}</p>

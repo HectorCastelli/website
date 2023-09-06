@@ -1,0 +1,16 @@
+---
+import type { Skill } from 'src/pages/profile/skills';
+import SkillItem from './SkillItem.astro';
+
+interface Props {
+    title: string;
+    skills: Skill[];
+}
+const { title, skills } = Astro.props;
+---
+<article>
+    <h1>{title}</h1>
+    <ol>
+        {skills.map(s=><li><SkillItem skill={s}/></li>)}
+    </ol>
+</article>
