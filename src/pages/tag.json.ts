@@ -1,6 +1,6 @@
 import { getAllTags } from "@lib/tags";
 
-export async function GET({  }) {
+export async function GET({ }) {
   const tags = await getAllTags();
   return new Response(JSON.stringify({
     name: 'Tags',

@@ -26,11 +26,11 @@ import Navigation from "@layouts/Navigation.astro";
         labels: ["bug"],
       };
       document.getElementById(
-        "report-link"
+        "report-link",
       ).href = `https://github.com/hectorcastelli/website/issues/new?title=${encodeURIComponent(
-        issue.title
+        issue.title,
       )}&body=${encodeURIComponent(issue.body)}&labels=${encodeURIComponent(
-        issue.labels.join(",")
+        issue.labels.join(","),
       )}`;
     };
   </script>

@@ -6,7 +6,7 @@ import Gallery from "@layouts/Gallery.astro";
 import { getAllBlogPosts } from "@lib/blogs";
 import type { GetStaticPathsOptions, Page } from "astro";
 
-export async function getStaticPaths({ paginate }: GetStaticPathsOptions){
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const blogs = await getAllBlogPosts();
 
   return paginate(blogs, { pageSize: config.pagination.blog });
