@@ -1,8 +1,8 @@
 ---
-title: "Why Devs think PMs suck?"
+title: "Why Developers think their Product Managers suck?"
 pubDate: 2023-10-02
-description: ""
-tags: []
+description: "Distilling what makes PMs frustrating for developers, some likely reasons why, and how to do better."
+tags: ["career", "software"]
 ---
 
 two types of company: one that uses software as tool, one where software is the product.
