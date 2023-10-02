@@ -9,7 +9,7 @@ tags: ["career", "software"]
 
 When brick-and-mortar companies first discovered the power of computing they saw the opportunity to leverage software for the only thing that matters to companies: making more money. By leveraging this sleepless machination capable to pushing data to all corners of the world, locality was no longer a problem. Scaling operations across the globe, running business at all hours, and even automating repetitive tasks became within reach. It is in this gold-rush of information that the software development lifecycle practices and tools we use today originated. However, while we learned a lot in some areas, others are more or less the same...
 
-One of the constants is, to the surprise of none, the search for ways to make software in a cost-effective way. Nowadays, the common wisdom to achieve this goal is to rely on a variety of roles and disciplines that collaborate together to make software. One such role, whose sole responsibility is keeping the flow of work unimpeded, is the "planner". You may know them as Product/Programme/Project managers, SCRUM masters, or "that guy with the Gantt chart". Regardless of the name, they are the ones that usually guide the efforts of others.
+One of the constants is, to the surprise of none, the search for ways to make software in a cost-effective way. Nowadays, the common wisdom to achieve this goal is to rely on a variety of roles and disciplines that collaborate together to make software. One such role, whose sole responsibility is keeping the flow of work unimpeded, is the "planner". You may know them as Product/Programme/Project managers, SCRUM masters, or "that person with the Gantt chart". Regardless of the name, they are the ones that usually guide the efforts of others.
 
 ## Types of software projects
 
@@ -17,49 +17,59 @@ When you analyze software based on the goals of the organizations that birthed t
 
 Going back to our old-school businesses, the creation of software has, historically, been a means to an end. In these organizations, the software is usually created to enable or enhance business capabilities to help it make its product more profitable. These companies are the majority.
 
-On the other end of the spectrum, you have organizations that make their entire product offerings with software. Funnily enough, they often sell process-enhancing tools to the other group. Think of all the SaaS contracts that float around the industry.
+On the other end of the spectrum, you have organizations that make their entire product offerings with software. Funnily enough, those often sell process-enhancing tools to the other group. Think of all the Software-as-a-Service contracts that float around the industry.
 
 ## The dictatorship of planners
 
 In the eternal pursuit of effectiveness, some decided to shrink the informed forum as much as possible, possibly to concentrate expertise and expedite decision-making. Those select few would then be responsible for leading the rest across the perilous minefield that is building useful software.
 
-Centralizing information, thinning communication lines, blocking outside influences, and monitoring others for unknown purposes; Planners have become evil dictators.
+Centralizing information, thinning communication lines, blocking outside influences, holding unchallenged assumptions, and monitoring others with obscure measures; Planners have become evil dictators.
 
 Maybe this wasn't the intent. Maybe it was born out of a desire to protect their team's precious time. Or maybe it was born from a lack of trust in the decision-making skills of the diverse mass. Regardless of the intent, the oppressed resent it.
 
 ## A problem of the majority
 
-Just like other rant-induced (and perhaps cathartic) essays you see published across the industry, these problems are present on the majority of engagements. Not *all*, just *most*.
+Before going too far, I would like to remind you that I do not believe this is done consciously out of malicious intent. However, just like other rant-induced (and perhaps cathartic) essays you see published across the industry, these problems are present on the majority of engagements. Not *all*, just *most*.
 
+While I am making these claims without the analytical receipts to back them up, I do believe I speak for a majority of people involved in the software industry. This being the case, I will pull no punches when denouncing these bad practices, so that hopefully we grow out of them.
 
+## How it feels
 
+Being kept disinformed and goal-less, teams churn away at the work. Without a understanding of what they are trying to achieve, sloppy work is done. That work is then measured, arming those that the team mistrusts with tools to push harder. All this push tries to meet pointless demands.
 
+By robbing your team of agency and knowledge, you make sure they:
 
-This leads to a team of people that:
+- Don't understand what they are building;
+- Don't care about building the correct thing;
+- Don't care about their effectiveness;
+- Do hate your pointless plans.
 
-- **Don't understand what they are building**, because they lack the domain knowledge;
-- **Don't care about being effective**, because they are ????
-- **Don't care about the finished product**, because they don't understand nor believe in it;
+## How it perpetuates
 
+All this negative feelings in turn, drive away team members. Any little knowledge they gained, as well as all their expertise regarding the inner-workings of the software itself vanish. And so another fresh, ignorant, member joins. 
 
-In reality the time it takes to build software often longer than the time it takes for business to change processes and targets. This disconnect leads to projects that deliver "too late to be useful", as well as "too expensive to fix".
+Unfortunately, remedying that ignorance is too costly, so the knowledge centralization strengthens, and more alienation ensues. And thus it repeats.
 
-PM methodologies classicly try to manage with goals and metrics, but PMs are too ignorant to come up with good metrics, and mistrust devs too much to collaborate on goals (this leads to low buy-in).
+## Is it time for a change?
 
-On companies where software is the product, there is no excuse. You must understand the product, or you'll help with nothing.
+If you've identified your dictator, processes, or even yourself in the previous text, it is time for a change.
 
-pm as a glue between the multiple disciplines.
+To be able to serve your businesses, you must deliver useful software. To achieve this, some of your previously held wisdom stands: Understand what you are making. However, it doesn't stop there. In the case of software, you must also understand how you build your product. 
 
-Pure-business PMs suck. tech knowledge is useful. willingness to learn paramount.
+Incidentally, if you work on a company where the software is the product, there is no excuse. You must understand your software, for it is your business and your process.
 
-Why pure-business PMs are popular? Because its easier for them to silo knowledge and hand-down orders to other disciplines.
+## From planner to enabler
 
-High-churn rate and attrition makes this model attractive, but on the other hand this model causes more attrition (even on the PMs).
+The change needed is deep, but simple. The role of the planner should not be an exercise of control, but an exercise of trust and understanding. Stop being a planner, and become an enabler instead.
 
+Enablers have a couple of characteristics that make them invaluable to their teams: They share information, establish strong channels of communication, embrace external influences, validate their assumptions with others, and empower their peers to do more.
 
-What to do to be better?
+To do this, make no mistake, they still need vasts amount of knowledge. They must understand all the pieces involved in building software to a degree where they, at least, are able to communicate effectively with all other experts. Their expertise is a glue that holds the team strongly together.
 
-- share domain understanding
-- learn technical minimum
-- pair with devs
-- communicate more
+This change won't come easy, and it won't happen from one day to another. But it must come if we want our industry to be sustainable and successful for years to come.
+
+For the time being, here are three ways you can do better:
+
+- Share your domain understanding and validate your assumptions with your team
+- Pair with your team
+- Create goals and metrics together
