@@ -7,7 +7,7 @@ tags: ["career", "software"]
 
 ## The rise of planners
 
-When brick-and-mortar companies first discovered the power of computing they saw the opportunity to leverage software for the only thing that matters to companies: making more money. By leveraging this sleepless machination capable to pushing data to all corners of the world, locality was no longer a problem. Automating repetitive tasks, running business at all hours, and even scaling operations across the globe became within reach. It is in this gold-rush of information that the software development lifecycle practices and tools we use today originated.
+When brick-and-mortar companies first discovered the power of computing they saw the opportunity to leverage software for the only thing that matters to companies: making more money. By leveraging this sleepless machination capable of pushing data to all corners of the world, locality was no longer a problem. Automating repetitive tasks, running business at all hours, and even scaling operations across the globe became within reach. It is in this gold-rush of information that the software development lifecycle practices and tools we use today originated.
 
 One of the constants is, to the surprise of none, the search for ways to make software in a cost-effective way. Nowadays, the common wisdom to achieve this goal is to rely on a variety of roles and disciplines that collaborate together to make software. One such role, whose sole responsibility is keeping the flow of work unimpeded, is the "planner". You may know them as Product/Programme/Project managers, SCRUM masters, or "that person with the Gantt chart". Regardless of the name, they are the ones that usually guide the efforts of others.
 
@@ -27,7 +27,7 @@ Centralizing information, thinning communication lines, blocking outside influen
 
 Maybe this wasn't the intent initially. It could have been born out of a desire to protect their team's precious time. Or maybe it was born from a lack of trust in the decision-making skills of the mass. Regardless of the intent, the oppressed resent it.
 
-## A problem of the majority
+## A problem for the majority
 
 Before going too far, I would like to remind you that, while I do not believe this is done consciously out of malicious intent, I do believe in the negative impact that such a practice has. Additionally, just like other rant-induced (and perhaps cathartic) essays you see published across the industry, these problems are present on the majority of engagements. Not all, just most.
 
