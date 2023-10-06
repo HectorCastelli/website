@@ -73,6 +73,11 @@ jobs:
           cd ${{steps.download-main.outputs.download-path}}/
           mkdir -p preview/
           cp -r ${{steps.download-preview.outputs.download-path}}/ ${{steps.download-main.outputs.download-path}}/preview/
+      # TODO: Remove this
+      - name: Debug stuff
+        run: |-
+          cd ${{steps.download-main.outputs.download-path}}/
+          ls -al
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload to pages
