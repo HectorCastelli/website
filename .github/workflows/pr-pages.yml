@@ -63,21 +63,17 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: website
+      - name: Prepare website for preview
+        run: |-
+          cd ${{steps.download-main.outputs.download-path}}/
+          mkdir -p preview
+          ls -l
       - name: Download build
         id: download-preview
         uses: actions/download-artifact@v3
         with:
           name: pr-preview
-      # TODO: Remove this
-      - name: Debug stuff
-        run: |-
-          cd ${{steps.download-main.outputs.download-path}}/
-          ls -al
-      - name: Combine website and preview
-        run: |-
-          cd ${{steps.download-main.outputs.download-path}}/
-          mkdir -p preview/
-          cp -r ${{steps.download-preview.outputs.download-path}}/ ${{steps.download-main.outputs.download-path}}/preview/
+          path: ${{steps.download-main.outputs.download-path}}/preview
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload to pages
