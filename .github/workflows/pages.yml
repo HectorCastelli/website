@@ -7,7 +7,6 @@ on:
     paths-ignore:
       - .vscode/**
       - README.md
-      - scripts/**
   workflow_dispatch:
 
 permissions:
