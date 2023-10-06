@@ -1,0 +1,84 @@
+name: Preview pages
+
+on:
+  pull_request:
+    types:
+      - "opened"
+      - "synchronize"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  build-master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+        with:
+          ref: 'main'
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.4.0
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build
+      - name: Upload website
+        uses: actions/upload-artifact@v3
+        with:
+          name: website
+          path: dist/
+          if-no-files-found: error
+  build-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.3.0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20.4.0
+          cache: "npm"
+      - run: npm ci
+      - run: npm run build
+      - name: Upload website
+        uses: actions/upload-artifact@v3
+        with:
+          name: pr-preview
+          path: dist/
+          if-no-files-found: error
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [ build-preview, build-master ]
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download build
+        id: download-main
+        uses: actions/download-artifact@v3
+        with:
+          name: website
+      - name: Download build
+        id: download-preview
+        uses: actions/download-artifact@v3
+        with:
+          name: pr-preview
+      - name: Combine website and preview
+        run: |-
+          cd ${{steps.download-main.outputs.download-path}}/
+          mkdir -p preview/
+          cp ${{steps.download-preview.outputs.download-path}}/ ${{steps.download-main.outputs.download-path}}/preview/
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      - name: Upload to pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ${{steps.download-main.outputs.download-path}}/
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
