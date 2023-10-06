@@ -1,6 +1,6 @@
 ---
 title: "Why Developers think their Product Managers suck?"
-pubDate: 2023-10-02
+pubDate: 2023-10-06
 description: "Let's distill the causes of frustration, some reasons why this is the norm, and how to do better."
 tags: ["career", "software"]
 ---
