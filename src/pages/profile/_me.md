@@ -1,3 +1,5 @@
 # A little about me...
 
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates corporis adipisci quisquam ab sunt reiciendis et consectetur, consequuntur laborum dolorum delectus expedita numquam illo perferendis quas incidunt, accusantium dicta unde.
+I'm a curious technologist with a love for results. That is to say that, despite my love for tech and the puzzles involved, I take greater pride in accomplishing things and providing value.
+
+I bring a diverse skill set, a passion for learning, and a healthy dose of laziness to make sure time is not wasted. I love learning new things, and I don't shy away from challenges.
