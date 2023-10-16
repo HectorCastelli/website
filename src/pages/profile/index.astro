@@ -2,7 +2,10 @@
 import Footer from "@components/Footer.astro";
 import Header from "@components/Header.astro";
 import Base from "@layouts/Base.astro";
-import { businessSkills, softwareSkills } from "./skills";
+import { softwareSkills,
+programmingLanguages,
+businessSkills,
+interpersonalSkills } from "./skills";
 
 import config from "@config";
 import StyledProse from "@components/StyledProse.astro";
@@ -33,9 +36,9 @@ const skills = await fs.readFile(new URL('./_skills.md', import.meta.url), 'utf-
             <Markdown markdown={skills}/>
         </StyledProse>
             <SkillList title="Business" skills={businessSkills}/>
-            <SkillList title="Engineering" skills={businessSkills}/>
-            <SkillList title="Technologies" skills={businessSkills}/>
-            <SkillList title="Interpersonal" skills={businessSkills}/>
+            <SkillList title="Engineering" skills={softwareSkills}/>
+            <SkillList title="Technologies" skills={programmingLanguages}/>
+            <SkillList title="Interpersonal" skills={interpersonalSkills}/>
         </section>        
     </main>
     <Footer />
