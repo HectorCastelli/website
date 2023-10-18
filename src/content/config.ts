@@ -36,7 +36,8 @@ export const collections = {
         type: 'content',
         schema: z.object({
             title: z.string(),
-            company: z.string(),
+            position: z.enum(["intern", "volunteer", "contract", "full-time"]),
+            company: institution,
             startDate: z.date(),
             endDate: z.date().optional(),
         })
