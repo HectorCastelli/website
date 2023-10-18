@@ -7,7 +7,7 @@ company:
 startDate: 01/12/2019
 endDate: 01/06/2020
 ---
-- Reduced weekly data-gathering activities by 12 hours by automating data-gathering for QBRs
+- Saved 12 human-hours each week by automating data-gathering for quality control and business reviews
 - Led and mentored a team of 15 support engineers
-- Created, maintained and improved training material and processes
+- Created and improved training material and processes
 - Maintained daily contact with Google engineers to prioritize product development and bug-fixes

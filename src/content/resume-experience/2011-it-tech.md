@@ -7,6 +7,6 @@ company:
 startDate: 01/06/2011
 endDate: 01/11/2012
 ---
-- Automated a research-related greenhouse for better data collection and increased trust in quality of samples.
-- Responsible for responsibly recycling and decommissioning IT hardware for a social cause.
-- Develop and setup backup and recovery solution for professors
+- Improved trust and quality of data samples by automating research-related greenhouse
+- Decommissioned and recycled hardware to serve a social cause
+- Protected 32 professors from losing data by developing a backup and recovery solution

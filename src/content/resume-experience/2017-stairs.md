@@ -8,8 +8,8 @@ startDate: 01/10/2017
 endDate: 01/06/2020
 ---
 - Successfully launched game on Steam, Google Play Store, and Apple Store
-  - Drove Kickstarter campaign that amassed 5 thousand dollar in funding
-- Responsible for a distribute team of 3 developers
+  - Drove Kickstarter campaign that amassed $5.000 in funding
+- Responsible for a distribute team of three developers
 - Organized and executed talent sourcing with university students
 - Implemented IT infrastructure for company, including website, version-control, build-server, and test automation
   

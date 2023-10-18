@@ -7,7 +7,7 @@ company:
 startDate: 01/03/2019
 endDate: 01/05/2019
 ---
-- Organized and optimized SEO to increase monthly revenue by 19 thousand in three months
+- Increased monthly revenue by $19.000 in three months by optimizing SEO and discoverability
 - Improved internal reporting tools to improve decision making
 - Migrated email-list to new platform
   

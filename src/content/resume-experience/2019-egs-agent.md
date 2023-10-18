@@ -7,6 +7,6 @@ company:
 startDate: 01/09/2019
 endDate: 01/12/2019
 ---
-- Responsible for providing accurate information to customers about API usage and best-practices
-- Debug and troubleshoot customer code and infrastructure
-- Daily contact with the multiple Google Workspaces APIs and systems
+- Provided 216 answers to StackOverflow questions regarding API usage and best-practices
+- Contributed to 15 pages in the public API documentation
+- Triaged, reproduced, analyzed, and reported 6 customer-facing bugs in API or product behavior
