@@ -1,0 +1,19 @@
+---
+import Header from "@components/Header.astro";
+import Base from "@layouts/Base.astro";
+import Footer from "@components/Footer.astro";
+
+interface Props {
+  frontmatter?: any;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Base frontmatter={frontmatter}>
+  <main
+    class="md:mx-auto w-screen lg:max-w-5xl p-4 md:p-12 bg-neutral-50 text-neutral-900"
+  >
+    <slot />
+  </main>
+</Base>
