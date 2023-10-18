@@ -25,4 +25,38 @@ export const collections = {
             status: z.enum(["ongoing", "completed", "abandoned"])
         })
     }),
+    // Resume-related
+    'resume-experience': defineCollection({
+        type: 'content',
+        schema: z.object({
+            title: z.string(),
+            company: z.string(),
+            startDate: z.date(),
+            endDate: z.date().optional(),
+        })
+    }),
+    'resume-education': defineCollection({
+        type: 'data',
+        schema: z.object({
+            degree: z.string(),
+            institution: z.string(),
+            startDate: z.date(),
+            endDate: z.date().optional(),
+        })
+    }),
+    'resume-awards': defineCollection({
+        type: 'data',
+        schema: z.object({
+            award: z.string(),
+            date: z.date(),
+        })
+    }),
+    'resume-skills': defineCollection({
+        type: 'data',
+        schema: z.object({
+            skill: z.string(),
+            category: z.enum(["technology", "practice", "language"]),
+            rating: z.number().int().positive().lte(5)
+        })
+    }),
 };
