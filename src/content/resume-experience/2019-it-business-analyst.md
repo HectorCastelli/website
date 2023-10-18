@@ -4,8 +4,8 @@ position: full-time
 company:
     name: Embraer Executive Jets
     url: https://executive.embraer.com/
-startDate: 01/05/2019
-endDate: 01/09/2019
+startDate: 2019-05-01
+endDate: 2019-09-01
 ---
 - Key-player in deduplicating and planning IT systems for company merger
 - Reduced business-impact by monitoring critical processes for data transfer and system integrations

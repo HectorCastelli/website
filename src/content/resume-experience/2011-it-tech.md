@@ -4,8 +4,8 @@ position: intern
 company:
     name: Faculdade de Engenharia e Ciências - Universidade Estaudla Paulista
     url: https://www.feg.unesp.br/
-startDate: 01/06/2011
-endDate: 01/11/2012
+startDate: 2011-06-01
+endDate: 2012-11-01
 ---
 - Improved trust and quality of data samples by automating research-related greenhouse
 - Decommissioned and recycled hardware to serve a social cause

@@ -4,8 +4,8 @@ position: full-time
 company:
     name: Thoughtworks Spain
     url: https://thoughtworks.com/
-startDate: 01/04/2023
-endDate: 01/08/2023
+startDate: 2023-04-01
+endDate: 2023-08-01
 ---
 - Assigned to a Digital Transformation project for a large retailer
   - Responsible for planning and executing business-intelligence features between multiple countries

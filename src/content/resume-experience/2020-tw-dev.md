@@ -4,8 +4,8 @@ position: full-time
 company:
     name: Thoughtworks Spain
     url: https://thoughtworks.com/
-startDate: 01/07/2021
-endDate: 01/04/2023
+startDate: 2021-07-01
+endDate: 2023-04-01
 ---
 - Assigned to a Digital Transformation project for a large retailer
   - Responsible for developing solutions to track and correct issues in invoicing process

@@ -4,8 +4,8 @@ position: full-time
 company:
     name: Webhelp Group Spain, on behalf of Google Enterprise Grade Support project
     url: https://workspace.google.com/
-startDate: 01/12/2019
-endDate: 01/06/2020
+startDate: 2019-12-01
+endDate: 2020-06-01
 ---
 - Saved 12 human-hours each week by automating data-gathering for quality control and business reviews
 - Led and mentored a team of 15 support engineers

@@ -4,7 +4,7 @@ position: full-time
 company:
     name: Thoughtworks Spain
     url: https://thoughtworks.com/
-startDate: 01/04/2023
+startDate: 2023-04-01
 ---
 - Assigned to a Platform enablement project for a large retailer
   - Responsible for leading internal platform team
