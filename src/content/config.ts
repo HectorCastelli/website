@@ -1,4 +1,10 @@
 import { z, defineCollection } from 'astro:content';
+
+const institution = z.object({
+    name: z.string(),
+    url: z.string().url().optional(),
+})
+
 export const collections = {
     'tag': defineCollection({
         type: 'content',
@@ -38,8 +44,9 @@ export const collections = {
     'resume-education': defineCollection({
         type: 'data',
         schema: z.object({
+            discipline: z.string(),
             degree: z.string(),
-            institution: z.string(),
+            institution: institution,
             startDate: z.date(),
             endDate: z.date().optional(),
         })
@@ -48,7 +55,8 @@ export const collections = {
         type: 'data',
         schema: z.object({
             award: z.string(),
-            date: z.date(),
+            grantedBy: institution,
+            year: z.number().gte(1996).lte(new Date().getFullYear()),
         })
     }),
     'resume-skills': defineCollection({
