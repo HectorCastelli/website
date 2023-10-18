@@ -1,11 +1,13 @@
 import { z, defineCollection } from 'astro:content';
 export const collections = {
     'tag': defineCollection({
+        type: 'content',
         schema: z.object({
             name: z.string(),
         })
     }),
     'blog': defineCollection({
+        type: 'content',
         schema: z.object({
             title: z.string(),
             pubDate: z.date(),
@@ -15,6 +17,7 @@ export const collections = {
         }),
     }),
     'project': defineCollection({
+        type: 'content',
         schema: z.object({
             name: z.string(),
             url: z.string().url().optional(),
