@@ -1,9 +1,7 @@
 ---
 title: Research Associate
 position: intern
-company:
-    name: Universidade Federal de São Paulo
-    url: https://www.unifesp.br/
+company: feg
 startDate: 2014-06-01
 endDate: 2015-01-01
 ---

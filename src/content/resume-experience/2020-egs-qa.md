@@ -1,9 +1,8 @@
 ---
 title: Quality Analyst & Technical Lead
 position: full-time
-company:
-    name: Webhelp Group Spain, on behalf of Google Enterprise Grade Support project
-    url: https://workspace.google.com/
+company: webhelp
+targetCompany: googleegs
 startDate: 2019-12-01
 endDate: 2020-06-01
 ---

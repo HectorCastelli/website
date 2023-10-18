@@ -1,9 +1,7 @@
 ---
 title: Web Developer
 position: intern
-company:
-    name: Faculdade de Engenharia e Ciências - Universidade Estaudla Paulista
-    url: https://www.feg.unesp.br/
+company: feg
 startDate: 2013-01-01
 endDate: 2013-12-01
 ---

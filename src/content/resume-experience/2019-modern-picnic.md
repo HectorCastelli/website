@@ -1,9 +1,7 @@
 ---
 title: Shopify Developer
 position: contract
-company:
-    name: Modern Picnic
-    url: https://modernpicnic.com/
+company: modernpicnic
 startDate: 2019-03-01
 endDate: 2019-05-01
 ---

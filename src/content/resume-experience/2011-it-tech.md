@@ -1,9 +1,7 @@
 ---
 title: IT Technician
 position: intern
-company:
-    name: Faculdade de Engenharia e Ciências - Universidade Estaudla Paulista
-    url: https://www.feg.unesp.br/
+company: feg
 startDate: 2011-06-01
 endDate: 2012-11-01
 ---

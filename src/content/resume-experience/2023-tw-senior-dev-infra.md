@@ -1,9 +1,7 @@
 ---
 title: Senior Consultant Developer
 position: full-time
-company:
-    name: Thoughtworks Spain
-    url: https://thoughtworks.com/
+company: tw
 startDate: 2023-04-01
 ---
 - Assigned to a Platform enablement project for a large retailer

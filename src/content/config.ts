@@ -32,12 +32,20 @@ export const collections = {
         })
     }),
     // Resume-related
+    'resume-institutions': defineCollection({
+        type: 'data',
+        schema: z.object({
+            name: z.string(),
+            url: z.string().url().optional(),
+        })
+    }),
     'resume-experience': defineCollection({
         type: 'content',
         schema: z.object({
             title: z.string(),
             position: z.enum(["intern", "volunteer", "contract", "full-time"]),
-            company: institution,
+            company: reference('resume-institution'),
+            targetCompany: reference('resume-institution').optional(),
             startDate: z.date(),
             endDate: z.date().optional(),
         })
@@ -47,7 +55,7 @@ export const collections = {
         schema: z.object({
             discipline: z.string(),
             degree: z.string(),
-            institution: institution,
+            institution: reference('resume-institution'),
             startDate: z.date(),
             endDate: z.date().optional(),
         })
@@ -56,7 +64,7 @@ export const collections = {
         type: 'data',
         schema: z.object({
             award: z.string(),
-            grantedBy: institution,
+            grantedBy: reference('resume-institution'),
             year: z.number().gte(1996).lte(new Date().getFullYear()),
         })
     }),

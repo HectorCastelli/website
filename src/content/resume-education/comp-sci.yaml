@@ -1,8 +1,6 @@
 discipline: Computer Science
 degree: Bachelor of Science and Technology
-institution:
-  name: Universidade Federal de São Paulo
-  url: https://www.unifesp.br/
+institution: unifesp
 startDate: 2014-02-01
 # Did not finish, but dropped out at this date
 # endDate: 2016-06-01

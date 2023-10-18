@@ -1,9 +1,7 @@
 ---
 title: Lead Programmer & Co-founder
 position: contract
-company:
-    name: Stairs Production
-    url: https://www.instagram.com/stairsproductions/?hl=en
+company: stairs
 startDate: 2017-10-01
 endDate: 2020-06-01
 ---

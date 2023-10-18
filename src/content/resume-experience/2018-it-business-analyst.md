@@ -1,9 +1,7 @@
 ---
 title: Information Technology Business Analyst
 position: full-time
-company:
-    name: STS Aviation Group, on behalf of Embraer Executive Jets
-    url: https://executive.embraer.com/
+company: sts
 startDate: 2018-06-01
 endDate: 2019-05-01
 ---

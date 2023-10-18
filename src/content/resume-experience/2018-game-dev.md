@@ -1,9 +1,8 @@
 ---
 title: Game Developer
 position: contract
-company:
-    name: TuneStudio, on behalf of Rede Globo
-    url: https://redeglobo.globo.com/
+company: tunestudio
+targetCompany: redeglobo
 startDate: 2018-06-01
 endDate: 2018-08-01
 ---

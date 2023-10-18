@@ -1,11 +1,9 @@
 ---
 title: Microprocessors Lab Assistant
 position: volunteer
-company:
-  name: Colégio Técnico Industrial de Guaratinguetá "Prof. Carlos Augusto Patrício Amorim"
-  url: https://www.feg.unesp.br/#!/cotec
+company: ctig
 startDate: 2012-02-01
-endDate: 2012-12-1
+endDate: 2012-12-01
 ---
 - Created self-guided interactive material for Microprocessors skill evaluation
 - Modernized classroom material by migrating from Assembly to C

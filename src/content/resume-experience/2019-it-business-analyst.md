@@ -1,9 +1,7 @@
 ---
 title: Information Technology Business Analyst
 position: full-time
-company:
-    name: Embraer Executive Jets
-    url: https://executive.embraer.com/
+company: embraer
 startDate: 2019-05-01
 endDate: 2019-09-01
 ---

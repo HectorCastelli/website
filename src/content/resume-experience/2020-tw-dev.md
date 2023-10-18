@@ -1,9 +1,7 @@
 ---
 title: Consultant Developer
 position: full-time
-company:
-    name: Thoughtworks Spain
-    url: https://thoughtworks.com/
+company: tw
 startDate: 2021-07-01
 endDate: 2023-04-01
 ---
