@@ -7,7 +7,8 @@ interface Props {
   experience: CollectionEntry<"resume-experience">;
 }
 
-const { data, render } = Astro.props.experience;
+const { experience } = Astro.props;
+const { data, render } = experience;
 const { Content } = await render();
 
 const company = await getEntry(data.company);
@@ -26,16 +27,16 @@ const targetCompany = data.targetCompany
       />
     </h2>
   </header>
-  <aside class="flex justify-between mb-4">
+  <aside class="flex justify-between mb-4"  title={`details for ${experience.slug}`}>
     <h3 class="text-sm uppercase">{data.position}</h3>
     <p class="font-thin">
       {dateToMonthString(data.startDate)} to
       {data.endDate ? dateToMonthString(data.endDate) : "now"}
     </p>
   </aside>
-  <main class="w-fit">
-    <StyledProse>
+  <section class="w-fit">
+    <StyledProse >
       <Content />
     </StyledProse>
-  </main>
+  </section>
 </article>

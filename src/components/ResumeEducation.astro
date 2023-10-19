@@ -7,7 +7,8 @@ interface Props {
   education: CollectionEntry<"resume-education">;
 }
 
-const { data } = Astro.props.education;
+const { education } = Astro.props;
+const { data } = education;
 
 const institution = await getEntry(data.institution);
 ---
@@ -22,7 +23,7 @@ const institution = await getEntry(data.institution);
       />
     </h2>
   </header>
-  <aside class="flex justify-between mb-4">
+  <aside class="flex justify-between mb-4" title={`details for ${education.id}`}>
     <h3 class="text-sm uppercase">{data.degree}</h3>
     <p class="font-thin">
       {dateToMonthString(data.startDate)}

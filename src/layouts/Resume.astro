@@ -70,7 +70,7 @@ function sortSkills(
     <h1 class="font-bold text-5xl mb-8">{author}</h1>
     <h2 class="font-bold text-xl mb-4">{data.title}</h2>
   </header>
-  <aside class="flex flex-row justify-between mb-2" title="contact">
+  <ul class="flex flex-row justify-between mb-2" title="contact">
     {
       socialLinks.map((link) => (
         <li class="list-none">
@@ -80,9 +80,9 @@ function sortSkills(
         </li>
       ))
     }
-  </aside>
+  </ul>
   <hr class="mb-8" />
-  <main>
+  <section>
     <slot />
     {
       experience && experience.length > 0 ? (
@@ -90,11 +90,11 @@ function sortSkills(
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Professional Experience</h1>
           </header>
-          <main class="flex flex-col gap-2 pl-4">
+          <section class="flex flex-col gap-2 pl-4">
             {experience.sort(sortExperience).map((e) => (
               <ResumeExperience experience={e} />
             ))}
-          </main>
+          </section>
         </section>
       ) : (
         ""
@@ -106,11 +106,11 @@ function sortSkills(
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Education</h1>
           </header>
-          <main class="flex flex-col gap-2 pl-4">
+          <section class="flex flex-col gap-2 pl-4">
             {education.sort(sortEducation).map((e) => (
               <ResumeEducation education={e} />
             ))}
-          </main>
+          </section>
         </section>
       ) : (
         ""
@@ -122,11 +122,11 @@ function sortSkills(
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Awards</h1>
           </header>
-          <main class="flex flex-col gap-2 pl-4">
+          <section class="flex flex-col gap-2 pl-4">
             {awards.sort(sortAwards).map((a) => (
               <ResumeAward award={a} />
             ))}
-          </main>
+          </section>
         </section>
       ) : (
         ""
@@ -138,27 +138,27 @@ function sortSkills(
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Skills</h1>
           </header>
-          <main class="flex flex-col gap-4 pl-4">
+          <section class="flex flex-col gap-4 pl-4">
             {skillGroups.map((sg) => (
               <section id={`skills-${sg}`} class="even:bg-neutral-100 p-2">
                 <header class="mb-2">
                   <h1 class="text-2xl font-bold uppercase">{sg}</h1>
                 </header>
-                <main class="grid grid-cols-2 md:grid-cols-4 gap-2 pl-4">
+                <section class="grid grid-cols-2 md:grid-cols-4 gap-2 pl-4">
                   {skills
                     .sort(sortSkills)
                     .filter((s) => s.data.category === sg)
                     .map((s) => (
                       <ResumeSkill skill={s} />
                     ))}
-                </main>
+                </section>
               </section>
             ))}
-          </main>
+          </section>
         </section>
       ) : (
         ""
       )
     }
-  </main>
+  </section>
 </Printable>
