@@ -5,6 +5,9 @@ import config from "@config";
 import Link from "@components/Link.astro";
 import { getCollection } from "astro:content";
 import ResumeExperience from "@components/ResumeExperience.astro";
+import ResumeEducation from "@components/ResumeEducation.astro";
+import ResumeAward from "@components/ResumeAward.astro";
+import ResumeSkill from "@components/ResumeSkill.astro";
 
 const {author, socialLinks} = config;
 
@@ -14,8 +17,21 @@ const data = {
 }
 
 const experience = (await getCollection("resume-experience")).sort((a,b)=>{
-    return b.data.startDate - a.data.startDate
+    return b.data.startDate.valueOf() - a.data.startDate.valueOf()
 })
+
+const education = (await getCollection("resume-education")).sort((a,b)=>{
+    return b.data.startDate.valueOf() - a.data.startDate.valueOf()
+})
+
+const awards = (await getCollection("resume-award")).sort((a,b)=>{
+    return b.data.year - a.data.year
+})
+
+const skills = (await getCollection("resume-skill")).sort((a,b)=>{
+    return b.data.skill.localeCompare(a.data.skill)
+});
+const skillGroups = Array.from(new Set(skills.map(s=>s.data.category)));
 ---
 <Printable frontmatter={data}>
     <header class="text-center [text-wrap:balance]">
@@ -36,30 +52,51 @@ const experience = (await getCollection("resume-experience")).sort((a,b)=>{
     <hr class="mb-8" />
     <main>
         <section id="experience">
-            <header>
-                <h1>Professional Experience</h1>
+            <header class="mb-3">
+                <h1 class="text-2xl font-bold">Professional Experience</h1>
             </header>
-            {
+            <main class="flex flex-col gap-2 pl-4">
+              {
                 experience.map(e=><ResumeExperience experience={e}/>)
-            }
+              }
+              </main>
         </section>
         <section id="education">
-            <header>
-                <h1>education</h1>
+            <header class="mb-3">
+                <h1 class="text-2xl font-bold">Education</h1>
             </header>
-            <StyledProse></StyledProse>
+            <main class="flex flex-col gap-2 pl-4">
+              {
+                education.map(e=><ResumeEducation education={e}/>)
+              }
+              </main>
         </section>
         <section id="awards">
-            <header>
-                <h1>awards</h1>
+            <header class="mb-3">
+                <h1 class="text-2xl font-bold">Awards</h1>
             </header>
-            <StyledProse></StyledProse>
+            <main class="flex flex-col gap-2 pl-4">
+              {
+                awards.map(a=><ResumeAward award={a}/>)
+              }
+              </main>
         </section>
         <section id="skills">
-            <header>
-                <h1>skills</h1>
+            <header class="mb-3">
+                <h1 class="text-2xl font-bold">Skills</h1>
             </header>
-            <StyledProse></StyledProse>
+            <main class="flex flex-col gap-2 pl-4">
+              {
+                skillGroups.map(sg=>
+                  <section id={`skills-${sg}`}>
+                    <header class="mb-2">
+                        <h1 class="text-2xl font-bold uppercase">{sg}</h1>
+                    </header>
+                    {skills.filter(s=>s.data.category===sg).map(s=><ResumeSkill skill={s}/>)}
+                  </section>
+                )
+              }
+              </main>
         </section>
     </main>
   </Printable>

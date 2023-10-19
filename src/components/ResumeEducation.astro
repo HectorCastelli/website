@@ -1,0 +1,27 @@
+---
+import { getEntry, type CollectionEntry } from "astro:content";
+import StyledProse from "./StyledProse.astro";
+import { dateToMonthString } from "@lib/strings";
+import ResumeInstitutions from "./ResumeInstitutions.astro";
+interface Props {
+  education: CollectionEntry<"resume-education">;
+}
+
+const { data } = Astro.props.education;
+
+const institution = await getEntry(data.institution);
+---
+
+<article class="p-2 grid grid-cols-[2fr,1fr] even:bg-neutral-100">
+      <h1 class="text-lg font-bold mb-2 order-1">{data.discipline}</h1>
+      <h2 class="text-md font-bold order-3">
+        <ResumeInstitutions
+        institution={institution}
+        />
+      </h2>
+      <h3 class="text-sm uppercase order-2">{data.degree}</h3>
+      <p class="font-thin order-4">
+        {dateToMonthString(data.startDate)} to
+        {data.endDate ? dateToMonthString(data.endDate) : "now"}
+      </p>
+</article>

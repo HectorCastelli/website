@@ -1,8 +1,8 @@
 ---
-import { getEntry, type CollectionEntry } from 'astro:content';
-import StyledProse from './StyledProse.astro';
-import { dateToMonthString } from '@lib/strings';
-import ResumeInstitutions from './ResumeInstitutions.astro';
+import { getEntry, type CollectionEntry } from "astro:content";
+import StyledProse from "./StyledProse.astro";
+import { dateToMonthString } from "@lib/strings";
+import ResumeInstitutions from "./ResumeInstitutions.astro";
 interface Props {
   experience: CollectionEntry<"resume-experience">;
 }
@@ -11,19 +11,27 @@ const { data, render } = Astro.props.experience;
 const { Content } = await render();
 
 const company = await getEntry(data.company);
-const targetCompany = data.targetCompany ? await getEntry(data.targetCompany) : undefined;
+const targetCompany = data.targetCompany
+  ? await getEntry(data.targetCompany)
+  : undefined;
 ---
 
-<article>
-<header>
-  <h1>{data.title}</h1>
-  <h2><ResumeInstitutions institution={company} targetInstitution={targetCompany}/></h2>
-  <h3 class="uppercase">{data.position}</h3>
-  <p>From {dateToMonthString(data.startDate)} until
-    {data.endDate? dateToMonthString(data.endDate) : "now"}
-  </p>
-</header>
-<StyledProse>
-  <Content/>
-</StyledProse>
+<article class="p-2 grid grid-cols-[1fr,2fr] even:bg-neutral-100">
+  <header class="flex flex-col justify-start">
+      <h1 class="text-lg font-bold mb-2 order-1">{data.title}</h1>
+      <h2 class="text-md font-bold order-3">
+        <ResumeInstitutions
+        institution={company}
+        targetInstitution={targetCompany}
+        />
+      </h2>
+      <h3 class="text-sm uppercase order-2">{data.position}</h3>
+      <p class="font-thin order-4">
+        {dateToMonthString(data.startDate)} to
+        {data.endDate ? dateToMonthString(data.endDate) : "now"}
+      </p>
+  </header>
+  <StyledProse>
+    <Content />
+  </StyledProse>
 </article>

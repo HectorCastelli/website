@@ -1,0 +1,23 @@
+---
+import { getEntry, type CollectionEntry } from "astro:content";
+import StyledProse from "./StyledProse.astro";
+import { dateToMonthString } from "@lib/strings";
+import ResumeInstitutions from "./ResumeInstitutions.astro";
+interface Props {
+  award: CollectionEntry<"resume-award">;
+}
+
+const { data } = Astro.props.award;
+
+const grantedBy = await getEntry(data.grantedBy);
+---
+
+<article class="p-2 even:bg-neutral-100">
+      <h1 class="text-lg font-bold mb-2">{data.award}</h1>
+      <h2 class="text-md font-bold">
+        <ResumeInstitutions
+        institution={grantedBy}
+        />
+      </h2>
+      <p class="font-thin">{data.year}</p>
+</article>

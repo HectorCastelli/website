@@ -1,0 +1,14 @@
+---
+import { getEntry, type CollectionEntry } from "astro:content";
+import ResumeInstitutions from "./ResumeInstitutions.astro";
+interface Props {
+  skill: CollectionEntry<"resume-skill">;
+}
+
+const { data } = Astro.props.skill;
+---
+
+<article class="p-2 even:bg-neutral-100">
+      <h1 class="text-lg font-bold mb-2">{data.skill}</h1>
+      <p class="font-thin">{data.rating}</p>
+</article>
