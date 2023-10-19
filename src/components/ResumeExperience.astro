@@ -1,8 +1,9 @@
 ---
 import { getEntry, type CollectionEntry } from "astro:content";
-import StyledProse from "./StyledProse.astro";
+import StyledProse from "@components/StyledProse.astro";
+import Zebra from "@components/Zebra.astro";
 import { dateToMonthString } from "@lib/strings";
-import ResumeInstitutions from "./ResumeInstitutions.astro";
+import ResumeInstitutions from "@components/ResumeInstitutions.astro";
 interface Props {
   experience: CollectionEntry<"experience">;
 }
@@ -17,7 +18,7 @@ const targetCompany = data.targetCompany
   : undefined;
 ---
 
-<article class="p-2 even:bg-neutral-100">
+<Zebra>
   <header class="flex justify-between flex-wrap">
     <h1 class="text-lg font-bold mb-2">{data.title}</h1>
     <h2 class="text-md font-bold">
@@ -42,4 +43,4 @@ const targetCompany = data.targetCompany
       <Content />
     </StyledProse>
   </section>
-</article>
+</Zebra>

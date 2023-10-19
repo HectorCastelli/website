@@ -1,7 +1,8 @@
 ---
 import { getEntry, type CollectionEntry } from "astro:content";
 import { dateToMonthString } from "@lib/strings";
-import ResumeInstitutions from "./ResumeInstitutions.astro";
+import Zebra from "@components/Zebra.astro";
+import ResumeInstitutions from "@components/ResumeInstitutions.astro";
 interface Props {
   education: CollectionEntry<"education">;
 }
@@ -12,7 +13,7 @@ const { data } = education;
 const institution = await getEntry(data.institution);
 ---
 
-<article class="p-2 even:bg-neutral-100">
+<Zebra>
   <header class="flex justify-between flex-wrap">
     <h1 class="text-lg font-bold mb-2">{data.discipline}</h1>
     <h2 class="text-md font-bold">
@@ -30,4 +31,4 @@ const institution = await getEntry(data.institution);
       {data.endDate ? dateToMonthString(data.endDate) : " (incomplete)"}
     </p>
   </aside>
-</article>
+</Zebra>
