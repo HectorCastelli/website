@@ -1,11 +1,11 @@
 ---
 import Printable from "@layouts/Printable.astro";
 import config from "@config";
-import Link from "@components/Link.astro";
-import ResumeExperience from "@components/ResumeExperience.astro";
-import ResumeEducation from "@components/ResumeEducation.astro";
-import ResumeAward from "@components/ResumeAward.astro";
-import ResumeSkill from "@components/ResumeSkill.astro";
+import Link from "@components/link/Link.astro";
+import Experience from "@components/resume/Experience.astro";
+import Education from "@components/resume/Education.astro";
+import Award from "@components/resume/Award.astro";
+import ResumeSkill from "@components/resume/Skill.astro";
 import { type CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
@@ -66,22 +66,21 @@ function sortSkills(
 ---
 
 <Printable frontmatter={data}>
-  <header class="text-center [text-wrap:balance]">
+  <header class="m-auto w-screen lg:max-w-5xl p-4 md:p-12 text-white text-center [text-wrap:balance]" slot="header">
     <h1 class="font-bold text-5xl mb-8">{author}</h1>
     <h2 class="font-bold text-xl mb-4">{data.title}</h2>
+    <ul class="flex flex-row justify-between mb-2" title="contact">
+      {
+        socialLinks.map((link) => (
+          <li class="list-none">
+            <Link href={link.link} rel="me">
+              {link.name}: {link.printName}
+            </Link>
+          </li>
+        ))
+      }
+    </ul>
   </header>
-  <ul class="flex flex-row justify-between mb-2" title="contact">
-    {
-      socialLinks.map((link) => (
-        <li class="list-none">
-          <Link href={link.link} rel="me">
-            {link.name}: {link.printName}
-          </Link>
-        </li>
-      ))
-    }
-  </ul>
-  <hr class="mb-8" />
   <section>
     <slot />
     {
@@ -92,7 +91,7 @@ function sortSkills(
           </header>
           <section class="flex flex-col gap-2 pl-4">
             {experience.sort(sortExperience).map((e) => (
-              <ResumeExperience experience={e} />
+              <Experience experience={e} />
             ))}
           </section>
         </section>
@@ -108,7 +107,7 @@ function sortSkills(
           </header>
           <section class="flex flex-col gap-2 pl-4">
             {education.sort(sortEducation).map((e) => (
-              <ResumeEducation education={e} />
+              <Education education={e} />
             ))}
           </section>
         </section>
@@ -124,7 +123,7 @@ function sortSkills(
           </header>
           <section class="flex flex-col gap-2 pl-4">
             {awards.sort(sortAwards).map((a) => (
-              <ResumeAward award={a} />
+              <Award award={a} />
             ))}
           </section>
         </section>

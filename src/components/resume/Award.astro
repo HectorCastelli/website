@@ -1,6 +1,7 @@
 ---
 import { getEntry, type CollectionEntry } from "astro:content";
-import ResumeInstitutions from "./ResumeInstitutions.astro";
+import Institution from "@components/resume/Institution.astro";
+import Zebra from "@components/Zebra.astro";
 interface Props {
   award: CollectionEntry<"award">;
 }
@@ -11,14 +12,14 @@ const { data } = award;
 const grantedBy = await getEntry(data.grantedBy);
 ---
 
-<article class="p-2 even:bg-neutral-100">
+<Zebra>
   <header class="flex justify-between flex-wrap">
     <h1 class="text-lg font-bold mb-2">{data.award}</h1>
   </header>
   <aside class="flex justify-between flex-wrap mb-4" title={`details for ${award.id}`}>
     <h2 class="text-md font-bold">
-      <ResumeInstitutions institution={grantedBy} />
+      <Institution institution={grantedBy} />
     </h2>
     <p class="font-thin">{data.year}</p>
   </aside>
-</article>
+</Zebra>

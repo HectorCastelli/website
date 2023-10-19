@@ -15,6 +15,9 @@
       "@config": [
         "src/config"
       ],
+      "@pages/*": [
+        "src/pages/*"
+      ],
     },
     "types": [
       "vitest/importMeta",
