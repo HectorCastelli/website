@@ -34,7 +34,7 @@ export const collections = {
             url: z.string().url().optional(),
         })
     }),
-    'resume-experience': defineCollection({
+    'experience': defineCollection({
         type: 'content',
         schema: z.object({
             title: z.string(),
@@ -75,7 +75,7 @@ export const collections = {
         type: 'content',
         schema: z.object({
             title: z.string(),
-            experience: z.array(reference('resume-experience')).optional(),
+            experience: z.array(reference('experience')).optional(),
             education: z.array(reference('education')).optional(),
             awards: z.array(reference('award')).optional(),
             skills: z.array(reference('resume-skill')).optional(),
