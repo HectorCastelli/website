@@ -55,7 +55,7 @@ export const collections = {
             endDate: z.date().optional(),
         })
     }),
-    'resume-award': defineCollection({
+    'award': defineCollection({
         type: 'data',
         schema: z.object({
             award: z.string(),
@@ -77,7 +77,7 @@ export const collections = {
             title: z.string(),
             experience: z.array(reference('resume-experience')).optional(),
             education: z.array(reference('resume-education')).optional(),
-            awards: z.array(reference('resume-award')).optional(),
+            awards: z.array(reference('award')).optional(),
             skills: z.array(reference('resume-skill')).optional(),
         })
     }),

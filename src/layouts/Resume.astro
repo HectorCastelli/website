@@ -14,7 +14,7 @@ interface Props {
   title: string;
   experience?: CollectionEntry<"resume-experience">[];
   education?: CollectionEntry<"resume-education">[];
-  awards?: CollectionEntry<"resume-award">[];
+  awards?: CollectionEntry<"award">[];
   skills?: CollectionEntry<"resume-skill">[];
   frontmatter?: any;
 }
@@ -49,8 +49,8 @@ function sortEducation(
 }
 
 function sortAwards(
-  a: CollectionEntry<"resume-award">,
-  b: CollectionEntry<"resume-award">,
+  a: CollectionEntry<"award">,
+  b: CollectionEntry<"award">,
 ): number {
   return b.data.year - a.data.year;
 }
