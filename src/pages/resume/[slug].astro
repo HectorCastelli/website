@@ -1,0 +1,48 @@
+---
+import StyledProse from "@components/StyledProse.astro";
+import Resume from "@layouts/Resume.astro";
+import { getCollection, type CollectionEntry, getEntries } from "astro:content";
+
+export async function getStaticPaths() {
+  const resumes = await getCollection("resume");
+
+  return Promise.all(
+    resumes.map(async (resume) => ({
+      params: {
+        slug: resume.slug,
+      },
+      props: {
+        resume: resume,
+      },
+    })),
+  );
+}
+
+interface Props {
+  resume: CollectionEntry<"resume">;
+}
+
+const { data, render } = Astro.props.resume;
+const { Content } = await render();
+
+const experience = data.experience ? await getEntries(data.experience) : [];
+const education = data.education ? await getEntries(data.education) : [];
+const awards = data.awards ? await getEntries(data.awards) : [];
+const skills = data.skills ? await getEntries(data.skills) : [];
+
+---
+
+<Resume
+  title="Curriculum Vitae"
+  experience={experience}
+  education={education}
+  awards={awards}
+  skills={skills}
+>
+<main class="mb-8">
+  <StyledProse>
+    <h1>Summary</h1>
+    <Content />
+  </StyledProse>
+</main>
+</Resume>

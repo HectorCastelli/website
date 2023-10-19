@@ -1,105 +1,25 @@
 ---
-import Printable from "@layouts/Printable.astro";
-import StyledProse from "@components/StyledProse.astro";
-import config from "@config";
-import Link from "@components/Link.astro";
+import Resume from "@layouts/Resume.astro";
 import { getCollection } from "astro:content";
-import ResumeExperience from "@components/ResumeExperience.astro";
-import ResumeEducation from "@components/ResumeEducation.astro";
-import ResumeAward from "@components/ResumeAward.astro";
-import ResumeSkill from "@components/ResumeSkill.astro";
-
-const {author, socialLinks} = config;
 
 const data = {
-    title: "Curriculum Vitae",
-    description: "A written summary of my career and accomplishments"
-}
+  title: "Curriculum Vitae",
+  description: "A written summary of my career and accomplishments",
+};
 
-const experience = (await getCollection("resume-experience")).sort((a,b)=>{
-    return b.data.startDate.valueOf() - a.data.startDate.valueOf()
-})
+const experience = await getCollection("resume-experience");
 
-const education = (await getCollection("resume-education")).sort((a,b)=>{
-    return b.data.startDate.valueOf() - a.data.startDate.valueOf()
-})
+const education = await getCollection("resume-education");
 
-const awards = (await getCollection("resume-award")).sort((a,b)=>{
-    return b.data.year - a.data.year
-})
+const awards = await getCollection("resume-award");
 
-const skills = (await getCollection("resume-skill")).sort((a,b)=>{
-    return b.data.skill.localeCompare(a.data.skill)
-});
-const skillGroups = ["language", "practice", "technology", "architecture", "tool"];
+const skills = await getCollection("resume-skill");
 ---
-<Printable frontmatter={data}>
-    <header class="text-center [text-wrap:balance]">
-      <h1 class="font-bold text-5xl mb-8">{author}</h1>
-      <h2 class="font-bold text-xl mb-4">{data.title}</h2>
-    </header>
-    <aside class="flex flex-row justify-between mb-2" title="contact">
-      {
-        socialLinks.map((link) => (
-          <li class="list-none">
-            <Link href={link.link} rel="me">
-              {link.name}: {link.printName}
-            </Link>
-          </li>
-        ))
-      }
-    </aside>
-    <hr class="mb-8" />
-    <main>
-        <section id="experience">
-            <header class="mb-3">
-                <h1 class="text-2xl font-bold">Professional Experience</h1>
-            </header>
-            <main class="flex flex-col gap-2 pl-4">
-              {
-                experience.map(e=><ResumeExperience experience={e}/>)
-              }
-              </main>
-        </section>
-        <section id="education">
-            <header class="mb-3">
-                <h1 class="text-2xl font-bold">Education</h1>
-            </header>
-            <main class="flex flex-col gap-2 pl-4">
-              {
-                education.map(e=><ResumeEducation education={e}/>)
-              }
-              </main>
-        </section>
-        <section id="awards">
-            <header class="mb-3">
-                <h1 class="text-2xl font-bold">Awards</h1>
-            </header>
-            <main class="flex flex-col gap-2 pl-4">
-              {
-                awards.map(a=><ResumeAward award={a}/>)
-              }
-              </main>
-        </section>
-        <section id="skills">
-            <header class="mb-3">
-                <h1 class="text-2xl font-bold">Skills</h1>
-            </header>
-            <main class="flex flex-col gap-4 pl-4">
-              {
-                skillGroups.map(sg=>
-                  <section id={`skills-${sg}`} class="even:bg-neutral-100 p-2">
-                    <header class="mb-2">
-                        <h1 class="text-2xl font-bold uppercase">{sg}</h1>
-                    </header>
-            <main class="grid grid-cols-2 md:grid-cols-4 gap-2 pl-4">
-                    {skills.filter(s=>s.data.category===sg).map(s=><ResumeSkill skill={s}/>)}
-              </main>
-                  </section>
-                )
-              }
-              </main>
-        </section>
-    </main>
-  </Printable>
-  
+
+<Resume
+  title="Curriculum Vitae"
+  experience={experience}
+  education={education}
+  awards={awards}
+  skills={skills}
+/>
