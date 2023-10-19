@@ -18,9 +18,8 @@ const ratingTitles = [
 <article class="p-2 flex flex-col justify-center">
   <h1 class="md:text-lg font-bold mb-2">{data.skill}</h1>
   <section class="flex flex-col gap-1">
-
     <p class="font-thin text-xs md:text-sm">{ratingTitles[data.rating - 1]}</p>
-    <div class="bg-secondary-100 rounded-full w-full p-2 grid grid-cols-5 gap-1">
+    <div class="bg-secondary-100 rounded-full w-full p-2 hidden md:grid grid-cols-5 gap-1">
       {
         data.rating >= 1 ? (
           <span class="bg-primary-400 rounded-full w-full p-1" />

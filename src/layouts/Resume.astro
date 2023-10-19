@@ -69,7 +69,7 @@ function sortSkills(
   <header class="m-auto w-screen lg:max-w-5xl p-4 md:p-12 text-white text-center [text-wrap:balance]" slot="header">
     <h1 class="font-bold text-5xl mb-8">{author}</h1>
     <h2 class="font-bold text-xl mb-4">{data.title}</h2>
-    <ul class="flex flex-row justify-between mb-2" title="contact">
+    <ul class="grid grid-cols-2 lg:flex lg:flex-row flex-wrap justify-between mb-2" title="contact">
       {
         socialLinks.map((link) => (
           <li class="list-none">
@@ -81,8 +81,8 @@ function sortSkills(
       }
     </ul>
   </header>
+  <slot />
   <section>
-    <slot />
     {
       experience && experience.length > 0 ? (
         <section id="experience">
