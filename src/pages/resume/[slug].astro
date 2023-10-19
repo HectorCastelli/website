@@ -29,7 +29,6 @@ const experience = data.experience ? await getEntries(data.experience) : [];
 const education = data.education ? await getEntries(data.education) : [];
 const awards = data.awards ? await getEntries(data.awards) : [];
 const skills = data.skills ? await getEntries(data.skills) : [];
-
 ---
 
 <Resume
@@ -39,10 +38,10 @@ const skills = data.skills ? await getEntries(data.skills) : [];
   awards={awards}
   skills={skills}
 >
-<section class="mb-8">
-  <StyledProse>
-    <h1>Summary</h1>
-    <Content />
-  </StyledProse>
-</section>
+  <section class="mb-8">
+    <StyledProse>
+      <h1>Summary</h1>
+      <Content />
+    </StyledProse>
+  </section>
 </Resume>

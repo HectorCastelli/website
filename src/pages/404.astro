@@ -15,23 +15,23 @@ import Navigation from "@layouts/Navigation.astro";
     </Link>, and I will look into it promptly.
   </p>
   <script is:inline>
-    window.onload = (e) => {
-      var issue = {
-        title: "404 page found: ",
-        body: [
-          `I've reached an URL that responded with a 404 link.`,
-          ``,
-          `The URL is question is "${document.URL}".`,
-        ].join("\n"),
-        labels: ["bug"],
-      };
-      document.getElementById(
-        "report-link",
-      ).href = `https://github.com/hectorcastelli/website/issues/new?title=${encodeURIComponent(
-        issue.title,
-      )}&body=${encodeURIComponent(issue.body)}&labels=${encodeURIComponent(
-        issue.labels.join(","),
-      )}`;
+  window.onload = (e) => {
+    var issue = {
+      title: "404 page found: ",
+      body: [
+        `I've reached an URL that responded with a 404 link.`,
+        ``,
+        `The URL is question is "${document.URL}".`,
+      ].join("\n"),
+      labels: ["bug"],
     };
+    document.getElementById(
+      "report-link",
+    ).href = `https://github.com/hectorcastelli/website/issues/new?title=${encodeURIComponent(
+      issue.title,
+    )}&body=${encodeURIComponent(issue.body)}&labels=${encodeURIComponent(
+      issue.labels.join(","),
+    )}`;
+  };
   </script>
 </Navigation>

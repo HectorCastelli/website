@@ -1,1 +1,7 @@
-{"name":"Resumes","resumes":["cv","sr-dev"]}
+{
+    "name": "Resumes",
+    "resumes": [
+        "cv",
+        "sr-dev"
+    ]
+}

@@ -14,16 +14,12 @@ const grantedBy = await getEntry(data.grantedBy);
 ---
 
 <article class="p-2 even:bg-neutral-100">
-
-
   <header class="flex justify-between">
     <h1 class="text-lg font-bold mb-2">{data.award}</h1>
   </header>
   <aside class="flex justify-between mb-4" title={`details for ${award.id}`}>
     <h2 class="text-md font-bold">
-      <ResumeInstitutions
-        institution={grantedBy}
-      />
+      <ResumeInstitutions institution={grantedBy} />
     </h2>
     <p class="font-thin">{data.year}</p>
   </aside>

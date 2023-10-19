@@ -18,12 +18,42 @@ const ratingTitles = [
 
 <article class="p-2 flex flex-col justify-center">
   <h1 class="text-lg font-bold mb-2">{data.skill}</h1>
-  <p class="font-thin">{ratingTitles[data.rating-1]}</p>
+  <p class="font-thin">{ratingTitles[data.rating - 1]}</p>
   <div class="bg-primary-100 rounded-full w-full p-2 grid grid-cols-5 gap-1">
-    {data.rating >= 1 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
-    {data.rating >= 2 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
-    {data.rating >= 3 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
-    {data.rating >= 4 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
-    {data.rating >= 5 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
+    {
+      data.rating >= 1 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+      ) : (
+        ""
+      )
+    }
+    {
+      data.rating >= 2 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+      ) : (
+        ""
+      )
+    }
+    {
+      data.rating >= 3 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+      ) : (
+        ""
+      )
+    }
+    {
+      data.rating >= 4 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+      ) : (
+        ""
+      )
+    }
+    {
+      data.rating >= 5 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+      ) : (
+        ""
+      )
+    }
   </div>
 </article>

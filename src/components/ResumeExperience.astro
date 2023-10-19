@@ -27,7 +27,10 @@ const targetCompany = data.targetCompany
       />
     </h2>
   </header>
-  <aside class="flex justify-between mb-4"  title={`details for ${experience.slug}`}>
+  <aside
+    class="flex justify-between mb-4"
+    title={`details for ${experience.slug}`}
+  >
     <h3 class="text-sm uppercase">{data.position}</h3>
     <p class="font-thin">
       {dateToMonthString(data.startDate)} to
@@ -35,7 +38,7 @@ const targetCompany = data.targetCompany
     </p>
   </aside>
   <section class="w-fit">
-    <StyledProse >
+    <StyledProse>
       <Content />
     </StyledProse>
   </section>
