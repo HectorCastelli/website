@@ -1,0 +1,164 @@
+---
+import Printable from "@layouts/Printable.astro";
+import config from "@config";
+import Link from "@components/Link.astro";
+import ResumeExperience from "@components/ResumeExperience.astro";
+import ResumeEducation from "@components/ResumeEducation.astro";
+import ResumeAward from "@components/ResumeAward.astro";
+import ResumeSkill from "@components/ResumeSkill.astro";
+import { type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+const { author, socialLinks } = config;
+
+interface Props {
+  title: string;
+  experience?: CollectionEntry<"experience">[];
+  education?: CollectionEntry<"education">[];
+  awards?: CollectionEntry<"award">[];
+  skills?: CollectionEntry<"skill">[];
+  frontmatter?: any;
+}
+
+const { title, experience, education, awards, skills } = Astro.props;
+
+const data = {
+  title,
+  description: "A written summary of my career and accomplishments",
+};
+
+const skillCategories = await getCollection("skillCategory");
+
+function sortExperience(
+  a: CollectionEntry<"experience">,
+  b: CollectionEntry<"experience">,
+): number {
+  return b.data.startDate.valueOf() - a.data.startDate.valueOf();
+}
+
+function sortEducation(
+  a: CollectionEntry<"education">,
+  b: CollectionEntry<"education">,
+): number {
+  return b.data.startDate.valueOf() - a.data.startDate.valueOf();
+}
+
+function sortAwards(
+  a: CollectionEntry<"award">,
+  b: CollectionEntry<"award">,
+): number {
+  return b.data.year - a.data.year;
+}
+
+function sortSkillCategories(
+  a: CollectionEntry<"skillCategory">,
+  b: CollectionEntry<"skillCategory">,
+): number {
+  return a.data.order - b.data.order;
+}
+
+function sortSkills(
+  a: CollectionEntry<"skill">,
+  b: CollectionEntry<"skill">,
+): number {
+  return a.data.skill.localeCompare(b.data.skill);
+}
+---
+
+<Printable frontmatter={data}>
+  <header class="text-center [text-wrap:balance]">
+    <h1 class="font-bold text-5xl mb-8">{author}</h1>
+    <h2 class="font-bold text-xl mb-4">{data.title}</h2>
+  </header>
+  <ul class="flex flex-row justify-between mb-2" title="contact">
+    {
+      socialLinks.map((link) => (
+        <li class="list-none">
+          <Link href={link.link} rel="me">
+            {link.name}: {link.printName}
+          </Link>
+        </li>
+      ))
+    }
+  </ul>
+  <hr class="mb-8" />
+  <section>
+    <slot />
+    {
+      experience && experience.length > 0 ? (
+        <section id="experience">
+          <header class="mb-3">
+            <h1 class="text-2xl font-bold">Professional Experience</h1>
+          </header>
+          <section class="flex flex-col gap-2 pl-4">
+            {experience.sort(sortExperience).map((e) => (
+              <ResumeExperience experience={e} />
+            ))}
+          </section>
+        </section>
+      ) : (
+        ""
+      )
+    }
+    {
+      education && education.length > 0 ? (
+        <section id="education">
+          <header class="mb-3">
+            <h1 class="text-2xl font-bold">Education</h1>
+          </header>
+          <section class="flex flex-col gap-2 pl-4">
+            {education.sort(sortEducation).map((e) => (
+              <ResumeEducation education={e} />
+            ))}
+          </section>
+        </section>
+      ) : (
+        ""
+      )
+    }
+    {
+      awards && awards.length > 0 ? (
+        <section id="awards">
+          <header class="mb-3">
+            <h1 class="text-2xl font-bold">Awards</h1>
+          </header>
+          <section class="flex flex-col gap-2 pl-4">
+            {awards.sort(sortAwards).map((a) => (
+              <ResumeAward award={a} />
+            ))}
+          </section>
+        </section>
+      ) : (
+        ""
+      )
+    }
+    {
+      skills && skills.length > 0 ? (
+        <section id="skills">
+          <header class="mb-3">
+            <h1 class="text-2xl font-bold">Skills</h1>
+          </header>
+          <section class="flex flex-col gap-4 pl-4">
+            {skillCategories.sort(sortSkillCategories).map((sg) => (
+              <section id={`skills-${sg.id}`} class="even:bg-neutral-100 p-2">
+                <header class="mb-2">
+                  <h1 class="text-2xl font-bold uppercase">{sg.data.name}</h1>
+                </header>
+                <section class="grid grid-cols-2 md:grid-cols-4 gap-2 pl-4">
+                  {skills
+                    .sort(sortSkills)
+                    .filter((s) => s.data.category.id === sg.id)
+                    .map((s) => (
+                      <ResumeSkill skill={s} />
+                    ))}
+                </section>
+              </section>
+            ))}
+          </section>
+        </section>
+      ) : (
+        ""
+      )
+    }
+  </section>
+</Printable>

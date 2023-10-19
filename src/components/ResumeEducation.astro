@@ -1,0 +1,33 @@
+---
+import { getEntry, type CollectionEntry } from "astro:content";
+import { dateToMonthString } from "@lib/strings";
+import ResumeInstitutions from "./ResumeInstitutions.astro";
+interface Props {
+  education: CollectionEntry<"education">;
+}
+
+const { education } = Astro.props;
+const { data } = education;
+
+const institution = await getEntry(data.institution);
+---
+
+<article class="p-2 even:bg-neutral-100">
+  <header class="flex justify-between flex-wrap">
+    <h1 class="text-lg font-bold mb-2">{data.discipline}</h1>
+    <h2 class="text-md font-bold">
+      <ResumeInstitutions institution={institution} />
+    </h2>
+  </header>
+  <aside
+    class="flex justify-between flex-wrap mb-4"
+    title={`details for ${education.id}`}
+  >
+    <h3 class="text-sm uppercase">{data.degree}</h3>
+    <p class="font-thin">
+      {dateToMonthString(data.startDate)}
+      {data.endDate ? " to " : ""}
+      {data.endDate ? dateToMonthString(data.endDate) : " (incomplete)"}
+    </p>
+  </aside>
+</article>

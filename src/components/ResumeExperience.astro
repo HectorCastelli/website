@@ -1,0 +1,45 @@
+---
+import { getEntry, type CollectionEntry } from "astro:content";
+import StyledProse from "./StyledProse.astro";
+import { dateToMonthString } from "@lib/strings";
+import ResumeInstitutions from "./ResumeInstitutions.astro";
+interface Props {
+  experience: CollectionEntry<"experience">;
+}
+
+const { experience } = Astro.props;
+const { data, render } = experience;
+const { Content } = await render();
+
+const company = await getEntry(data.company);
+const targetCompany = data.targetCompany
+  ? await getEntry(data.targetCompany)
+  : undefined;
+---
+
+<article class="p-2 even:bg-neutral-100">
+  <header class="flex justify-between flex-wrap">
+    <h1 class="text-lg font-bold mb-2">{data.title}</h1>
+    <h2 class="text-md font-bold">
+      <ResumeInstitutions
+        institution={company}
+        targetInstitution={targetCompany}
+      />
+    </h2>
+  </header>
+  <aside
+    class="flex justify-between flex-wrap mb-4"
+    title={`details for ${experience.slug}`}
+  >
+    <h3 class="text-sm uppercase">{data.position}</h3>
+    <p class="font-thin">
+      {dateToMonthString(data.startDate)} to
+      {data.endDate ? dateToMonthString(data.endDate) : "now"}
+    </p>
+  </aside>
+  <section class="w-fit">
+    <StyledProse>
+      <Content />
+    </StyledProse>
+  </section>
+</article>

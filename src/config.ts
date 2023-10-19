@@ -54,19 +54,23 @@ export default {
     socialLinks: [
         {
             name: "E-mail",
-            link: "mailto:hector.zacharias@gmail.com"
+            link: "mailto:hector.zacharias@gmail.com",
+            printName: "hector.zacharias@gmail.com"
         },
         {
             name: "Twitter",
-            link: "https://twitter.com/ZektorH"
+            link: "https://twitter.com/ZektorH",
+            printName: "@ZektorH"
         },
         {
             name: "LinkedIn",
-            link: "https://www.linkedin.com/in/hectorzacharias/"
+            link: "https://www.linkedin.com/in/hectorzacharias/",
+            printName: "in/hectorzacharias"
         },
         {
-            name: "SMS",
-            link: "sms:+43677059383"
+            name: "Phone",
+            link: "sms:+43677059383",
+            printName: "+43 677 059 383"
         }
     ]
 }

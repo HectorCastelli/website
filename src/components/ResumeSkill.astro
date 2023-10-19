@@ -1,0 +1,61 @@
+---
+import { type CollectionEntry } from "astro:content";
+interface Props {
+  skill: CollectionEntry<"skill">;
+}
+
+const { data } = Astro.props.skill;
+
+const ratingTitles = [
+  "Beginner", //1
+  "Developing", //2
+  "Average", //3
+  "Experienced", //4
+  "Expert", //5
+];
+---
+
+<article class="p-2 flex flex-col justify-center">
+  <h1 class="md:text-lg font-bold mb-2">{data.skill}</h1>
+  <section class="flex flex-col gap-1">
+
+    <p class="font-thin text-xs md:text-sm">{ratingTitles[data.rating - 1]}</p>
+    <div class="bg-secondary-100 rounded-full w-full p-2 grid grid-cols-5 gap-1">
+      {
+        data.rating >= 1 ? (
+          <span class="bg-primary-400 rounded-full w-full p-1" />
+          ) : (
+            <span class="bg-secondary-50 rounded-full w-full p-1" />
+            )
+          }
+    {
+      data.rating >= 2 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+        ) : (
+          <span class="bg-secondary-50 rounded-full w-full p-1" />
+          )
+        }
+    {
+      data.rating >= 3 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+        ) : (
+          <span class="bg-secondary-50 rounded-full w-full p-1" />
+          )
+        }
+    {
+      data.rating >= 4 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+        ) : (
+          <span class="bg-secondary-50 rounded-full w-full p-1" />
+          )
+        }
+    {
+      data.rating >= 5 ? (
+        <span class="bg-primary-400 rounded-full w-full p-1" />
+        ) : (
+          <span class="bg-secondary-50 rounded-full w-full p-1" />
+          )
+        }
+  </div>
+</section>
+</article>

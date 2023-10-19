@@ -1,0 +1,17 @@
+---
+import Base from "@layouts/Base.astro";
+
+interface Props {
+  frontmatter?: any;
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<Base frontmatter={frontmatter}>
+  <main
+    class="m-auto w-screen min-h-[95vh] lg:max-w-5xl p-4 md:p-12 bg-neutral-50 text-neutral-900"
+  >
+    <slot />
+  </main>
+</Base>

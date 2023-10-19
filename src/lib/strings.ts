@@ -14,3 +14,14 @@ export function chunkString(source: string, chunkSize: number): string[] {
     })
     return result.filter(x => x);
 }
+
+const monthNames = [
+    "January", "February", "March",
+    "April", "May", "June",
+    "July", "August", "September",
+    "October", "November", "December"
+]
+
+export function dateToMonthString(date: Date): string {
+    return `${monthNames[date.getMonth()]} ${date.getFullYear().toString().substring(2)}`
+}

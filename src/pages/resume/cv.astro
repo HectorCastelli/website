@@ -1,0 +1,20 @@
+---
+import Resume from "@layouts/Resume.astro";
+import { getCollection } from "astro:content";
+
+const experience = await getCollection("experience");
+
+const education = await getCollection("education");
+
+const awards = await getCollection("award");
+
+const skills = await getCollection("skill");
+---
+
+<Resume
+  title="Curriculum Vitae"
+  experience={experience}
+  education={education}
+  awards={awards}
+  skills={skills}
+/>
