@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Link from '@components/Link.astro';
+
+interface Props {
+  institution: CollectionEntry<"resume-institution">;
+  targetInstitution?: CollectionEntry<"resume-institution">;
+}
+
+const { institution, targetInstitution } = Astro.props;
+---
+<>
+  {institution.data.url ? <Link href={institution.data.url}>{institution.data.name}</Link> : institution.data.name}
+  {targetInstitution? ', on behalf of ' : ''}
+  {targetInstitution ? targetInstitution.data.url ? <Link href={targetInstitution.data.url}>{targetInstitution.data.name}</Link> : targetInstitution.data.name : ''}
+</>

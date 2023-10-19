@@ -1,0 +1,29 @@
+---
+import { getEntry, type CollectionEntry } from 'astro:content';
+import StyledProse from './StyledProse.astro';
+import { dateToMonthString } from '@lib/strings';
+import ResumeInstitutions from './ResumeInstitutions.astro';
+interface Props {
+  experience: CollectionEntry<"resume-experience">;
+}
+
+const { data, render } = Astro.props.experience;
+const { Content } = await render();
+
+const company = await getEntry(data.company);
+const targetCompany = data.targetCompany ? await getEntry(data.targetCompany) : undefined;
+---
+
+<article>
+<header>
+  <h1>{data.title}</h1>
+  <h2><ResumeInstitutions institution={company} targetInstitution={targetCompany}/></h2>
+  <h3 class="uppercase">{data.position}</h3>
+  <p>From {dateToMonthString(data.startDate)} until
+    {data.endDate? dateToMonthString(data.endDate) : "now"}
+  </p>
+</header>
+<StyledProse>
+  <Content/>
+</StyledProse>
+</article>
