@@ -63,11 +63,19 @@ export const collections = {
             year: z.number().gte(1996).lte(new Date().getFullYear()),
         })
     }),
+    'skillCategory': defineCollection({
+        type: 'data',
+        schema: z.object({
+            name: z.string(),
+            description: z.string(),
+            order: z.number().positive(),
+        })
+    }),
     'skill': defineCollection({
         type: 'data',
         schema: z.object({
             skill: z.string(),
-            category: z.enum(["technologies", "tooling", "architectures", "practices", "languages"]),
+            category: reference("skillCategory"),
             rating: z.number().int().positive().lte(5)
         })
     }),

@@ -6,7 +6,8 @@ import ResumeExperience from "@components/ResumeExperience.astro";
 import ResumeEducation from "@components/ResumeEducation.astro";
 import ResumeAward from "@components/ResumeAward.astro";
 import ResumeSkill from "@components/ResumeSkill.astro";
-import type { CollectionEntry } from "astro:content";
+import { getEntries, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 const { author, socialLinks } = config;
 
@@ -26,13 +27,7 @@ const data = {
   description: "A written summary of my career and accomplishments",
 };
 
-const skillGroups = [
-  "languages",
-  "practices",
-  "technologies",
-  "architectures",
-  "tooling",
-];
+const skillCategories = await getCollection("skillCategory");
 
 function sortExperience(
   a: CollectionEntry<"experience">,
@@ -53,6 +48,13 @@ function sortAwards(
   b: CollectionEntry<"award">,
 ): number {
   return b.data.year - a.data.year;
+}
+
+function sortSkillCategories(
+  a: CollectionEntry<"skillCategory">,
+  b: CollectionEntry<"skillCategory">,
+): number {
+  return a.data.order - b.data.order;
 }
 
 function sortSkills(
@@ -137,15 +139,15 @@ function sortSkills(
             <h1 class="text-2xl font-bold">Skills</h1>
           </header>
           <section class="flex flex-col gap-4 pl-4">
-            {skillGroups.map((sg) => (
-              <section id={`skills-${sg}`} class="even:bg-neutral-100 p-2">
+            {skillCategories.sort(sortSkillCategories).map((sg) => (
+              <section id={`skills-${sg.id}`} class="even:bg-neutral-100 p-2">
                 <header class="mb-2">
-                  <h1 class="text-2xl font-bold uppercase">{sg}</h1>
+                  <h1 class="text-2xl font-bold uppercase">{sg.data.name}</h1>
                 </header>
                 <section class="grid grid-cols-2 md:grid-cols-4 gap-2 pl-4">
                   {skills
                     .sort(sortSkills)
-                    .filter((s) => s.data.category === sg)
+                    .filter((s) => s.data.category.id === sg.id)
                     .map((s) => (
                       <ResumeSkill skill={s} />
                     ))}
