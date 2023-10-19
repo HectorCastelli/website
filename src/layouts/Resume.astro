@@ -29,11 +29,11 @@ const data = {
 };
 
 const skillGroups = [
-  "language",
-  "practice",
-  "technology",
-  "architecture",
-  "tool",
+  "languages",
+  "practices",
+  "technologies",
+  "architectures",
+  "tooling",
 ];
 
 function sortExperience(
@@ -61,7 +61,7 @@ function sortSkills(
   a: CollectionEntry<"resume-skill">,
   b: CollectionEntry<"resume-skill">,
 ): number {
-  return b.data.skill.localeCompare(a.data.skill);
+  return a.data.skill.localeCompare(b.data.skill);
 }
 ---
 

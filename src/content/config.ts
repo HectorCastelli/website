@@ -72,7 +72,7 @@ export const collections = {
         type: 'data',
         schema: z.object({
             skill: z.string(),
-            category: z.enum(["technology", "tool", "architecture", "practice", "language"]),
+            category: z.enum(["technologies", "tooling", "architectures", "practices", "languages"]),
             rating: z.number().int().positive().lte(5)
         })
     }),
