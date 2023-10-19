@@ -13,7 +13,7 @@ const { author, socialLinks } = config;
 interface Props {
   title: string;
   experience?: CollectionEntry<"resume-experience">[];
-  education?: CollectionEntry<"resume-education">[];
+  education?: CollectionEntry<"education">[];
   awards?: CollectionEntry<"award">[];
   skills?: CollectionEntry<"resume-skill">[];
   frontmatter?: any;
@@ -42,8 +42,8 @@ function sortExperience(
 }
 
 function sortEducation(
-  a: CollectionEntry<"resume-education">,
-  b: CollectionEntry<"resume-education">,
+  a: CollectionEntry<"education">,
+  b: CollectionEntry<"education">,
 ): number {
   return b.data.startDate.valueOf() - a.data.startDate.valueOf();
 }

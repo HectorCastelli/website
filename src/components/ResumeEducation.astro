@@ -3,7 +3,7 @@ import { getEntry, type CollectionEntry } from "astro:content";
 import { dateToMonthString } from "@lib/strings";
 import ResumeInstitutions from "./ResumeInstitutions.astro";
 interface Props {
-  education: CollectionEntry<"resume-education">;
+  education: CollectionEntry<"education">;
 }
 
 const { education } = Astro.props;
