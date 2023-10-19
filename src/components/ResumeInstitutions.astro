@@ -3,8 +3,8 @@ import type { CollectionEntry } from "astro:content";
 import Link from "@components/Link.astro";
 
 interface Props {
-  institution: CollectionEntry<"resume-institution">;
-  targetInstitution?: CollectionEntry<"resume-institution">;
+  institution: CollectionEntry<"institution">;
+  targetInstitution?: CollectionEntry<"institution">;
 }
 
 const { institution, targetInstitution } = Astro.props;
