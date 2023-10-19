@@ -18,7 +18,7 @@ const targetCompany = data.targetCompany
 ---
 
 <article class="p-2 even:bg-neutral-100">
-  <header class="flex justify-between">
+  <header class="flex justify-between flex-wrap">
     <h1 class="text-lg font-bold mb-2">{data.title}</h1>
     <h2 class="text-md font-bold">
       <ResumeInstitutions
@@ -28,7 +28,7 @@ const targetCompany = data.targetCompany
     </h2>
   </header>
   <aside
-    class="flex justify-between mb-4"
+    class="flex justify-between flex-wrap mb-4"
     title={`details for ${experience.slug}`}
   >
     <h3 class="text-sm uppercase">{data.position}</h3>

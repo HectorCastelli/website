@@ -13,14 +13,14 @@ const institution = await getEntry(data.institution);
 ---
 
 <article class="p-2 even:bg-neutral-100">
-  <header class="flex justify-between">
+  <header class="flex justify-between flex-wrap">
     <h1 class="text-lg font-bold mb-2">{data.discipline}</h1>
     <h2 class="text-md font-bold">
       <ResumeInstitutions institution={institution} />
     </h2>
   </header>
   <aside
-    class="flex justify-between mb-4"
+    class="flex justify-between flex-wrap mb-4"
     title={`details for ${education.id}`}
   >
     <h3 class="text-sm uppercase">{data.degree}</h3>
