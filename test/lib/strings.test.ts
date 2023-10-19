@@ -27,6 +27,6 @@ describe("String chunking", () => {
 
 describe("Date to String conversion", () => {
     test('Uses the correct months', () => {
-        expect(dateToMonthString(new Date('2023-01-01'))).toStrictEqual("January 2023")
+        expect(dateToMonthString(new Date('2023-01-01'))).toStrictEqual("January 23")
     });
 });

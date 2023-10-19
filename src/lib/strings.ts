@@ -23,5 +23,5 @@ const monthNames = [
 ]
 
 export function dateToMonthString(date: Date) : string {
-    return `${monthNames[date.getMonth()]} ${date.getFullYear()}`
+    return `${monthNames[date.getMonth()]} ${date.getFullYear().toString().substring(2)}`
 }
