@@ -1,11 +1,11 @@
 ---
-import Link from "@components/Link.astro";
-import LinkChip from "@components/LinkChip.astro";
-import Tag from "@components/Tag.astro";
+import Link from "@components/link/Link.astro";
+import LinkChip from "@components/link/LinkChip.astro";
+import Tag from "@components/tag/Tag.astro";
 import Base from "@layouts/Base.astro";
 import { getTopTagsThenRemainder } from "@lib/tags";
 import { getAllBlogPosts } from "@lib/blogs";
-import Blog from "@components/Blog.astro";
+import Blog from "@components/blog/Blog.astro";
 
 const [tags, _] = await getTopTagsThenRemainder(3);
 const recentPosts = await getAllBlogPosts().then((p) => p.slice(0, 3));
