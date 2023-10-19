@@ -33,7 +33,7 @@ const skills = data.skills ? await getEntries(data.skills) : [];
 ---
 
 <Resume
-  title="Curriculum Vitae"
+  title={data.title}
   experience={experience}
   education={education}
   awards={awards}

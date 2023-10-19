@@ -85,7 +85,7 @@ function sortSkills(
   <main>
     <slot />
     {
-      experience ? (
+      experience && experience.length > 0 ? (
         <section id="experience">
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Professional Experience</h1>
@@ -101,7 +101,7 @@ function sortSkills(
       )
     }
     {
-      education ? (
+      education && education.length > 0 ? (
         <section id="education">
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Education</h1>
@@ -117,7 +117,7 @@ function sortSkills(
       )
     }
     {
-      awards ? (
+      awards && awards.length > 0 ? (
         <section id="awards">
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Awards</h1>
@@ -133,7 +133,7 @@ function sortSkills(
       )
     }
     {
-      skills ? (
+      skills && skills.length > 0 ? (
         <section id="skills">
           <header class="mb-3">
             <h1 class="text-2xl font-bold">Skills</h1>
