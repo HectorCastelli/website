@@ -63,7 +63,7 @@ export const collections = {
             year: z.number().gte(1996).lte(new Date().getFullYear()),
         })
     }),
-    'resume-skill': defineCollection({
+    'skill': defineCollection({
         type: 'data',
         schema: z.object({
             skill: z.string(),
@@ -78,7 +78,7 @@ export const collections = {
             experience: z.array(reference('experience')).optional(),
             education: z.array(reference('education')).optional(),
             awards: z.array(reference('award')).optional(),
-            skills: z.array(reference('resume-skill')).optional(),
+            skills: z.array(reference('skill')).optional(),
         })
     }),
 };

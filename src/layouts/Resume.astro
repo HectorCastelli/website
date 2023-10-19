@@ -15,7 +15,7 @@ interface Props {
   experience?: CollectionEntry<"experience">[];
   education?: CollectionEntry<"education">[];
   awards?: CollectionEntry<"award">[];
-  skills?: CollectionEntry<"resume-skill">[];
+  skills?: CollectionEntry<"skill">[];
   frontmatter?: any;
 }
 
@@ -56,8 +56,8 @@ function sortAwards(
 }
 
 function sortSkills(
-  a: CollectionEntry<"resume-skill">,
-  b: CollectionEntry<"resume-skill">,
+  a: CollectionEntry<"skill">,
+  b: CollectionEntry<"skill">,
 ): number {
   return a.data.skill.localeCompare(b.data.skill);
 }
