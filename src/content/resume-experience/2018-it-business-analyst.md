@@ -2,6 +2,7 @@
 title: Information Technology Business Analyst
 position: full-time
 company: sts
+targetCompany: embraer
 startDate: 2018-06-01
 endDate: 2019-05-01
 ---

@@ -32,7 +32,7 @@ export const collections = {
         })
     }),
     // Resume-related
-    'resume-institutions': defineCollection({
+    'resume-institution': defineCollection({
         type: 'data',
         schema: z.object({
             name: z.string(),
