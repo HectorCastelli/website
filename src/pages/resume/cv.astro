@@ -2,11 +2,6 @@
 import Resume from "@layouts/Resume.astro";
 import { getCollection } from "astro:content";
 
-const data = {
-  title: "Curriculum Vitae",
-  description: "A written summary of my career and accomplishments",
-};
-
 const experience = await getCollection("resume-experience");
 
 const education = await getCollection("resume-education");

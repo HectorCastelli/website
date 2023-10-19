@@ -1,10 +1,5 @@
 import { z, reference, defineCollection } from 'astro:content';
 
-const institution = z.object({
-    name: z.string(),
-    url: z.string().url().optional(),
-})
-
 export const collections = {
     'tag': defineCollection({
         type: 'content',
