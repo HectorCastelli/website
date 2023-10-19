@@ -31,7 +31,7 @@ const awards = (await getCollection("resume-award")).sort((a,b)=>{
 const skills = (await getCollection("resume-skill")).sort((a,b)=>{
     return b.data.skill.localeCompare(a.data.skill)
 });
-const skillGroups = Array.from(new Set(skills.map(s=>s.data.category)));
+const skillGroups = ["language", "practice", "technology", "architecture", "tool"];
 ---
 <Printable frontmatter={data}>
     <header class="text-center [text-wrap:balance]">
@@ -85,14 +85,16 @@ const skillGroups = Array.from(new Set(skills.map(s=>s.data.category)));
             <header class="mb-3">
                 <h1 class="text-2xl font-bold">Skills</h1>
             </header>
-            <main class="flex flex-col gap-2 pl-4">
+            <main class="flex flex-col gap-4 pl-4">
               {
                 skillGroups.map(sg=>
-                  <section id={`skills-${sg}`}>
+                  <section id={`skills-${sg}`} class="even:bg-neutral-100 p-2">
                     <header class="mb-2">
                         <h1 class="text-2xl font-bold uppercase">{sg}</h1>
                     </header>
+            <main class="grid grid-cols-2 md:grid-cols-4 gap-2 pl-4">
                     {skills.filter(s=>s.data.category===sg).map(s=><ResumeSkill skill={s}/>)}
+              </main>
                   </section>
                 )
               }

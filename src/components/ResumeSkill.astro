@@ -6,9 +6,24 @@ interface Props {
 }
 
 const { data } = Astro.props.skill;
+
+const ratingTitles = [
+  "Beginner", //1
+  "Developing", //2
+  "Average", //3
+  "Experienced", //4
+  "Expert", //5
+];
 ---
 
-<article class="p-2 even:bg-neutral-100">
-      <h1 class="text-lg font-bold mb-2">{data.skill}</h1>
-      <p class="font-thin">{data.rating}</p>
+<article class="p-2 flex flex-col justify-center">
+  <h1 class="text-lg font-bold mb-2">{data.skill}</h1>
+  <p class="font-thin">{ratingTitles[data.rating-1]}</p>
+  <div class="bg-primary-100 rounded-full w-full p-2 grid grid-cols-5 gap-1">
+    {data.rating >= 1 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
+    {data.rating >= 2 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
+    {data.rating >= 3 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
+    {data.rating >= 4 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
+    {data.rating >= 5 ? <span class="bg-primary-400 rounded-full w-full p-1"></span> : ''}
+  </div>
 </article>

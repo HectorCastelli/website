@@ -12,16 +12,22 @@ const { data } = Astro.props.education;
 const institution = await getEntry(data.institution);
 ---
 
-<article class="p-2 grid grid-cols-[2fr,1fr] even:bg-neutral-100">
-      <h1 class="text-lg font-bold mb-2 order-1">{data.discipline}</h1>
-      <h2 class="text-md font-bold order-3">
-        <ResumeInstitutions
+<article class="p-2 even:bg-neutral-100">
+
+  <header class="flex justify-between">
+    <h1 class="text-lg font-bold mb-2">{data.discipline}</h1>
+    <h2 class="text-md font-bold">
+      <ResumeInstitutions
         institution={institution}
-        />
-      </h2>
-      <h3 class="text-sm uppercase order-2">{data.degree}</h3>
-      <p class="font-thin order-4">
-        {dateToMonthString(data.startDate)} to
-        {data.endDate ? dateToMonthString(data.endDate) : "now"}
-      </p>
+      />
+    </h2>
+  </header>
+  <aside class="flex justify-between mb-4">
+    <h3 class="text-sm uppercase">{data.degree}</h3>
+    <p class="font-thin">
+      {dateToMonthString(data.startDate)}
+      {data.endDate? ' to ': ''}
+      {data.endDate ? dateToMonthString(data.endDate) : " (incomplete)"}
+    </p>
+  </aside>
 </article>
