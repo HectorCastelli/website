@@ -2,10 +2,10 @@
 import Printable from "@layouts/Printable.astro";
 import config from "@config";
 import Link from "@components/Link.astro";
-import ResumeExperience from "@components/ResumeExperience.astro";
-import ResumeEducation from "@components/ResumeEducation.astro";
+import Experience from "@components/resume/Experience.astro";
+import Education from "@components/resume/Education.astro";
 import Award from "@components/resume/Award.astro";
-import ResumeSkill from "@components/ResumeSkill.astro";
+import ResumeSkill from "@components/resume/Skill.astro";
 import { type CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
 
@@ -91,7 +91,7 @@ function sortSkills(
           </header>
           <section class="flex flex-col gap-2 pl-4">
             {experience.sort(sortExperience).map((e) => (
-              <ResumeExperience experience={e} />
+              <Experience experience={e} />
             ))}
           </section>
         </section>
@@ -107,7 +107,7 @@ function sortSkills(
           </header>
           <section class="flex flex-col gap-2 pl-4">
             {education.sort(sortEducation).map((e) => (
-              <ResumeEducation education={e} />
+              <Education education={e} />
             ))}
           </section>
         </section>
