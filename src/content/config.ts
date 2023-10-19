@@ -60,7 +60,7 @@ export const collections = {
             endDate: z.date().optional(),
         })
     }),
-    'resume-awards': defineCollection({
+    'resume-award': defineCollection({
         type: 'data',
         schema: z.object({
             award: z.string(),
@@ -68,7 +68,7 @@ export const collections = {
             year: z.number().gte(1996).lte(new Date().getFullYear()),
         })
     }),
-    'resume-skills': defineCollection({
+    'resume-skill': defineCollection({
         type: 'data',
         schema: z.object({
             skill: z.string(),
@@ -82,8 +82,8 @@ export const collections = {
             title: z.string(),
             experience: z.array(reference('resume-experience')).optional(),
             education: z.array(reference('resume-education')).optional(),
-            awards: z.array(reference('resume-awards')).optional(),
-            skills: z.array(reference('resume-skills')).optional(),
+            awards: z.array(reference('resume-award')).optional(),
+            skills: z.array(reference('resume-skill')).optional(),
         })
     }),
 };

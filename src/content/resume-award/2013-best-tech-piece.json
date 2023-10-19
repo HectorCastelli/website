@@ -1,8 +1,5 @@
 {
     "award": "Best technical piece: Genetic Algorithms for Simulated Annealing",
-    "grantedBy": {
-        "name": "UNESP",
-        "url": "https://www.unesp.br/"
-    },
+    "grantedBy": "ctig",
     "year": 2013
 }
