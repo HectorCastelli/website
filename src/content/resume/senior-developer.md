@@ -31,6 +31,7 @@ skills:
   - tool/pulumi
   - tool/sqlite
   - tool/terraform
+  - practice/automation
   - practice/dataviz
   - practice/encryption
   - practice/functional
@@ -41,6 +42,7 @@ skills:
   - interpersonal/businessvalue
   - interpersonal/candor
   - interpersonal/cultivation
+  - interpersonal/emapthy
   - interpersonal/feedback
   - interpersonal/prioritization
   - interpersonal/riskmgmt
