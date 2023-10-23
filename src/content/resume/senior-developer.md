@@ -42,7 +42,7 @@ skills:
   - interpersonal/businessvalue
   - interpersonal/candor
   - interpersonal/cultivation
-  - interpersonal/emapthy
+  - interpersonal/empathy
   - interpersonal/feedback
   - interpersonal/prioritization
   - interpersonal/riskmgmt
