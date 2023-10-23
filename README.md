@@ -48,6 +48,7 @@ Some of these commands have sub-steps that execute extra functionality. They can
   | `npm install`   | `npm run postinstall:sync`          | Sync content types for astro types                                          |
   |                 | `npm run postinstall:feed`          | Downloads [rss feed styling](feed.xsl) for users browsing the url           |
   | `npm run build` | `npm run prebuild:diagrams`         | Renders all diagrams in the `./public` directory (`.mmd` become `.mmd.svg`) |
+  |                 | `npm run prebuild:skills`           | Updates all skills to use the category that corresponds to their directory  |
   |                 | `npm run postbuild:update-fixtures` | Updates fixtures for the end-to-end tests                                   |
   | `npm run dev`   | `npm run dev:server`                | Same as `npm run start`                                                     |
   |                 | `npm run dev:test:unit`             | Runs the unit tests and watches for file changes                            |
@@ -65,7 +66,8 @@ These commands will ask for input and create the appropriate files with the corr
 | Command                  | Action                                           |
 | :----------------------- | :----------------------------------------------- |
 | `npm run create:blog`    | Create a new entry in the blog with today's date |
-| `npm run create:tag`     | Create a new tag                                 |
 | `npm run create:project` | Create a new project entry                       |
+| `npm run create:resume`  | Create a new resume entry                        |
+| `npm run create:tag`     | Create a new tag                                 |
 
 [feed.xsl]: https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl

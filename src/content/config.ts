@@ -53,6 +53,7 @@ export const collections = {
             institution: reference('institution'),
             startDate: z.date(),
             endDate: z.date().optional(),
+            note: z.string().optional(),
         })
     }),
     'award': defineCollection({

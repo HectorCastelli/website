@@ -3,6 +3,7 @@ import { getEntry, type CollectionEntry } from "astro:content";
 import { dateToMonthString } from "@lib/strings";
 import Zebra from "@components/Zebra.astro";
 import Institution from "@components/resume/Institution.astro";
+import Markdown from "@components/Markdown.astro";
 interface Props {
   education: CollectionEntry<"education">;
 }
@@ -31,4 +32,8 @@ const institution = await getEntry(data.institution);
       {data.endDate ? dateToMonthString(data.endDate) : " (incomplete)"}
     </p>
   </aside>
+  {data.note ? 
+  <section class="font-thin text-xs"><Markdown markdown={data.note}/></section>
+   : ''
+  }
 </Zebra>
