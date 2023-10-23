@@ -29,8 +29,9 @@
     "test:e2e": "start-server-and-test start http://localhost:4321/ 'cypress run'",
     "pretest:e2e": "npm run build",
     "create:blog": "node scripts/blog/create.js",
-    "create:tag": "node scripts/tag/create.js",
-    "create:project": "node scripts/project/create.js"
+    "create:project": "node scripts/project/create.js",
+    "create:resume": "node scripts/resume/create.js",
+    "create:tag": "node scripts/tag/create.js"
   },
   "engines": {
     "node": ">=18"

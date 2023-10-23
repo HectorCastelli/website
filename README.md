@@ -66,7 +66,8 @@ These commands will ask for input and create the appropriate files with the corr
 | Command                  | Action                                           |
 | :----------------------- | :----------------------------------------------- |
 | `npm run create:blog`    | Create a new entry in the blog with today's date |
-| `npm run create:tag`     | Create a new tag                                 |
 | `npm run create:project` | Create a new project entry                       |
+| `npm run create:resume`  | Create a new resume entry                        |
+| `npm run create:tag`     | Create a new tag                                 |
 
 [feed.xsl]: https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl
