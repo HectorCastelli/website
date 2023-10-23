@@ -14,6 +14,7 @@
     "build": "astro build",
     "prebuild": "npm-run-all prebuild:*",
     "prebuild:diagrams": "scripts/render-diagrams.sh",
+    "prebuild:skills": "scripts/reset-skill-groups.sh",
     "postbuild": "npm-run-all postbuild:*",
     "postbuild:update-fixtures": "scripts/update-fixtures.sh",
     "start": "astro dev",
