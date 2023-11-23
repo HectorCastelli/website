@@ -69,8 +69,8 @@ export default {
         },
         {
             name: "Phone",
-            link: "sms:+43677059383",
-            printName: "+43 677 059 383"
+            link: "sms:+34677059383",
+            printName: "+34 677 059 383"
         }
     ]
 }
