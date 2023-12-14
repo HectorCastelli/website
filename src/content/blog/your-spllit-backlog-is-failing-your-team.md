@@ -48,13 +48,13 @@ Visibility of other team's work is also important to identify opportunities to g
 
 This is a risk when conversations happen too late, or not at all.
 
-### Confusing priorities:
+### Confusing priorities
 
 Contrary to the effect on those discovering work items, teams executing work items will still deal with the full complexity and scope of the multiple work items.
 
 Additionally, as priorities are presented, there may be no clear way to distinguish which of the "first priorities" is the *firstest*.
 
-## An example:
+## An example
 
 Imagine a retailer that has physical and digital presence. In this retailer, two groups of stakeholders are refining features, one focusing on the digital experience, and one focusing on the physical experience. The two teams have their own way of visualizing their features, separated from the other group.
 
@@ -81,7 +81,7 @@ With this level of information, the correct course of action is not clear to the
 
 ### Likely outcomes and their risks
 
-Let's assume that: 
+Let's assume that:
 
 - the team only has the capacity to execute on two of these initiatives immediately;
 - all initiatives are about the same in terms of effort required;
@@ -89,7 +89,7 @@ Let's assume that:
 
 With this in mind, here are the likely choices and their implications:
 
-#### Scenario one:
+#### Scenario one
 
 The team picks "Time-based notifications" first, since it doesn't have dependencies and was explicitly asked for by the stakeholders of group one.
 
@@ -99,7 +99,7 @@ Then, then they choose "Store greeters" second, as it is the only task from grou
 
 This means that the most important activity from the second group is now blocked by it's dependency for an extra cycle, meaning that the value add is delayed and the business suffers for it.
 
-#### Scenario two:
+#### Scenario two
 
 The team chooses to execute "Targeted emails" to tackle the dependency first.
 

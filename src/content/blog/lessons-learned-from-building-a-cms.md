@@ -18,14 +18,14 @@ So, being the expert in my own problems, I felt I could do me a much better serv
 
 Here is the list of features I desired:
 
- - Easy to deploy
- - Self-contained
- - Custom data-types
- - Easy to extend
- - Easy to "theme"
- - Easy to manage
- - Secure administrative panel
- - Low cost
+- Easy to deploy
+- Self-contained
+- Custom data-types
+- Easy to extend
+- Easy to "theme"
+- Easy to manage
+- Secure administrative panel
+- Low cost
 
 As you can see, there is no real concern with an easy-to-use administrative panel. Since this would only be used by my colleagues that can't go directly to the database and edit the data through it.
 
@@ -33,7 +33,7 @@ As you can see, there is no real concern with an easy-to-use administrative pane
 
 Let me share with you the lessons I learned.
 
-### Lesson 1: Auto-generation is great!
+### Lesson 1: Auto-generation is great
 
 The main concern I had when coming up with how I would structure my database is the fact that I wanted to use this project for multiple end-products. Since this was the case, a single rigid table structure would be unusable.
 
@@ -41,13 +41,13 @@ To achieve this I decided that configuring the database should be part of config
 
 With technology like Sequelize, translating this from JavaScript to actual tables on an actual DB is easy. I imagine that with other ORMs the task will also be trivial.
 
-### Lesson 2: Bare-bones comes at a cost.
+### Lesson 2: Bare-bones comes at a cost
 
 What would be the point of customizing the database in a CMS if I couldn't customize the front-end to reflect my desires and data-relationships? Obviously, the answer is 'None'. So I decided to leave all the front-end customization to the end-user.
 
 Most CMS's come with templates and a 'starter-kit' of pages but this becomes impossible if I need to have no expectations. The systems are incredibly easy to extend thanks to template engines and JS magic but I don't expect anyone to just pick it up and start working with it.
 
-### Lesson 3: Don't try to predict too much.
+### Lesson 3: Don't try to predict too much
 
 In a project of this nature, it's quite understandable that I would spend half of my time thinking if what I'm about to code fits the bill for my goals and what impact it will have on other aspects of the system.
 
