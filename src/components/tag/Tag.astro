@@ -15,7 +15,7 @@ const tagEntry = await getTag(tag);
 {
   tagEntry ? (
     <Link href={`/tag/${tagEntry?.slug}`}>
-      {tagEntry?.data.name}
+      {tagEntry?.data.title}
       {suffix}
     </Link>
   ) : (

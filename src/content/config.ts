@@ -4,7 +4,7 @@ export const collections = {
     'tag': defineCollection({
         type: 'content',
         schema: z.object({
-            name: z.string(),
+            title: z.string(),
         })
     }),
     'blog': defineCollection({
