@@ -8,4 +8,5 @@ endDate: 2019-12-01
 ---
 - Provided 216 answers to StackOverflow questions regarding API usage and best-practices
 - Contributed to 15 pages in the public API documentation
-- Triaged, reproduced, analyzed, and reported 6 customer-facing bugs in API or product behavior
+- Triaged, reproduced, analyzed, and reported 6 customer-facing bugs in API or
+  product behavior

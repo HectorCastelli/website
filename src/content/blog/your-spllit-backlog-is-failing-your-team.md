@@ -5,23 +5,43 @@ description: "How poorly-communicated priorities poison organizations and lead t
 tags: ["planning", "software"]
 ---
 
-As companies scale, the size of initiatives they can take on increases, as does the complexity. The scales of teams (their size, and diversity) forces companies to reconsider how they communicate the intent and strategy behind their product changes.
+As companies scale, the size of initiatives they can take on increases,
+as does the complexity. The scales of teams (their size, and diversity) forces
+companies to reconsider how they communicate the intent and strategy behind
+their product changes.
 
 ## Starting with a backlog
 
-The common approach to capture the scope and communicate the priority of work items is the backlog: A sorted list containing all work items required to be completed, ordered by a combination of value, priority, timeliness, and feasibility.
+The common approach to capture the scope and communicate the priority of work
+items is the backlog: A sorted list containing all work items required to be
+completed, ordered by a combination of value, priority, timeliness, and feasibility.
 
-This backlog should be a guide for the teams executing the work. Additionally, a healthy organization will allow for teams to make decisions regarding how they execute the work from the backlog. Some examples of these decisions are:
+This backlog should be a guide for the teams executing the work. Additionally,
+a healthy organization will allow for teams to make decisions regarding how they
+execute the work from the backlog. Some examples of these decisions are:
 
-- **Changing the execution order**: Given two work items of similar scope and value, but one of them is blocked, the team will chose to take the unblocked one and postpone the other;
-- **Discovering details**: Given a work item that is not clearly understood, the team may choose to delay the execution, and spend more time trying to discover the missing or incomplete information;
-- **Cancelling work**: Given a work item that implements a feature that already exists elsewhere, the team will cancel the immediate work item and spend their energy elsewhere.
+- **Changing the execution order**: Given two work items of similar scope and
+  value, but one of them is blocked, the team will chose to take the unblocked
+  one and postpone the other;
+- **Discovering details**: Given a work item that is not clearly understood,
+  the team may choose to delay the execution, and spend more time trying to
+  discover the missing or incomplete information;
+- **Cancelling work**: Given a work item that implements a feature that already
+  exists elsewhere, the team will cancel the immediate work item and spend their
+  energy elsewhere.
 
 ## Dealing with complexity
 
-As the nature of work increase in complexity, things get harder to prioritize. Since [humans like to categorize](https://www.scientificamerican.com/article/wired-for-categorization/), the "categorized backlog" appears as a way to simplify the prioritization and planning process. This pattern usually manifests with the creation of "parallel" backlogs, managed by different group of stakeholders, which cover one area or type of work.
+As the nature of work increase in complexity, things get harder to prioritize.
+Since [humans like to categorize](https://www.scientificamerican.com/article/wired-for-categorization/),
+the "categorized backlog" appears as a way to simplify the prioritization and
+planning process.
+This pattern usually manifests with the creation of "parallel" backlogs,
+managed by different group of stakeholders, which cover one area or type of work.
 
-Two very frequent occurrences are: Product vs. [Tech-Debt](https://martinfowler.com/bliki/TechnicalDebt.html); and the "one backlog per feature" approach. If you work on a multidisciplinary team, these probably exist within your organization.
+Two very frequent occurrences are: Product vs. [Tech-Debt](https://martinfowler.com/bliki/TechnicalDebt.html);
+and the "one backlog per feature" approach.
+If you work on a multidisciplinary team, these probably exist within your organization.
 
 Categorizing is useful, and the benefits are apparent for conversations regarding scope, relative value, and priority:
 
@@ -149,37 +169,71 @@ When communicating with the teams, avoid communication that relies on "quotas" f
 - ["Why human brains are not designed to multi-task" by Julia Thomas](https://brainfodder.org/multi-tasking-doesnt-work/)
 - ["Why Multitasking Doesn't Work" by Douglas Merrill](https://www.forbes.com/sites/douglasmerrill/2012/08/17/why-multitasking-doesnt-work/).
 
-In reality, teams work with more fluidity, and implementing quotas can make it difficult to make the right choice. Forcing this constraint on the teams will lead to frustration, or worse, wasted effort. Instead, define goals for your team at a time-resolution larger than their unit-of-planning, which is usually sprints. Importantly, these goals should be feasible, even when taking into account all the other initiatives that will be worked on.
+In reality, teams work with more fluidity, and implementing quotas can make it
+difficult to make the right choice. Forcing this constraint on the teams will
+lead to frustration, or worse, wasted effort.
+Instead, define goals for your team at a time-resolution larger than their
+unit-of-planning, which is usually sprints. Importantly, these goals should be
+feasible, even when taking into account all the other initiatives that will be
+worked on.
 
 ### 👍 Do: Provide clear information
 
-Make sure that the teams are able to access the relevant information to make the correct calls.
+Make sure that the teams are able to access the relevant information to make the
+correct calls.
 
-Document the expected value, impact, and the dependencies. Prefer searchable and linkable formats that facilitate the discovery of this information instead of relying on word-of-mouth or fractured sources of information. Regardless of how your team works, the reasons behind the execution should be clear.
+Document the expected value, impact, and the dependencies.
+Prefer searchable and linkable formats that facilitate the discovery of this
+information instead of relying on word-of-mouth or fractured sources of
+information. Regardless of how your team works, the reasons behind the execution
+should be clear.
 
-Usually, this boils down to "delete your multiple excel files and use your JIRA tickets".
+Usually, this boils down to "delete your multiple excel files and use your
+JIRA tickets".
 
 ### 🙅 Do not: Ask for work before prioritization
 
-Do not fall back into the previous model, where each stakeholder fights for attention and confuses the teams regarding what's next in the roadmap.
+Do not fall back into the previous model, where each stakeholder fights for
+attention and confuses the teams regarding what's next in the roadmap.
 
-For some teams, this means "align with the project manager first," using them as a safety layer in front of the team. For others, it means refusing to work on unprioritized initiatives.
+For some teams, this means "align with the project manager first," using them as
+a safety layer in front of the team. For others, it means refusing to work on
+unprioritized initiatives.
 
 ### 👍 Do: Allow teams to safely decide
 
-Allow teams to make decisions based on the information provided, without fearing for their jobs if they make a mistake. Foster [psychological safety](https://www.themuse.com/advice/effective-teams-psychological-safety-in-the-workplace), and make sure that when things don't go as planned, you learn from the mistakes and move past them without assigning blame.
+Allow teams to make decisions based on the information provided, without fearing
+for their jobs if they make a mistake.
+Foster [psychological safety](https://www.themuse.com/advice/effective-teams-psychological-safety-in-the-workplace),
+and make sure that when things don't go as planned, you learn from the mistakes
+and move past them without assigning blame.
 
 ## Revisiting the Example
 
-In the example, the way priorities were communicated was not clear and the team implementing the changes was the one ultimately making the decision on which feature they would tackle first, without the necessary knowledge to do so.
+In the example, the way priorities were communicated was not clear and the team
+implementing the changes was the one ultimately making the decision on which
+feature they would tackle first, without the necessary knowledge to do so.
 
-If the mitigating measures above were implemented, the conversations to determine priorities could have been closer to the optimal choice.
+If the mitigating measures above were implemented, the conversations to
+determine priorities could have been closer to the optimal choice.
 
-When analyzing all initiatives together (as we did with the table of all the initiatives and their values), we would see that the most valuable piece was "In-store digital coupons". We would also notice that it requires the work for "Targeted emails" to be complete before it begins.
+When analyzing all initiatives together (as we did with the table of all the
+initiatives and their values), we would see that the most valuable piece was
+"In-store digital coupons".
+We would also notice that it requires the work for "Targeted emails" to be
+complete before it begins.
 
-The team picks "Targeted emails" first, to tackle the dependency of the most-valuable feature. This enables the business to deliver massive value in the next period.
+The team picks "Targeted emails" first, to tackle the dependency of the
+most-valuable feature. This enables the business to deliver massive value in the
+next period.
 
-Since the priorities are clear and the team feels empowered to make a non-obvious choice: To minimize context changes and to avoid blocking, the team chooses to tackle "Time-based notifications" next. This means that in the next period, "In-store digital coupons" and "Store greeters" would be tackled together. This in theory also reduced cognitive load for the next cycle.
+Since the priorities are clear and the team feels empowered to make a
+non-obvious choice:
+To minimize context changes and to avoid blocking, the team chooses to
+tackle "Time-based notifications" next.
+This means that in the next period, "In-store digital coupons" and "Store greeters"
+would be tackled together.
+This in theory also reduced cognitive load for the next cycle.
 
 ![Revisited roadmap][revisited-roadmap]
 

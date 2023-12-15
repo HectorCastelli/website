@@ -9,5 +9,6 @@ endDate: 2020-06-01
 - Drove the Kickstarter campaign that amassed $5.000 in funding
 - Responsible for a distributed team of three developers
 - Organized and executed talent sourcing with university students
-- Implemented IT infrastructure for the company, including website, version control, build-server, and test automation
+- Implemented IT infrastructure for the company, including website, version
+  control, build-server, and test automation
   

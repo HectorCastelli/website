@@ -63,6 +63,9 @@ skills:
   - architecture/mvc
   - architecture/pubsub
 ---
-I am a curious self-started that learns fast and prioritizes value. My knowledge as a developer is vast and I have been involved in all areas of the software development lifecycle.
+I am a curious self-started that learns fast and prioritizes value.
+My knowledge as a developer is vast and I have been involved in all areas of the
+software development lifecycle.
 
-I am especially interested in developer ergonomics and productivity, exploiting automation and tooling to deliver more, quicker, and safely.
+I am especially interested in developer ergonomics and productivity,
+exploiting automation and tooling to deliver more, quicker, and safely.
