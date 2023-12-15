@@ -9,7 +9,7 @@ const rl = readline.createInterface({ input, output });
 const title = await rl.question('What is the name of the tag? ');
 
 const fileContents = `---
-name: "${title}"
+title:"${title}"
 ---
 `
 

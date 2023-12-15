@@ -1,5 +1,5 @@
 ---
-name: "Ruin Racer"
+title: "Ruin Racer"
 status: "completed"
 image: "/images/content/project/ruinracer.png"
 ---

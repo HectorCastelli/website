@@ -9,7 +9,7 @@ const rl = readline.createInterface({ input, output });
 const name = await rl.question('What is the name of the project? ');
 
 const fileContents = `---
-name: "${name}"
+title:"${name}"
 url: ""
 image: ""
 description: ""

@@ -20,7 +20,7 @@ export const collections = {
     'project': defineCollection({
         type: 'content',
         schema: z.object({
-            name: z.string(),
+            title: z.string(),
             url: z.string().url().optional(),
             image: z.string().optional(),
             status: z.enum(["ongoing", "completed", "abandoned"])
@@ -67,7 +67,7 @@ export const collections = {
     'skillCategory': defineCollection({
         type: 'data',
         schema: z.object({
-            name: z.string(),
+            title:z.string(),
             description: z.string(),
             order: z.number().positive(),
         })
