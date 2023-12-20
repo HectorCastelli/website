@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-for f in $(find ./public/ -name '*.mmd'); do
+shopt -s globstar nullglob
+for f in public/**/*.mmd
+do
     echo "Rendering $f"
     ./node_modules/.bin/mmdc \
-        --input $f \
+        --input "$f" \
         --outputFormat svg \
         --backgroundColor transparent \
         --theme neutral \

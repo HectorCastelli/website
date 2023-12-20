@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
-for d in `ls ./src/content/skill/`
+shopt -s globstar nullglob
+for f in src/content/skill/**/*.yaml
 do
-    echo "Resetting $d"
-    for f in `ls ./src/content/skill/$d`
-    do
-        echo $d/$f
-        perl -pi -e "s/category: (.*)/category: $d/g" "./src/content/skill/$d/$f"
-    done
+    echo "Resetting $f"
+    if [[ $f =~ src\/content\/skill\/([^\/]+)\/[^\/]+\.yaml ]]; then
+        category="${BASH_REMATCH[1]}"
+        echo "Category: $category"
+        perl -pi -e "s/category: (.*)/category: $category/g" "$f"
+    else
+        echo "Pattern not found in the string."
+    fi
 done

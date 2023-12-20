@@ -21,6 +21,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      dist: ${{ steps.upload.outputs.artifact-id }}
     steps:
       - uses: actions/checkout@v3.3.0
       - uses: actions/setup-node@v3
@@ -31,7 +33,8 @@ jobs:
       - run: npm run build
       - run: npm test
       - name: Upload website
-        uses: actions/upload-artifact@v3
+        id: upload
+        uses: actions/upload-artifact@v4
         with:
           name: website
           path: dist/
@@ -45,13 +48,13 @@ jobs:
     steps:
       - name: Download build
         id: download
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: website
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload to pages
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ${{steps.download.outputs.download-path}}/
       - name: Deploy to GitHub Pages

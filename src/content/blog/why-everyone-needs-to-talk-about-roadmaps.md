@@ -20,7 +20,6 @@ Let's assume you already know enough about your users to make informed decisions
 
 In this context, armed with the knowledge and the research regarding the value and the impact of the possible changes, how do you choose the order we should tackle things?
 
-
 ### Step 1: Document value and impact
 
 First, capture the expected value and impact. Write this down in a way that is easy to reference and compare. Exact values are not recommended, abstract it away to a level where you can still compare two options, without getting stuck comparing things that are orders of magnitude below your target.

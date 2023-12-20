@@ -33,7 +33,6 @@ Following the previous example, my feats might look like this:
 - Build rapport with my colleagues
 - Have a conversation about the goals of the product from the stakeholder's point-of-view
 
-
 ## Time boundaries
 
 Now that we have the feats in place, it is important we estimate how long it would take us to complete them. This estimation can be loose, but it shouldn't be exaggerated. Unlike the *guess*timates your run-of-the-mill project management technique suggests, padding will not be helpful here. If I believe a feat takes a month to complete, then that is the time I should use for it.

@@ -1,5 +1,5 @@
 ---
-name: "Low Violence RPG"
+title: "Low Violence RPG"
 url: "https://github.com/lowviolencerpg"
 status: "abandoned"
 ---

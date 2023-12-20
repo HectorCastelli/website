@@ -8,7 +8,7 @@ My [personal website](https://gohector.com), as well as the contents that powers
 
 [Web mentions](https://webmention.io/api/mentions.html?token=RDJRXtZAj4QOKaiMWxgtXQ)(or [rss](https://webmention.io/api/mentions.html?token=RDJRXtZAj4QOKaiMWxgtXQ)) tracked with [webmention.io](https://webmention.io/).
 
-## Stack:
+## Stack
 
 - Hosted on [github pages](https://pages.github.com/)
 - Domain provided by [gandi.net](https://www.gandi.net/)
@@ -42,11 +42,10 @@ Some of these commands have sub-steps that execute extra functionality. They can
 <details>
   <summary>Sub-commands</summary>
 
-
   | Command         | Sub-command                         | Action                                                                      |
   | :-------------- | :---------------------------------- | :-------------------------------------------------------------------------- |
   | `npm install`   | `npm run postinstall:sync`          | Sync content types for astro types                                          |
-  |                 | `npm run postinstall:feed`          | Downloads [rss feed styling](feed.xsl) for users browsing the url           |
+  |                 | `npm run postinstall:feed`          | Downloads [rss feed styling][feed.xsl] for users browsing the url           |
   | `npm run build` | `npm run prebuild:diagrams`         | Renders all diagrams in the `./public` directory (`.mmd` become `.mmd.svg`) |
   |                 | `npm run prebuild:skills`           | Updates all skills to use the category that corresponds to their directory  |
   |                 | `npm run postbuild:update-fixtures` | Updates fixtures for the end-to-end tests                                   |
@@ -57,7 +56,6 @@ Some of these commands have sub-steps that execute extra functionality. They can
   |                 | `npm run test:unit`                 | Runs the unit tests                                                         |
   |                 | `npm run test:e2e`                  | Runs the end-to-end tests. This runs `npm run build` before executing       |
 </details>
-
 
 ### Helpers: creating content
 
@@ -71,3 +69,9 @@ These commands will ask for input and create the appropriate files with the corr
 | `npm run create:tag`     | Create a new tag                                 |
 
 [feed.xsl]: https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl
+
+<!-- markdownlint-configure-file
+{
+  "html": false
+}
+-->

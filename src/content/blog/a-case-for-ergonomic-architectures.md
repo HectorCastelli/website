@@ -17,7 +17,7 @@ Sometimes, these aspects are essential for your clients, and choosing which ones
 Well, let me give you an answer. Not **the** answer. Just one possible answer:
 
 > Invest into architecture and focus on developer's ergonomics.
- 
+
 While this may all sound silly to you now, I guarantee that this will all make sense when I'm done.
 
 ## The complexities of software

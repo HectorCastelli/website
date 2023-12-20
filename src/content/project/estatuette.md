@@ -1,5 +1,5 @@
 ---
-name: "Estatuette"
+title: "Estatuette"
 url: "https://github.com/HectorCastelli/estatuette"
 status: "abandoned"
 ---

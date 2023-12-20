@@ -1,0 +1,26 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost:4321/"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/images/",
+      "replacement": "{{BASEURL}}/public/images/"
+    },
+    {
+      "pattern": ".mmd.svg",
+      "replacement": ".mmd"
+    },
+    {
+      "pattern": "^/blog/",
+      "replacement": "https://gohector.com/blog/"
+    }
+  ],
+  "aliveStatusCodes": [
+    200,
+    403,
+    999
+  ]
+}

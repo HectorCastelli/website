@@ -1,0 +1,7 @@
+{
+    "config": {
+        "default": true,
+        // Do not want to validate this because blog gets messy if split
+        "line_length": false
+    }
+}

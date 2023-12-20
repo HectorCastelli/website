@@ -47,7 +47,7 @@ By robbing the team of agency and knowledge, they:
 
 ## How it perpetuates
 
-All these negative feelings, in turn, drive team members away. Any little knowledge they gained through sheer stubbornness, as well as all their expertise regarding the inner workings of the software itself, vanishes. And so, another fresh, ignorant, member joins the team. 
+All these negative feelings, in turn, drive team members away. Any little knowledge they gained through sheer stubbornness, as well as all their expertise regarding the inner workings of the software itself, vanishes. And so, another fresh, ignorant, member joins the team.
 
 Unfortunately, remedying that ignorance is too costly, so the knowledge centralization strengthens, and more alienation ensues. This is the perfect excuse to go further in the dictatorial direction.
 
