@@ -69,3 +69,9 @@ These commands will ask for input and create the appropriate files with the corr
 | `npm run create:tag`     | Create a new tag                                 |
 
 [feed.xsl]: https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl
+
+<!-- markdownlint-configure-file
+{
+  "html": false
+}
+-->
