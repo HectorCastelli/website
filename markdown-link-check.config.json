@@ -1,7 +1,17 @@
 {
-    "ignorePatterns": [
-      {
-        "pattern": "^http://localhost:4321/"
-      }
-    ]
-  }
+  "ignorePatterns": [
+    {
+      "pattern": "^http://localhost:4321/"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/images/",
+      "replacement": "{{BASEURL}}/public/images/"
+    },
+    {
+      "pattern": "^/blog/",
+      "replacement": "https://gohector.com/blog/"
+    }
+  ]
+}
