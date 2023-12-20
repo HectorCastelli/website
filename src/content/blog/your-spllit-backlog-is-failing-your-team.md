@@ -166,7 +166,7 @@ In these conversations the matters regarding **scope and impact should already b
 When communicating with the teams, avoid communication that relies on "quotas" for each feature. This approach relies on the misconception that multitasking works, but it doesn't:
 
 - ["You Can’t Multitask, So Stop Trying" by Paul Atchley](https://hbr.org/2010/12/you-cant-multi-task-so-stop-tr)
-- ["Why human brains are not designed to multi-task" by Julia Thomas](https://brainfodder.org/multi-tasking-doesnt-work/)
+- ["Multicosts of Multitasking" by Kevin P. Madore and Anthony D. Wagner](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7075496/)
 - ["Why Multitasking Doesn't Work" by Douglas Merrill](https://www.forbes.com/sites/douglasmerrill/2012/08/17/why-multitasking-doesnt-work/).
 
 In reality, teams work with more fluidity, and implementing quotas can make it
