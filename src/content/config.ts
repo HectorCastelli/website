@@ -67,7 +67,7 @@ export const collections = {
     'skillCategory': defineCollection({
         type: 'data',
         schema: z.object({
-            title:z.string(),
+            name:z.string(),
             description: z.string(),
             order: z.number().positive(),
         })
