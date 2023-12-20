@@ -44,6 +44,7 @@ jobs:
     - uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         config-file: markdown-link-check.config.json
+        use-quiet-mode: yes
   action-lint:
     name: Action Lint
     runs-on: ubuntu-latest
