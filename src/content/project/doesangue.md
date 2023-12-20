@@ -1,6 +1,6 @@
 ---
 title: "DoeSangue"
-url: "https://github.com/HectorCastelli/DoeSangue/tree/master"
+url: "https://github.com/HectorCastelli/DoeSangue"
 image: "/images/content/project/doesangue.png"
 status: "completed"
 ---
