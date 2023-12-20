@@ -95,6 +95,8 @@ Without the collaboration between the two groups of stakeholders, the teams invo
 
 > First group: Team, please focus on time-based notifications as your top priority.
 
+and
+
 > Second group: Team, we want you to enable in-store digital coupons as soon as possible. We know this requires targeted emails, so please tackle that first.
 
 With this level of information, the correct course of action is not clear to the team, and therefore there is risk that it will not be executed.
