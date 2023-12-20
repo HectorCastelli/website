@@ -13,5 +13,8 @@
       "pattern": "^/blog/",
       "replacement": "https://gohector.com/blog/"
     }
+  ],
+  "aliveStatusCodes": [
+    999
   ]
 }
