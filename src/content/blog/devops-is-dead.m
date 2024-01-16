@@ -17,3 +17,7 @@ This is mostly a pipe-dream and companies should realize that software is not an
 However, platforms are good. And so is devops. The key is balance between "size of team", "size of problem", and "expertise of team".
 
 TODO: Make a chart and describe operating modes for the extremes of these three axis.
+
+teams that are closer to their ops have more visibility and impact on the company and can be more responsive and responsible.
+
+Corps that failed to implement devops will fail to implement autonomous platform teams.
