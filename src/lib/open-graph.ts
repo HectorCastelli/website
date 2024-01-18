@@ -1,4 +1,4 @@
-import type { OGImageOptions } from "astro-og-canvas/dist/types";
+import {type OGImageOptions} from "../../node_modules/astro-og-canvas/dist/types";
 
 export const baseImageOptions: OGImageOptions = {
     title: '',
