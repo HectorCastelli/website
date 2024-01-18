@@ -1,4 +1,4 @@
-import { getCollection, CollectionEntry, getEntryBySlug } from 'astro:content';
+import { getCollection, type CollectionEntry, getEntryBySlug } from 'astro:content';
 
 export async function getAllTags(): Promise<CollectionEntry<"tag">[]> {
     return await getCollection('tag');
