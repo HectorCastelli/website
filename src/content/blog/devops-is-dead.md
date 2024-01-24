@@ -33,6 +33,22 @@ However, unlike other similarly pendular trends, the forces that energize this m
 
 Yes. This is *yet* another one of my articles where economics slither into the conversation.
 
+## When the pendulum swings
+
+The things that popularize DevOps and Platforms are different in nature. In very simple terms, DevOps empowers teams to address a problem of quality, while Platforms empower organizations to address a problem of scale.
+
+DevOps is energized when teams:
+
+- Suffer from quality issues, due to the distance between their mistakes and the learnings that can be derived
+- Suffer from delays, due to dependencies on saturated centralized teams
+- Suffer from sub-optimal solutions, due to a lack of autonomy to choose the best solution for their problem
+  
+Platforms, on the other hand, gain traction when companies:
+
+- Suffer to address issues across the company, like security, regulatory or legal risks
+- Suffer with wasted efforts, as multiple similar solutions are created for similar problems
+- Suffer with sub-optimal staffing, as multiple teams require varied expertise in multiple areas to operate
+
 
 The point where "released" was has moved from "before the ops teams handles it" to "before the platform handles it"
 
