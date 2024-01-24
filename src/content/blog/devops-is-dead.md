@@ -61,26 +61,42 @@ Despite this being true, the economic incentives are too tempting. While the res
 
 # So, what is the right choice?
 
-Platform teams are now being hailed as the best solution by folks who failed to acknowledge the problem. There is no right choice, at least not without considering the multiple facets of your situation.
+Platform teams are now being hailed as the best solution by folks who failed to acknowledge the problem. There is no right choice. At least not without considering the multiple facets of your situation. However, because I want this article to be more than just a rant, I propose we evaluate the options along the following axis:
 
-Because I want this article to be more than just a rant, I propose we evaluate the options along the following axis:
+## Team size
 
-- size of team
-- size of problem
-- expertise of team
+Smaller teams are likely to outperform their larger counterparts when switching between approaches.
 
-TODO: Make a chart and describe operating modes for the extremes of these three axis.
+Larger teams may be able to support a split into two small teams: one to tend to the application and one to build or maintain a platform.
 
-TODO: Note that most people are not in the extremes and they live in a muddled area where the pendulum swings are not only natural, they are probably the only choice.
+## Domain complexity
 
+Simpler domains favour DevOps to unlock innovation, while more complex domains may benefit from offloading cognitive load to a platform team.
 
-BONUS: The extreme beyond platforms is the "just use off-the-shelf stuff", that causes a lof of other problems and is an unlikely choice.... unless you have a very low budget, and no customers, and no time, and no idea if your product will survive.
+## Expertise
 
+Teams with narrow knowledge struggle when switching approaches. Teams with wide knowledge succeed in either environment.
 
-# What comes next?
+Teams that work as platform teams tend to specialize, narrowing their knowledge.
 
-Corps that failed to implement devops will fail to implement autonomous platform teams.
+## Criticality
 
-teams that are closer to their ops have more visibility and impact on the company and can be more responsive and responsible.
+Highly critical applications are always problematic.
 
-Choosing one strategy is important, but knowing why it was chosen is even more important in this case.
+Platform teams compound the criticality of their dependents, which may harm innovation.
+
+If a mature and stable platform is available, choosing based on the domain complexity is a good idea. Otherwise, DevOps approaches lead to better results.
+
+## Innovation
+
+Teams that practice DevOps are more likely to innovate, but platforms team might have more impact from their efforts.
+
+Teams that practice DevOps are also more likely to deliver results earlier, and are quicker to uncover unknowns.
+
+## Closing thoughts
+
+While I've painted a picture of clearly defined archetypes of teams, most teams don't fall within these extremes. The changes in approach are not only natural, they are probably the only choice that can be made when balancing effectiveness, quality and cost in a reactive manner.
+
+Additionally, there are not only two options when addressing this problem space. For the sake of exemplifying, a "further than platform" approach that only relies on Platforms-as-a-service and Service-as-a-service products may be viable in the right conditions. This is exactly the success story of some notable startups that prioritized market penetration and validating their business instead of technologically-sound implementation. It goes to show that the right choice may be outlandish, but make sense if you have no idea if your company or application will survive another day.
+
+Finally, companies that failed to fully implement DevOps teams are very likely to be closeted platform teams, which is not inherently bad, as long as they are not being led based on popular opinion. Leadership in this position must not only make a decision, but preserve their reasoning in hopes of withstanding the next cycle of the pendulum if they wish to reap the benefits of either approach.
