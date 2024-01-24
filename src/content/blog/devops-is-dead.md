@@ -61,15 +61,26 @@ Despite this being true, the economic incentives are too tempting. While the res
 
 # So, what is the right choice?
 
-Platforms are now hailed as the one-stop solution for speed problems with software delivery, but the promises are the same as devops.... is it all a lie? Probably.
+Platform teams are now being hailed as the best solution by folks who failed to acknowledge the problem. There is no right choice, at least not without considering the multiple facets of your situation.
 
-Concept of cutting jobs by centralizing concerns (devops meant devs would absorb ops; platforms mean a group o devs deduplicates efforts accross other teams) is too tempting for companies. Software development doesnt scale in the same way as other things.
-This is mostly a pipe-dream and companies should realize that software is not an assembly line, the same ideas dont apply.
+Because I want this article to be more than just a rant, I propose we evaluate the options along the following axis:
 
-However, platforms are good. And so is devops. The key is balance between "size of team", "size of problem", and "expertise of team".
+- size of team
+- size of problem
+- expertise of team
 
 TODO: Make a chart and describe operating modes for the extremes of these three axis.
 
-teams that are closer to their ops have more visibility and impact on the company and can be more responsive and responsible.
+TODO: Note that most people are not in the extremes and they live in a muddled area where the pendulum swings are not only natural, they are probably the only choice.
+
+
+BONUS: The extreme beyond platforms is the "just use off-the-shelf stuff", that causes a lof of other problems and is an unlikely choice.... unless you have a very low budget, and no customers, and no time, and no idea if your product will survive.
+
+
+# What comes next?
 
 Corps that failed to implement devops will fail to implement autonomous platform teams.
+
+teams that are closer to their ops have more visibility and impact on the company and can be more responsive and responsible.
+
+Choosing one strategy is important, but knowing why it was chosen is even more important in this case.
