@@ -1,11 +1,13 @@
 ---
 title: "DevOps is dead, long live DevOps!"
 pubDate: 2023-12-14
-description: "What happened to the DevOps philosophy and where is it going in the corporate world?"
+description: "What happened to DevOps? And why it'll happen to Platforms too."
 tags: ['software', 'career']
 ---
 
-DevOps is now "platform engieneering"
+Software development is a complicated topic. For years, industry leaders debate regarding which philosophies, practices and processes can be adopted to increase the chances of achieving success.
+
+Out of the multitude, two fairly popular contenders seem to be strong opposites: DevOps and Platform teams. While both take a stance regarding some aspects of team shape and company structure, they seem to recommend incompatible solutions.
 
 The point where "released" was has moved from "before the ops teams handles it" to "before the platform handles it"
 
