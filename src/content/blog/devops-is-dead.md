@@ -9,6 +9,23 @@ Software development is a complicated topic. For years, industry leaders debate 
 
 Out of the multitude, two fairly popular contenders seem to be strong opposites: DevOps and Platform teams. While both take a stance regarding some aspects of team shape and company structure, they seem to recommend incompatible solutions.
 
+## A little more about them
+
+Before we continue exploring the topic, let's take a moment to define what we are discussing.
+
+### DevOps
+
+DevOps is a philosophy that recommends a cyclical approach to software development, where a team builds, deploys, and monitors an application, learning from these activities in order to plan their next cycle of changes.
+
+It emphasizes high-autonomy (and responsibility) of teams, with the understanding that all activities that the team engages in drive the learnings required to improve both the application and the health of the team itself.
+
+### Platforms
+
+Platforms recommend centralizing knowledge and expertise in specialized teams, then leveraging these centers of excellence to accelerate the activities of other teams.
+
+The centralized nature of platforms serve to remove the burden of decision-making, learning, operating, and monitoring out of the individual teams. It also facilitates standardization across a company.
+
+
 The point where "released" was has moved from "before the ops teams handles it" to "before the platform handles it"
 
 Platforms are now hailed as the one-stop solution for speed problems with software delivery, but the promises are the same as devops.... is it all a lie? Probably.
