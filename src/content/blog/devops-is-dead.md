@@ -49,8 +49,17 @@ Platforms, on the other hand, gain traction when companies:
 - Suffer with wasted efforts, as multiple similar solutions are created for similar problems
 - Suffer with sub-optimal staffing, as multiple teams require varied expertise in multiple areas to operate
 
+## The fallacy of the assembly line
 
-The point where "released" was has moved from "before the ops teams handles it" to "before the platform handles it"
+I should probably dedicate an entire article to this aspect of software development, however, it is essential we touch upon this point before going further.
+
+Software development is **not** a procedural activity that can be chunked and delegated to the cheapest bidder. It is a highly creative process that requires expertise and strong communication to yield results.
+
+Treating software development like an assembly line does not work. Attempting to replace parts of the process with cookie-cutter solutions or assigning work to specialized teams may work in manufacturing, but it doesn't work for software.
+
+Despite this being true, the economic incentives are too tempting. While the results of extreme centralization and standardization are often of lower quality, the cost involved is much lower. And due to the risky nature of software, for some companies the cost reduction justifies the drop in quality.
+
+# So, what is the right choice?
 
 Platforms are now hailed as the one-stop solution for speed problems with software delivery, but the promises are the same as devops.... is it all a lie? Probably.
 
