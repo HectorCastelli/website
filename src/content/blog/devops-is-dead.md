@@ -25,6 +25,14 @@ Platforms recommend centralizing knowledge and expertise in specialized teams, t
 
 The centralized nature of platforms serve to remove the burden of decision-making, learning, operating, and monitoring out of the individual teams. It also facilitates standardization across a company.
 
+## Two faces of the same problem
+
+Like so many other trends in the industry, these two create problems that the other seemingly solves. As companies apply them, the pendular nature of these practices start swinging from one extreme into the other. And then back again.
+
+However, unlike other similarly pendular trends, the forces that energize this motion are not products of the software craft. They are related to the environment in which software development is practiced, specifically, commercially-driven software development.
+
+Yes. This is *yet* another one of my articles where economics slither into the conversation.
+
 
 The point where "released" was has moved from "before the ops teams handles it" to "before the platform handles it"
 
