@@ -59,27 +59,27 @@ Treating software development like an assembly line does not work. Attempting to
 
 Despite this being true, the economic incentives are too tempting. While the results of extreme centralization and standardization are often of lower quality, the cost involved is much lower. And due to the risky nature of software, for some companies the cost reduction justifies the drop in quality.
 
-# So, what is the right choice?
+## So, what is the right choice?
 
-Platform teams are now being hailed as the best solution by folks who failed to acknowledge the problem. There is no right choice. At least not without considering the multiple facets of your situation. However, because I want this article to be more than just a rant, I propose we evaluate the options along the following axis:
+Platform teams are now being hailed as the best solution by folks who failed to acknowledge the problem. There is no right choice. At least not without considering the multiple facets of your situation. However, because I want this article to be more than just a rant, I propose we evaluate the options along the following axes:
 
-## Team size
+### Team size
 
 Smaller teams are likely to outperform their larger counterparts when switching between approaches.
 
 Larger teams may be able to support a split into two small teams: one to tend to the application and one to build or maintain a platform.
 
-## Domain complexity
+### Domain complexity
 
 Simpler domains favour DevOps to unlock innovation, while more complex domains may benefit from offloading cognitive load to a platform team.
 
-## Expertise
+### Expertise
 
 Teams with narrow knowledge struggle when switching approaches. Teams with wide knowledge succeed in either environment.
 
 Teams that work as platform teams tend to specialize, narrowing their knowledge.
 
-## Criticality
+### Criticality
 
 Highly critical applications are always problematic.
 
@@ -87,7 +87,7 @@ Platform teams compound the criticality of their dependents, which may harm inno
 
 If a mature and stable platform is available, choosing based on the domain complexity is a good idea. Otherwise, DevOps approaches lead to better results.
 
-## Innovation
+### Innovation
 
 Teams that practice DevOps are more likely to innovate, but platforms team might have more impact from their efforts.
 
