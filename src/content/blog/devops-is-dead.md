@@ -1,6 +1,6 @@
 ---
 title: "DevOps is dead, long live DevOps!"
-pubDate: 2023-12-14
+pubDate: 2024-01-30
 description: "What happened to DevOps? And why it'll happen to Platforms too."
 tags: ['software', 'career']
 ---
