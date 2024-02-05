@@ -4,6 +4,7 @@ position: full-time
 company: tw
 targetCompany: tesco
 startDate: 2023-04-01
+endDate: 2024-02-05
 ---
 - Responsible for leading an internal platform team
 - Led effort to reduce cloud costs, achieving a €35.000 monthly savings in three weeks
