@@ -42,7 +42,7 @@
     "@astrojs/tailwind": "^5.1.0",
     "@tailwindcss/typography": "^0.5.12",
     "astro": "^4.10.2",
-    "astro-og-canvas": "^0.4.2",
+    "astro-og-canvas": "^0.5.3",
     "astro-robots-txt": "^1.0.0",
     "micromark": "^4.0.0",
     "micromark-extension-gfm": "^3.0.0",
